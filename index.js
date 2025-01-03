@@ -86,6 +86,12 @@ const norliPris = async(doc) => {
     return {price, inStock}
 }
 
+const cardcenterPris = async (doc) => {
+    const price = parsePris(doc.querySelector(".price").textContent);
+    const inStock = doc.querySelector(".product-form__payment-container .button.button--disabled") == null
+    return {price, inStock}
+}
+
 const parsers = {
     "https://pokestore.no": pokestorePris,
     "https://proshop.no": proshopPris,
@@ -96,6 +102,8 @@ const parsers = {
     "https://extra-leker.no": extralekerPris,
     "https://lekekassen.no": lekekassenPris,
     "https://norli.no": norliPris,
+    "https://cardcenter.no": cardcenterPris
+
 }
 
 const headers= {
@@ -149,7 +157,8 @@ const shroudedFableEtb = {
         "https://www.collectible.no/home/pokemon-shrouded-fable-elite-trainer-box/",
         "https://www.extra-leker.no/pokemon-sv6-5-shrouded-fable-elite-trainer-box",
         "https://lekekassen.no/pokemon-tcg-shrouded-fable-elite-trainer-box-pok87853",
-        "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-elite-trainer-box-sv6-5"
+        "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-elite-trainer-box-sv6-5",
+        "https://cardcenter.no/products/pokemon-shrouded-fable-elite-trainer-box",
 
 
     ]
@@ -160,7 +169,8 @@ const prismaticEvolutionEtb = {
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-prismatic-evolutions-elite-trainer-box-4",
         "https://gamezone.no/samlekort/162855/pokemon-prismatic-evolutions-etb-elite-trainer-box",
-        "https://www.collectible.no/home/pokemon-prismatic-evolutions-elite-trainer-box/"
+        "https://www.collectible.no/home/pokemon-prismatic-evolutions-elite-trainer-box/",
+        "https://cardcenter.no/products/pokemon-prismatic-evolutions-elite-trainer-box"
     ]
 }
 
@@ -172,6 +182,7 @@ const silverTempestEtb = {
         "https://pokestore.no/produkt/engelsk/etb/pokemon-silver-tempest-elite-trainer-box-6",
         "https://www.collectible.no/home/pokemon-silver-tempest-elite-trainer-box/",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-swsh12-elite-trainer-box",
+        "https://cardcenter.no/products/pokemon-silver-tempest-elite-trainer-box",
         
 
     ]
@@ -186,7 +197,8 @@ const twilightMasqETB = {
         "https://www.collectible.no/home/pokemon-twilight-masquerade-elite-trainer-box/",
         "https://www.extra-leker.no/pokemon-sv6-twilight-masquerade-elite-trainer-box-teal-mask-ogerpon",
         "https://lekekassen.no/pokemon-tcg-twilight-masquerade-elite-trainer-box-med-samlekort-pok85798",
-        "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv6-elite-trainer-box"
+        "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv6-elite-trainer-box",
+        "https://cardcenter.no/products/pokemon-twilight-masquerade-elite-trainer-box"
     ]
 }
 
@@ -204,10 +216,8 @@ const temporalForcesEtb = {
         "https://www.extra-leker.no/pokemon-sv5-temporal-forces-elite-trainer-box-walking-wake",
         "https://www.extra-leker.no/pokemon-sv5-temporal-forces-elite-trainer-box-iron-leaves",
         "https://lekekassen.no/pokemon-tcg-temporal-forces-elite-trainer-boks-med-byttekort-og-tilbehor-iron-leaves-pok85657",
-
-
-
-
+        "https://cardcenter.no/products/pokemon-temporal-forces-elite-trainer-box-walking-wake",
+        "https://cardcenter.no/products/pokemon-temporal-forces-elite-trainer-box-iron-leaves",
     ]
 }
 
@@ -222,10 +232,7 @@ const stellarCrownEtb = {
         "https://www.extra-leker.no/pokemon-sv7-stellar-crown-elite-trainer-box-terastal-terapagos",
         "https://lekekassen.no/pokemon-tcg-stellar-crown-elite-trainer-box",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv7-elite-trainer-box",
-
-
-        
-
+        "https://cardcenter.no/products/stellar-crown-elite-trainer-box",
 
     ]
 }
@@ -254,6 +261,9 @@ const paradoxriftEtb = {
         "https://www.collectible.no/home/pokemon-paradox-rift-elite-trainer-box-roaring-moon/",
         "https://lekekassen.no/pokemon-tcg-paradox-rift-elite-trainer-box-roaring-moon-pok85416",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv5-elite-trainer-box",
+        "https://cardcenter.no/products/pokemon-paradox-rift-elite-trainer-box-iron-valiant",
+        "https://cardcenter.no/products/pokemon-paradox-rift-elite-trainer-box-roaring-moon",
+
 
 
 
@@ -280,6 +290,8 @@ const obsidianFlamesEtb = {
         "https://pokestore.no/produkt/engelsk/etb/pokemon-obsidian-flames-elite-trainer-box-4",
         "https://www.computersalg.no/i/10401232/pok%c3%a9mon-poke-sv3-elite-trainer-box",
         "https://www.collectible.no/home/obsidian-flames-elite-trainer-box/",
+        "https://cardcenter.no/products/pokemon-obsidian-flames-elite-trainer-box",
+
 
     ]
 }
@@ -293,9 +305,6 @@ const pokemonGoEtb = {
         "https://www.extra-leker.no/poke-elite-trainer-box-go-swsh10-5",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-elite-trainer-box-go-swsh10-5",
 
-
-
-
     ]
 }
 
@@ -307,8 +316,7 @@ const scarletAndVioletEtb = {
         "https://pokestore.no/produkt/engelsk/etb/pokemon-scarlet-violet-elite-trainer-box-miraidon-6",
         "https://www.collectible.no/home/scarlet-violet-elite-trainer-box-koraidon/",
         "https://www.collectible.no/home/scarlet-violet-elite-trainer-box-miraidon/",
-
-
+        "https://cardcenter.no/products/pokemon-scarlet-violet-elite-trainer-box",
     ]
 }
 
@@ -336,6 +344,8 @@ const paldeanFatesEtb = {
         "https://pokestore.no/produkt/engelsk/etb/pokemon-paldean-fates-elite-trainer-box-9",
         "https://www.collectible.no/home/pokemon-paldean-fates-elite-trainer-box/",
         "https://lekekassen.no/pokemon-tcg-elite-trainer-box-paldean-fates-pok85618",
+        "https://cardcenter.no/products/pokemon-paldean-fates-elite-trainer-box",
+
 
 
     ]
@@ -353,7 +363,8 @@ const lostOriginEtb = {
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-lost-origin-elite-trainer-box-10",
         "https://www.collectible.no/home/pokemon-lost-origin-elite-trainer-box/",
-        "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-swsh11-elite-trainer-box"
+        "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-swsh11-elite-trainer-box",
+        "https://cardcenter.no/products/lost-origin-elite-trainer-box"
 
     ]
 }
