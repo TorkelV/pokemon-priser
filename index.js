@@ -26,8 +26,8 @@ const parsePris = (pris) => {
 
 
 const pokestorePris = async (doc) => {
-    const price = parsePris(doc.querySelector(".price__display").innerHTML)
-    const inStock = doc.querySelector(".product__buy-button").getAttribute("disabled") === null;
+    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
+    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "instock";
     return { price, inStock};
 }
 
@@ -56,8 +56,8 @@ const proshopPris = async(doc) => {
 }
 
 const collectiblePris = async(doc) => {
-    const price = parsePris(doc.querySelector(".summary .woocommerce-Price-amount.amount bdi").textContent)
-    const inStock = doc.querySelector(".stock.out-of-stock") == null;
+    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
+    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") == "instock";
     return {price, inStock }
 }
 
@@ -92,6 +92,50 @@ const cardcenterPris = async (doc) => {
     return {price, inStock}
 }
 
+const pokemadnessPris = async (doc) => {
+    const price = +doc.querySelector('[itemprop="price"]').getAttribute("content")
+    const inStock = doc.querySelectorAll(".product-unavailable") == null
+    return {price, inStock}
+}
+
+const pokiheavenPris = async (doc) => {
+    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
+    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "instock";
+    return {price, inStock}
+}
+
+const pokelinkPris = async (doc) => {
+    const price = parsePris(doc.querySelector('[property="og:price:amount"]').getAttribute("content"))
+    const inStock = doc.querySelector(".payment-button")?.getAttribute("disabled") == null
+    return {price, inStock}
+}
+
+const coolshopPris = async (doc) => {
+    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
+    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "in stock";
+    return {price, inStock}
+}
+
+const cardstorePris = async (doc) => {
+    const price = parsePris([...doc.querySelectorAll("p")].find(e=>/^\d.+kr$/.test(e.textContent)).textContent)
+    const inStock = !!price
+    return {price, inStock}
+}
+
+const outlandPris = async (doc) => {
+    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
+    const inStock = doc.querySelector('script[type="application/ld+json"]')?.textContent?.includes("https://schema.org/OutOfStock")
+    return {price, inStock}
+}
+
+
+// TODO:
+// Nille
+// Gameninja
+// Ringo
+// Kanoncon
+// Cardstore
+
 const parsers = {
     "https://pokestore.no": pokestorePris,
     "https://proshop.no": proshopPris,
@@ -102,7 +146,13 @@ const parsers = {
     "https://extra-leker.no": extralekerPris,
     "https://lekekassen.no": lekekassenPris,
     "https://norli.no": norliPris,
-    "https://cardcenter.no": cardcenterPris
+    "https://cardcenter.no": cardcenterPris,
+    "https://pokelink.no": pokelinkPris,
+    "https://poki-heaven.no": pokiheavenPris,
+    "https://pokemadness.no/": pokemadnessPris,
+    "https://no.coolshop.com/": coolshopPris,
+    "https://cardstore.no": cardstorePris,
+    "https://outland.no": outlandPris
 
 }
 
@@ -159,8 +209,12 @@ const shroudedFableEtb = {
         "https://lekekassen.no/pokemon-tcg-shrouded-fable-elite-trainer-box-pok87853",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-elite-trainer-box-sv6-5",
         "https://cardcenter.no/products/pokemon-shrouded-fable-elite-trainer-box",
-
-
+        "https://pokelink.no/products/pokemon-sv6-5-scarlet-violet-shrouded-fable-elite-trainer-box",
+        "https://www.pokemadness.no/elite-trainer-boks/1574-shrouded-fable-elite-trainer-boks-820650858536.html",
+        "https://www.poki-heaven.no/produkt/pokemon-tcg/elite-trainer-box/pokemon-shrouded-fable-elite-trainer-box-5",
+        "https://no.coolshop.com/produkt/pokemon-sv6-5-shrouded-fable-elite-trainer-box-pok87853/23MG4X/",
+        "https://www.cardstore.no/produkter/shrouded-fable-elite-trainer-box",
+        "https://www.outland.no/p-shrouded-fable-elite-trainer-box-scarlet-violet-shrouded-fable-pokemon-820650858536"
     ]
 }
 
@@ -183,6 +237,10 @@ const silverTempestEtb = {
         "https://www.collectible.no/home/pokemon-silver-tempest-elite-trainer-box/",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-swsh12-elite-trainer-box",
         "https://cardcenter.no/products/pokemon-silver-tempest-elite-trainer-box",
+        "https://pokelink.no/products/pokemon-silver-tempest-elite-trainer-box",
+        "https://www.outland.no/p-sword-shield-silver-tempest-elite-trainer-box-pokemon-tcg-820650851070",
+
+
         
 
     ]
@@ -198,7 +256,8 @@ const twilightMasqETB = {
         "https://www.extra-leker.no/pokemon-sv6-twilight-masquerade-elite-trainer-box-teal-mask-ogerpon",
         "https://lekekassen.no/pokemon-tcg-twilight-masquerade-elite-trainer-box-med-samlekort-pok85798",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv6-elite-trainer-box",
-        "https://cardcenter.no/products/pokemon-twilight-masquerade-elite-trainer-box"
+        "https://cardcenter.no/products/pokemon-twilight-masquerade-elite-trainer-box",
+        "https://www.cardstore.no/produkter/twilight-masquerade-elite-trainer-box"
     ]
 }
 
@@ -218,6 +277,9 @@ const temporalForcesEtb = {
         "https://lekekassen.no/pokemon-tcg-temporal-forces-elite-trainer-boks-med-byttekort-og-tilbehor-iron-leaves-pok85657",
         "https://cardcenter.no/products/pokemon-temporal-forces-elite-trainer-box-walking-wake",
         "https://cardcenter.no/products/pokemon-temporal-forces-elite-trainer-box-iron-leaves",
+        "https://pokelink.no/products/pokemon-sv5-temporal-force-elite-trainer-box-iron-leaves",
+        "https://no.coolshop.com/produkt/pokemon-sv5-temporal-forces-elite-trainer-box-iron-leaves-pok85657/23JF7C/",
+        "https://no.coolshop.com/produkt/pokemon-sv5-temporal-forces-elite-trainer-box-walking-wake-pok85657/23JF7D/",
     ]
 }
 
@@ -233,6 +295,11 @@ const stellarCrownEtb = {
         "https://lekekassen.no/pokemon-tcg-stellar-crown-elite-trainer-box",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv7-elite-trainer-box",
         "https://cardcenter.no/products/stellar-crown-elite-trainer-box",
+        "https://pokelink.no/products/pokemon-sv7-stellar-crown-elite-trainer-box",
+        "https://www.pokemadness.no/elite-trainer-boks/1614-stellar-crown-elite-trainer-boks-820650859229.html",
+        "https://no.coolshop.com/produkt/pokemon-sv7-elite-trainer-box-pok85922/23MG5E/",
+        "https://www.cardstore.no/produkter/stellar-crown-elite-trainer-box",
+
 
     ]
 }
@@ -246,6 +313,8 @@ const surgingsparksEtb = {
         "https://www.extra-leker.no/pokemon-sv8-surging-sparks-elite-trainer-box",
         "https://lekekassen.no/pokemon-tcg-surging-sparks-elite-trainer-box",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv8-elite-trainer-box",
+        "https://pokelink.no/products/pokemon-sv8-surging-sparks-elite-trainer-box",
+        "https://www.pokemadness.no/elite-trainer-boks/1920-surging-sparks-elite-trainer-box-820650859526.html",
 
 
     ]
@@ -263,11 +332,9 @@ const paradoxriftEtb = {
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv5-elite-trainer-box",
         "https://cardcenter.no/products/pokemon-paradox-rift-elite-trainer-box-iron-valiant",
         "https://cardcenter.no/products/pokemon-paradox-rift-elite-trainer-box-roaring-moon",
-
-
-
-
-
+        "https://pokelink.no/products/pokemon-sv4-paradox-rift-elite-trainer-box",
+        "https://www.outland.no/p-scarlet-violet-paradox-rift-elite-trainer-box-pokemon-tcg-scarlet-violet-paradox-rift-pokemon-16055",
+        "https://www.outland.no/p-scarlet-violet-paradox-rift-elite-trainer-box-pokemon-tcg-scarlet-violet-paradox-rift-pokemon-16054"
         ]
 }
 
@@ -279,6 +346,7 @@ const paldeaEvolvedEtb = {
         "https://www.collectible.no/home/sv-paldea-evolved-elite-trainer-box/",
         "https://lekekassen.no/pokemon-tcg-scarlet-and-violet-2-paldea-evolved-elite-trainer-box-pok85366",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv2-elite-trainer-box",
+        "https://www.outland.no/p-scarlet-violet-paldea-evolved-elite-trainer-box-pokemon-tcg-pokemon-820650853661"
 
 
     ]
@@ -317,6 +385,7 @@ const scarletAndVioletEtb = {
         "https://www.collectible.no/home/scarlet-violet-elite-trainer-box-koraidon/",
         "https://www.collectible.no/home/scarlet-violet-elite-trainer-box-miraidon/",
         "https://cardcenter.no/products/pokemon-scarlet-violet-elite-trainer-box",
+        "https://no.coolshop.com/produkt/pokemon-sv1-elite-trainer-box-pok85341/23E5SP/"
     ]
 }
 
@@ -334,7 +403,8 @@ const chillingReignEtb = {
         "https://pokestore.no/produkt/engelsk/etb/pokemon-chilling-reign-elite-trainer-box-ice-rider-calyrex",
         "https://www.extra-leker.no/pokemon-swsh-chilling-reign-elite-trainer-box-shadow-rider-calyrex",
         "https://www.extra-leker.no/pokemon-swsh-chilling-reign-elite-trainer-box-ice-rider-calyrex",
-
+        "https://www.outland.no/sword-shield-shadow-rider-calyrex-chilling-reign-elite-trainer-box",
+        "https://www.outland.no/sword-shield-ice-rider-calyrex-chilling-reign-elite-trainer-box"
         ]
 }
 
@@ -374,6 +444,8 @@ const shiningFatesEtb = {
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-shining-fates-elite-trainer-box",
         "https://www.collectible.no/home/pokemon-shining-fates-elite-trainer-box/",
+        "https://www.outland.no/shining-fates-elite-trainer-box",
+
 
     ]
 }
