@@ -1,5 +1,5 @@
 // Fetch data from data.json and render the content
-fetch('data.json')
+fetch('master.json')
   .then((response) => {
     if (!response.ok) {
       throw new Error('Failed to fetch data');

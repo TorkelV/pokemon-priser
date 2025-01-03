@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google-cloud/storage": "^7.14.0",
     "dom-parser": "^1.1.5",
     "jsdom": "^25.0.1"
   },

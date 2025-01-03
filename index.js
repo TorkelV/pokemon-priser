@@ -186,7 +186,7 @@ const handleProduct = async (product) => {
     const prices = await Promise.all(product.urls.map(url => getPrice(url)))
     return {
         name: product.name,
-        prices: prices.filter(e=>e).sort((a,b)=>a.price-b.price)
+        prices: prices.filter(e=>e?.price).sort((a,b)=>a.price-b.price)
     }
 }
 
