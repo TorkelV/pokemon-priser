@@ -305,7 +305,7 @@ const stellarCrownEtb = {
 }
 
 const surgingsparksEtb = {
-    name: "Surging sparks Etb",
+    name: "Surging sparks Elite Trainer Box",
     urls: [
         "https://www.collectible.no/home/pokemon-surging-sparks-elite-trainer-box/",
         "https://www.computersalg.no/i/21696718/pok%c3%a9mon-pok%c3%a9mon-sv8-surging-sparks-elite-trainer-box-pok85952",
@@ -321,7 +321,7 @@ const surgingsparksEtb = {
 }
 
 const paradoxriftEtb = {
-    name: "Paradox Rift Etb",
+    name: "Paradox Rift Elite Trainer Box",
     urls: [
         "https://www.computersalg.no/i/10979960/the-pok%c3%a9mon-tcg-scarlet-violet-4-paradox-rift-elite-trainer-box-iron-valiant",
         "https://pokestore.no/produkt/engelsk/etb/pokemon-paradox-rift-elite-trainer-box-iron-valiant-9",
