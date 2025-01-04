@@ -131,6 +131,12 @@ const kanonconPris = async (doc) => {
     return {price, inStock} 
 }
 
+const playlotPris = async (doc) => {
+    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
+    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") != "oos";
+    return {price, inStock} 
+}
+
 
 // TODO:
 // Nille
@@ -157,6 +163,7 @@ export const parsers = {
     "https://ringo.no": ringoPris,
     "https://gameninja.no": gameninjaPris,
     "https://kanoncon.no": kanonconPris,
+    "https://playlot.no": playlotPris,
 }
 
 export const headers= {

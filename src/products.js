@@ -32,6 +32,8 @@ const prismaticEvolutionEtb = {
         "https://www.collectible.no/home/pokemon-prismatic-evolutions-elite-trainer-box/",
         "https://cardcenter.no/products/pokemon-prismatic-evolutions-elite-trainer-box",
         "https://www.gameninja.no/produkt/prismatic-evolutions-elite-trainer-box/",
+        "https://www.playlot.no/produkt/pokemon/prismatic-evolution-2025/prismatic-evolution-elite-trainer-boks",
+        
 
     ]
 }
