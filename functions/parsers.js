@@ -85,7 +85,7 @@ const pokiheavenPris = async (doc) => {
 
 const pokelinkPris = async (doc) => {
     const price = parsePris(doc.querySelector('[property="og:price:amount"]').getAttribute("content"))
-    const inStock = doc.querySelector('script[type="application/ld+json"]')?.textContent?.includes("https://schema.org/OutOfStock")
+    const inStock = !doc.querySelector('script[type="application/ld+json"]')?.textContent?.includes("schema.org/OutOfStock")
     return { price, inStock }
 }
 
@@ -103,7 +103,7 @@ const cardstorePris = async (doc) => {
 
 const outlandPris = async (doc) => {
     const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('script[type="application/ld+json"]')?.textContent?.includes("https://schema.org/OutOfStock")
+    const inStock = !doc.querySelector('script[type="application/ld+json"]')?.textContent?.includes("schema.org/OutOfStock")
     return { price, inStock }
 }
 
@@ -137,6 +137,12 @@ const playlotPris = async (doc) => {
     return { price, inStock }
 }
 
+const kortkjellerenPris = async (doc) => {
+    const inStock = !doc.querySelector('script[type="application/ld+json"]')?.textContent?.includes("https://schema.org/OutOfStock")
+    const price = parsePris(doc.querySelector('[property="og:price:amount"]').getAttribute("content"));
+    return {price, inStock}
+}
+
 
 // TODO:
 // Nille
@@ -164,6 +170,7 @@ export const parsers = {
     "https://gameninja.no": gameninjaPris,
     "https://kanoncon.no": kanonconPris,
     "https://playlot.no": playlotPris,
+    "https://kortkjelleren.no": kortkjellerenPris,
 }
 
 export const headers = {
