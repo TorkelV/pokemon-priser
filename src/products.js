@@ -1,4 +1,5 @@
 const shroudedFableEtb = {
+    gen: 98,
     name: "Shrouded Fable Elite Trainer Box",
     urls: [
         "https://gamezone.no/samlekort/160903/pokemon-shrouded-fable-elite-trainer-box",
@@ -25,6 +26,7 @@ const shroudedFableEtb = {
 }
 
 const prismaticEvolutionEtb = {
+    gen: 101,
     name: "Prismatic Evolutions Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-prismatic-evolutions-elite-trainer-box-4",
@@ -33,12 +35,13 @@ const prismaticEvolutionEtb = {
         "https://cardcenter.no/products/pokemon-prismatic-evolutions-elite-trainer-box",
         "https://www.gameninja.no/produkt/prismatic-evolutions-elite-trainer-box/",
         "https://www.playlot.no/produkt/pokemon/prismatic-evolution-2025/prismatic-evolution-elite-trainer-boks",
-        
+
 
     ]
 }
 
 const silverTempestEtb = {
+    gen: 88,
     name: "Silver Tempest Elite Trainer Box",
     urls: [
         "https://proshop.no/Pokemon/Pokemon-TCG-Elite-Trainer-Box-Sword-Shield-Silver-Tempest/3119983",
@@ -58,6 +61,7 @@ const silverTempestEtb = {
 }
 
 const twilightMasqETB = {
+    gen: 97,
     name: "Twilight Masquerade Elite Trainer Box",
     urls: [
         "https://www.computersalg.no/i/20959537/pok%c3%a9mon-pokemon-poke-elite-trainer-box-scarlet-violet-twilight-masquerade",
@@ -77,6 +81,7 @@ const twilightMasqETB = {
 }
 
 const temporalForcesEtb = {
+    gen: 96,
     name: "Temporal Forces Elite Trainer Box",
     urls: [
         "https://gamezone.no/samlekort/158434/pokemon-temporal-forces-elite-trainer--hash-1-turkis-boks-flutter-mane",
@@ -107,6 +112,7 @@ const temporalForcesEtb = {
 }
 
 const stellarCrownEtb = {
+    gen: 99,
     name: "Stellar Crown Elite Trainer Box",
     urls: [
         "https://www.proshop.no/Pokemon/Pokemon-TCG-Elite-Trainer-Box-Scarlet-Violet-Stellar-Crown/3298607",
@@ -133,6 +139,7 @@ const stellarCrownEtb = {
 }
 
 const surgingsparksEtb = {
+    gen: 100,
     name: "Surging sparks Elite Trainer Box",
     urls: [
         "https://www.collectible.no/home/pokemon-surging-sparks-elite-trainer-box/",
@@ -150,6 +157,7 @@ const surgingsparksEtb = {
 }
 
 const paradoxriftEtb = {
+    gen: 94,
     name: "Paradox Rift Elite Trainer Box",
     urls: [
         "https://www.computersalg.no/i/10979960/the-pok%c3%a9mon-tcg-scarlet-violet-4-paradox-rift-elite-trainer-box-iron-valiant",
@@ -170,6 +178,8 @@ const paradoxriftEtb = {
 }
 
 const paldeaEvolvedEtb = {
+    gen: 91,
+
     name: "Paldea Evolved Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-paldea-evolved-elite-trainer-box-7",
@@ -186,6 +196,7 @@ const paldeaEvolvedEtb = {
 }
 
 const obsidianFlamesEtb = {
+    gen: 92,
     name: "Obsidian Flames Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-obsidian-flames-elite-trainer-box-4",
@@ -200,6 +211,7 @@ const obsidianFlamesEtb = {
 }
 
 const pokemonGoEtb = {
+    gen: 86,
     name: "Pokemon Go Elite Trainer Box",
     urls: [
         "https://www.computersalg.no/i/8532722/pok%c3%a9mon-poke-elite-trainer-box-go-swsh10-5",
@@ -212,6 +224,7 @@ const pokemonGoEtb = {
 }
 
 const scarletAndVioletEtb = {
+    gen: 90,
     name: "Scarlet and Violet Elite Trainer Box",
     urls: [
         "https://www.computersalg.no/i/8532722/pok%c3%a9mon-poke-elite-trainer-box-go-swsh10-5",
@@ -225,6 +238,7 @@ const scarletAndVioletEtb = {
 }
 
 const brilliantStarsEtb = {
+    gen: 84,
     name: "Brilliant Stars Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-brilliant-stars-elite-trainer-box",
@@ -233,6 +247,7 @@ const brilliantStarsEtb = {
 }
 
 const chillingReignEtb = {
+    gen: 80,
     name: "Chilling Reign Elite Trainer Box",
     urls: [ 
         "https://pokestore.no/produkt/engelsk/etb/pokemon-chilling-reign-elite-trainer-box-ice-rider-calyrex",
@@ -244,6 +259,7 @@ const chillingReignEtb = {
 }
 
 const paldeanFatesEtb = {
+    gen:95,
     name: "Paldean Fates Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-paldean-fates-elite-trainer-box-9",
@@ -259,6 +275,7 @@ const paldeanFatesEtb = {
 }
 
 const crownZenithEtb = {
+    gen: 89,
     name: "Crown Zenith Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-crown-zenith-elite-trainer-box-4"
@@ -266,6 +283,7 @@ const crownZenithEtb = {
 }
 
 const lostOriginEtb = {
+    gen: 87,
     name: "Lost Origin Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-lost-origin-elite-trainer-box-10",
@@ -277,6 +295,7 @@ const lostOriginEtb = {
 }
 
 const shiningFatesEtb = {
+    gen: 78,
     name: "Shining Fates Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-shining-fates-elite-trainer-box",
@@ -288,6 +307,7 @@ const shiningFatesEtb = {
 }
 
 const vividVoltageEtb = {
+    gen: 77,
     name: "Vivid Voltage Elite Trainer Box",
     urls: [
         "https://www.collectible.no/home/pokemon-vivid-voltage-elite-trainer-box/",
@@ -296,6 +316,7 @@ const vividVoltageEtb = {
 }
 
 const astralRadianceEtb = {
+    gen: 85,
     name: "Astral Radiance Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-astral-radiance-elite-trainer-box-1",
@@ -304,6 +325,7 @@ const astralRadianceEtb = {
 }
 
 const darknessAblazeEtb = {
+    gen: 76,
     name: "Darkness Ablaze Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-darkness-ablaze-elite-trainer-box-4",
@@ -313,6 +335,7 @@ const darknessAblazeEtb = {
 }
 
 const hiddenFatesEtb = {
+    gen: 72,
     name: "Hidden Fates Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-hidden-fates-elite-trainer-box"
