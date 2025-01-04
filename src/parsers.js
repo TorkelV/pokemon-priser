@@ -109,20 +109,31 @@ const outlandPris = async (doc) => {
 
 const labogePris = async (doc) => {
     const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "instock";
+    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") == "instock";
     return {price, inStock} 
 }
 
 const ringoPris = async (doc) => {
     const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "instock";
+    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") == "instock";
+    return {price, inStock} 
+}
+
+const gameninjaPris = async (doc) => {
+    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
+    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") != "out of stock";
+    return {price, inStock} 
+}
+
+const kanonconPris = async (doc) => {
+    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
+    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") == "instock";
     return {price, inStock} 
 }
 
 
 // TODO:
 // Nille
-// Gameninja
 // Kanoncon
 
 export const parsers = {
@@ -144,7 +155,8 @@ export const parsers = {
     "https://outland.no": outlandPris,
     "https://laboge.no": labogePris,
     "https://ringo.no": ringoPris,
-
+    "https://gameninja.no": gameninjaPris,
+    "https://kanoncon.no": kanonconPris,
 }
 
 export const headers= {
