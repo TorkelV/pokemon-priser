@@ -17,7 +17,8 @@ const shroudedFableEtb = {
         "https://no.coolshop.com/produkt/pokemon-sv6-5-shrouded-fable-elite-trainer-box-pok87853/23MG4X/",
         "https://www.cardstore.no/produkter/shrouded-fable-elite-trainer-box",
         "https://www.outland.no/p-shrouded-fable-elite-trainer-box-scarlet-violet-shrouded-fable-pokemon-820650858536",
-        "https://www.laboge.no/produkt/sealed/live-shrouded-fable-etb-1"
+        "https://www.laboge.no/produkt/sealed/live-shrouded-fable-etb-1",
+        "https://www.ringo.no/produkt/pokemon-scarlet-violet-shrouded-fable-elite-trainer-box/"
     ]
 }
 
@@ -60,7 +61,9 @@ const twilightMasqETB = {
         "https://lekekassen.no/pokemon-tcg-twilight-masquerade-elite-trainer-box-med-samlekort-pok85798",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv6-elite-trainer-box",
         "https://cardcenter.no/products/pokemon-twilight-masquerade-elite-trainer-box",
-        "https://www.cardstore.no/produkter/twilight-masquerade-elite-trainer-box"
+        "https://www.cardstore.no/produkter/twilight-masquerade-elite-trainer-box",
+        "https://www.ringo.no/produkt/pokemon-elite-trainer-box-sv6-twilight-masquerade/",
+
     ]
 }
 
@@ -83,6 +86,7 @@ const temporalForcesEtb = {
         "https://pokelink.no/products/pokemon-sv5-temporal-force-elite-trainer-box-iron-leaves",
         "https://no.coolshop.com/produkt/pokemon-sv5-temporal-forces-elite-trainer-box-iron-leaves-pok85657/23JF7C/",
         "https://no.coolshop.com/produkt/pokemon-sv5-temporal-forces-elite-trainer-box-walking-wake-pok85657/23JF7D/",
+        "https://www.ringo.no/produkt/pokemon-elite-trainer-box-sv5-temporal-forces/"
     ]
 }
 
@@ -102,6 +106,8 @@ const stellarCrownEtb = {
         "https://www.pokemadness.no/elite-trainer-boks/1614-stellar-crown-elite-trainer-boks-820650859229.html",
         "https://no.coolshop.com/produkt/pokemon-sv7-elite-trainer-box-pok85922/23MG5E/",
         "https://www.cardstore.no/produkter/stellar-crown-elite-trainer-box",
+        "https://www.ringo.no/produkt/pokemon-elite-trainer-box-scarlet-violet-stellar-crown/",
+
 
 
     ]
@@ -118,6 +124,7 @@ const surgingsparksEtb = {
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv8-elite-trainer-box",
         "https://pokelink.no/products/pokemon-sv8-surging-sparks-elite-trainer-box",
         "https://www.pokemadness.no/elite-trainer-boks/1920-surging-sparks-elite-trainer-box-820650859526.html",
+        "https://www.ringo.no/produkt/pokemon-elite-trainer-box-scarlet-violet-surging-sparks/",
 
 
     ]
@@ -137,7 +144,8 @@ const paradoxriftEtb = {
         "https://cardcenter.no/products/pokemon-paradox-rift-elite-trainer-box-roaring-moon",
         "https://pokelink.no/products/pokemon-sv4-paradox-rift-elite-trainer-box",
         "https://www.outland.no/p-scarlet-violet-paradox-rift-elite-trainer-box-pokemon-tcg-scarlet-violet-paradox-rift-pokemon-16055",
-        "https://www.outland.no/p-scarlet-violet-paradox-rift-elite-trainer-box-pokemon-tcg-scarlet-violet-paradox-rift-pokemon-16054"
+        "https://www.outland.no/p-scarlet-violet-paradox-rift-elite-trainer-box-pokemon-tcg-scarlet-violet-paradox-rift-pokemon-16054",
+        "https://www.ringo.no/produkt/pokemon-elite-trainer-box-sv4-paradox-rift/"
         ]
 }
 
@@ -149,7 +157,9 @@ const paldeaEvolvedEtb = {
         "https://www.collectible.no/home/sv-paldea-evolved-elite-trainer-box/",
         "https://lekekassen.no/pokemon-tcg-scarlet-and-violet-2-paldea-evolved-elite-trainer-box-pok85366",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv2-elite-trainer-box",
-        "https://www.outland.no/p-scarlet-violet-paldea-evolved-elite-trainer-box-pokemon-tcg-pokemon-820650853661"
+        "https://www.outland.no/p-scarlet-violet-paldea-evolved-elite-trainer-box-pokemon-tcg-pokemon-820650853661",
+        "https://www.ringo.no/produkt/pokemon-elite-trainer-box-scarlet-violet-2/",
+
 
 
     ]
@@ -218,6 +228,7 @@ const paldeanFatesEtb = {
         "https://www.collectible.no/home/pokemon-paldean-fates-elite-trainer-box/",
         "https://lekekassen.no/pokemon-tcg-elite-trainer-box-paldean-fates-pok85618",
         "https://cardcenter.no/products/pokemon-paldean-fates-elite-trainer-box",
+        "https://www.ringo.no/produkt/pokemon-elite-trainer-box-sv4-5-paldean-fates/",
 
 
 
