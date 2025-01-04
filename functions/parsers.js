@@ -145,8 +145,8 @@ const kortkjellerenPris = async (doc) => {
 
 const midgardgamesPris = async (doc) => {
     const inStock = doc.querySelector('[itemprop="availability"]').getAttribute("href") == "http://schema.org/InStock";
-    const price = parsePris(doc.querySelector('[property="og:price:amount"]').getAttribute("content"));
-    return {price, inStock}
+    const price = parsePris(doc.querySelector('[property="og:price:amount"]').getAttribute("content")) * 1.25;
+    return { price, inStock }
 }
 
 const epicardsPris = async (doc) => {
