@@ -1,5 +1,5 @@
-import { products } from '../src/products.js';
-import { scrapeAllProducts } from '../src/scraper.js';
+import { products } from '../functions/products.js';
+import { scrapeAllProducts } from '../functions/scraper.js';
 import fs from 'node:fs'
 import util from 'util';
 util.inspect.defaultOptions.depth = 10;
