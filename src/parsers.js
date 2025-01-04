@@ -85,7 +85,7 @@ const pokiheavenPris = async (doc) => {
 
 const pokelinkPris = async (doc) => {
     const price = parsePris(doc.querySelector('[property="og:price:amount"]').getAttribute("content"))
-    const inStock = doc.querySelector(".payment-button")?.getAttribute("disabled") == null
+    const inStock = doc.querySelector('script[type="application/ld+json"]')?.textContent?.includes("https://schema.org/OutOfStock")
     return {price, inStock}
 }
 
