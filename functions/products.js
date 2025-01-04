@@ -55,7 +55,7 @@ const silverTempestEtb = {
         "https://www.gameninja.no/produkt/pokemon-silver-tempest-swsh12-elite-trainer-box/",
         "https://www.kanoncon.no/produkt/pokemon-sword-shield-silver-tempest-elite-trainer-box-copy/"
 
-        
+
 
     ]
 }
@@ -174,7 +174,7 @@ const paradoxriftEtb = {
         "https://www.outland.no/p-scarlet-violet-paradox-rift-elite-trainer-box-pokemon-tcg-scarlet-violet-paradox-rift-pokemon-16054",
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-sv4-paradox-rift/",
         "https://www.gameninja.no/produkt/pokemon-paradox-rift-sv4-elite-trainer-box/"
-        ]
+    ]
 }
 
 const paldeaEvolvedEtb = {
@@ -249,17 +249,17 @@ const brilliantStarsEtb = {
 const chillingReignEtb = {
     gen: 80,
     name: "Chilling Reign Elite Trainer Box",
-    urls: [ 
+    urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-chilling-reign-elite-trainer-box-ice-rider-calyrex",
         "https://www.extra-leker.no/pokemon-swsh-chilling-reign-elite-trainer-box-shadow-rider-calyrex",
         "https://www.extra-leker.no/pokemon-swsh-chilling-reign-elite-trainer-box-ice-rider-calyrex",
         "https://www.outland.no/sword-shield-shadow-rider-calyrex-chilling-reign-elite-trainer-box",
         "https://www.outland.no/sword-shield-ice-rider-calyrex-chilling-reign-elite-trainer-box"
-        ]
+    ]
 }
 
 const paldeanFatesEtb = {
-    gen:95,
+    gen: 95,
     name: "Paldean Fates Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-paldean-fates-elite-trainer-box-9",

@@ -2,43 +2,43 @@ import jsdom from 'jsdom';
 import { headers, parsers } from './parsers.js';
 const { JSDOM } = jsdom;
 
-const getDoc=(data) => {
+const getDoc = (data) => {
     const virtualConsole = new jsdom.VirtualConsole();
     virtualConsole.on("error", () => {
-    // No-op to skip console errors.
+        // No-op to skip console errors.
     });
     return new JSDOM(data, { virtualConsole }).window.document;
 }
 
-const getDom = async (url,headers) => {
+const getDom = async (url, headers) => {
     return fetch(url, {
-        method  : 'GET', 
+        method: 'GET',
         headers: headers,
     })
-    .then(response => response.text())
-    .then(data => getDoc(data))
+        .then(response => response.text())
+        .then(data => getDoc(data))
 }
 
 const getParser = (url) => {
     const cleanUrl = url.replace("https://www.", "https://")
-    const key =  Object.keys(parsers).find(u => cleanUrl.startsWith(u))
-    return parsers[key] ?? (() => {});
+    const key = Object.keys(parsers).find(u => cleanUrl.startsWith(u))
+    return parsers[key] ?? (() => { });
 };
 
 const getHeaders = (url) => {
     const cleanUrl = url.replace("https://www.", "https://")
-    const key =  Object.keys(headers).find(u => cleanUrl.startsWith(u))
+    const key = Object.keys(headers).find(u => cleanUrl.startsWith(u))
     return headers[key] ?? {};
 };
 
 const getPrice = async (url) => {
     const parser = getParser(url);
     const headers = getHeaders(url)
-    const price = await getDom(url,headers).then(doc=>parser(doc)).catch(e=>{
+    const price = await getDom(url, headers).then(doc => parser(doc)).catch(e => {
         console.error(`Failed to get price for: ${url}`, e)
         return {}
     });
-    return {url, ...price};
+    return { url, ...price };
 };
 
 const scrapeProduct = async (product) => {
@@ -46,11 +46,11 @@ const scrapeProduct = async (product) => {
     return {
         name: product.name,
         order: product.gen,
-        prices: prices.filter(e=>e?.price).sort((a,b)=>a.price-b.price)
+        prices: prices.filter(e => e?.price).sort((a, b) => a.price - b.price)
     }
 }
 
 export const scrapeAllProducts = async (products) => {
     const productWithPrices = await Promise.all(products.map(scrapeProduct))
-    return productWithPrices.sort((a,b)=>b.order-a.order)
+    return productWithPrices.sort((a, b) => b.order - a.order)
 }

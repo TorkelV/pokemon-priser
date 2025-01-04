@@ -17,3 +17,5 @@ python3 -m http.server 8000
 ```
 
 Hele greien kjører også i gcloud med en scheduler som oppdaterer data hver 8. time: https://storage.googleapis.com/pokemon-priser-data/index.html
+
+Deploy function fra root med: `gcloud functions deploy getPrices --gen2 --region=europe-north1 --runtime=nodejs20 --source=functions --entry-point=getPrices --trigger-http`

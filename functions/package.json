@@ -1,14 +1,6 @@
 {
-  "name": "priser",
-  "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "index.js",
   "type": "module",
-  "scripts": {
-    "scrape": "node local/index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "@google-cloud/functions-framework": "^3.0.0",
     "@google-cloud/storage": "^7.14.0",
