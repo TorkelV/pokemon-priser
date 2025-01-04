@@ -5,7 +5,7 @@ For å kjøre scraperen:
 
 ```js
 npm install
-node index.js
+npm run scrape
 ```
 
 Prisene blir lagt i `public/data.json`. 
@@ -15,3 +15,5 @@ For å se på de via web-appen, legg alt i /public på en webserver, for eksempe
 cd public
 python3 -m http.server 8000  
 ```
+
+Hele greien kjører også i gcloud med en scheduler som oppdaterer data hver 8. time: https://storage.googleapis.com/pokemon-priser-data/index.html
