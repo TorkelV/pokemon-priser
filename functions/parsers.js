@@ -155,6 +155,15 @@ const epicardsPris = async (doc) => {
     return {price, inStock}
 }
 
+const gamingsjappaPris = async (doc) => {
+    const jsonld = [...doc.querySelectorAll('script[type="application/ld+json"]')].find(e=>e.textContent?.includes('"availability"'))?.textContent
+    const json = JSON.parse(jsonld);
+    const price = json.offers.price;
+    const inStock = json.offers.availability.includes("schema.org/InStock")
+    return {price,inStock};
+}
+
+
 
 export const parsers = {
     "https://pokestore.no": pokestorePris,
@@ -180,7 +189,8 @@ export const parsers = {
     "https://playlot.no": playlotPris,
     "https://kortkjelleren.no": kortkjellerenPris,
     "https://midgardgames.no": midgardgamesPris,
-    "https://epicards.no": epicardsPris
+    "https://epicards.no": epicardsPris,
+    "https://gamingsjappa.no": gamingsjappaPris
 }
 
 export const headers = {

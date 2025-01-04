@@ -69,11 +69,18 @@
 <body>
 
   <div id="container">
-    <h1>Pokemon Elite Trainer Boxes</h1>
+    
+    <h1>Pokemonkort priser i norske nettbutikker</h1>
+    <label>Skjul utsolgte varer: <input type="checkbox" title="Skjul utsolgte" id="sold_toggle"></label>
+  <br><br>
     <div id="product-list"></div>
   </div>
 
   <script>
+    document.getElementById("sold_toggle").addEventListener('change', function() {
+      if(loadedData != null) renderProducts(loadedData)
+    });
+    var loadedData = null
     function getRoundedOsloTimestamp() {
       // Get the current date and time in Oslo's timezone
       const osloTime = new Date().toLocaleString("en-US", {
@@ -120,6 +127,7 @@
         return response.json();
       })
       .then((data) => {
+        loadedData = data
         renderProducts(data);
       })
       .catch((error) => {
@@ -128,6 +136,7 @@
 
     function renderProducts(products) {
       const productList = document.getElementById('product-list');
+      const hideSoldout = document.getElementById("sold_toggle").checked
       productList.innerHTML = ''; // Clear existing content
 
       products.forEach((product) => {
@@ -151,7 +160,9 @@
         <td>${price.price} NOK</td>
         <td>${price.inStock ? 'Yes' : 'No'}</td>
       `;
-          table.appendChild(row);
+          if(price.inStock || !hideSoldout){
+            table.appendChild(row);
+          }
         });
 
         productDiv.appendChild(name);

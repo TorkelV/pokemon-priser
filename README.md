@@ -8,7 +8,7 @@ npm install
 npm run scrape
 ```
 
-Prisene blir lagt i `public/data.json`. 
+Prisene blir lagt i `public/master.json`. 
 
 For å se på de via web-appen, legg alt i /public på en webserver, for eksempel med:
 ```

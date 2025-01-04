@@ -9,7 +9,7 @@ util.inspect.defaultOptions.depth = 10;
   const mapped = await scrapeAllProducts(products);
   console.dir(mapped)
 
-  fs.writeFile('public/data.json', JSON.stringify(mapped), err => {
+  fs.writeFile('public/master.json', JSON.stringify(mapped), err => {
     if (err) {
       console.error(err);
     } else {

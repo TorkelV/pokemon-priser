@@ -77,7 +77,8 @@ const twilightMasqETB = {
         "https://www.cardstore.no/produkter/twilight-masquerade-elite-trainer-box",
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-sv6-twilight-masquerade/",
         "https://www.gameninja.no/produkt/poke-sv6-elite-trainer-box-twilight-masquerade/",
-        "https://kortkjelleren.no/products/pokemon-twilight-masquerade-elite-trainer"
+        "https://kortkjelleren.no/products/pokemon-twilight-masquerade-elite-trainer",
+        "https://gamingsjappa.no/products/pokemon-tcg-kort-scarlet-violet-6-twilight-masquerade-elite-trainer-box"
 
 
     ]
@@ -108,7 +109,7 @@ const temporalForcesEtb = {
         "https://www.gameninja.no/produkt/poke-sv5-elite-trainer-box-flutter-mane/",
         "https://www.kanoncon.no/produkt/temporal-forces-elite-trainer-box-iron-leaves/",
         "https://www.kanoncon.no/produkt/temporal-forces-elite-trainer-box-walking-wake/",
-
+        "https://gamingsjappa.no/products/pokemon-tcg-kort-scarlet-violet-5-temporal-forces-elite-trainer-box"
 
 
     ]
@@ -178,7 +179,8 @@ const paradoxriftEtb = {
         "https://www.outland.no/p-scarlet-violet-paradox-rift-elite-trainer-box-pokemon-tcg-scarlet-violet-paradox-rift-pokemon-16054",
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-sv4-paradox-rift/",
         "https://www.gameninja.no/produkt/pokemon-paradox-rift-sv4-elite-trainer-box/",
-        "https://kortkjelleren.no/products/paradox-rift-elite-trainer-box-roaring-moon"
+        "https://kortkjelleren.no/products/paradox-rift-elite-trainer-box-roaring-moon",
+        "https://gamingsjappa.no/products/pokemon-tcg-kort-scarlet-violet-4-paradox-rift-elite-trainer-box"
     ]
 }
 
@@ -195,6 +197,7 @@ const paldeaEvolvedEtb = {
         "https://www.outland.no/p-scarlet-violet-paldea-evolved-elite-trainer-box-pokemon-tcg-pokemon-820650853661",
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-scarlet-violet-2/",
         "https://midgardgames.no/products/pokemon-tcg-scarlet-violet-2-paldea-evolved-elite-trainer-box",
+        "https://gamingsjappa.no/products/pokemon-tcg-kort-scarlet-violet-2-paldea-evolved-elite-trainer-box"
 
 
 
@@ -278,7 +281,8 @@ const paldeanFatesEtb = {
         "https://cardcenter.no/products/pokemon-paldean-fates-elite-trainer-box",
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-sv4-5-paldean-fates/",
         "https://www.gameninja.no/produkt/poke-elite-trainer-box-sv4-5/",
-        "https://kortkjelleren.no/products/paldean-fates-elite-trainer-box"
+        "https://kortkjelleren.no/products/paldean-fates-elite-trainer-box",
+        "https://gamingsjappa.no/products/pokemon-tcg-kort-scarlet-violet-4-5-paldean-fates-elite-trainer-box"
 
 
 
@@ -341,6 +345,7 @@ const darknessAblazeEtb = {
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-darkness-ablaze-elite-trainer-box-4",
         "https://www.collectible.no/home/pokemon-darkness-ablaze-elite-trainer-box/",
+        "https://gamingsjappa.no/products/pokemon-tcg-kort-sword-shield-3-darkness-ablaze-elite-trainer-box"
 
     ]
 }
