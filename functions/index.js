@@ -24,7 +24,7 @@ functions.http('getPrices', async (req, res) => {
     const json = JSON.stringify(mapped);
     const timestamp = Date.now();
     const masterSaveSuccess = await saveJsonToBucket(bucketName, json, 'master');
-    const uniqueFilename = `data-${timestamp}`;
+    const uniqueFilename = `history/data-${timestamp}`;
     const uniqueSaveSuccess = await saveJsonToBucket(bucketName, json, uniqueFilename);
     res.sendStatus(200);
     return true
