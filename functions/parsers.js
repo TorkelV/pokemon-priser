@@ -96,14 +96,16 @@ const coolshopPris = async (doc) => {
 }
 
 const cardstorePris = async (doc) => {
-    const price = parsePris([...doc.querySelectorAll("p")].find(e => /^\d.+kr$/.test(e.textContent)).textContent)
-    const inStock = !!price
+    const jsonld = [...doc.querySelectorAll('script[type="application/ld+json"]')].find(e => e.textContent?.includes('"availability"'))?.textContent
+    const json = JSON.parse(jsonld);
+    const price = json.offers.price;
+    const inStock = [...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => e.textContent).join(",").includes("InStock")
     return { price, inStock }
 }
 
 const outlandPris = async (doc) => {
     const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = !![...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => e.textContent).join(",").includes("OutOfStock")
+    const inStock = [...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => e.textContent).join(",").includes("InStock")
     return { price, inStock }
 }
 
