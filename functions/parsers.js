@@ -1,4 +1,23 @@
 
+const getApplicationLdJson = (doc) => {
+    return [...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => JSON.parse(e.textContent)).find(e => e["@type"] == "Product")
+}
+
+const fromApplicationLdJson = (doc) => {
+    const json = getApplicationLdJson(doc)
+    const offer = Array.isArray(json.offers) ? json.offers[0] : json.offers
+    const price = +offer.price;
+    const inStock = offer.availability?.includes("InStock") === true
+    return { price, inStock }
+}
+
+const fromProductPriceAmountAndProductAvailabilityProps = doc => {
+    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
+    const stockProp = doc.querySelector('[property="product:availability"]')?.getAttribute("content")?.toLowerCase()
+    const inStock = ["instock", "in stock"].includes(stockProp);
+    return { price, inStock }
+}
+
 const parsePris = (pris) => {
     const p = pris.includes(".") && pris.includes(",") ? pris.replace(".", "") : pris
     return +p?.replace(",", ".").replace(/[^0-9.]/g, "").replace(/\.$/, "")
@@ -10,12 +29,6 @@ const pokestorePris = async (doc) => {
     return { price, inStock };
 }
 
-const gamezonePris = async (doc) => {
-    const price = parsePris(doc.querySelector(".current-price-container > .PriceLabel")?.getAttribute("data-priceincvat"));
-    const inStock = doc.querySelector(".utsolgt-partivare-knapp") === null
-    return { price, inStock: inStock }
-}
-
 const computersalgPris = async (doc) => {
     const price = +doc.querySelector('[itemprop="price"]').getAttribute("content")
     const inStock = doc?.querySelector('[itemprop="availability"]')?.getAttribute("content") === "https://schema.org/InStock"
@@ -25,18 +38,6 @@ const computersalgPris = async (doc) => {
 const pokuPris = async (doc) => {
     const price = parsePris(doc.querySelector(".summary-inner .woocommerce-Price-amount.amount bdi").textContent)
     const inStock = true;
-    return { price, inStock }
-}
-
-const proshopPris = async (doc) => {
-    const price = parsePris(doc.querySelector(".site-currency-attention").textContent)
-    const inStock = true;
-    return { price, inStock }
-}
-
-const collectiblePris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") == "instock";
     return { price, inStock }
 }
 
@@ -77,92 +78,10 @@ const pokemadnessPris = async (doc) => {
     return { price, inStock }
 }
 
-const pokiheavenPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "instock";
-    return { price, inStock }
-}
-
-const pokelinkPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="og:price:amount"]').getAttribute("content"))
-    const inStock = ![...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => e.textContent).join(",").includes("OutOfStock")
-    return { price, inStock }
-}
-
-const coolshopPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "in stock";
-    return { price, inStock }
-}
-
-const cardstorePris = async (doc) => {
-    const jsonld = [...doc.querySelectorAll('script[type="application/ld+json"]')].find(e => e.textContent?.includes('"availability"'))?.textContent
-    const json = JSON.parse(jsonld);
-    const price = json.offers.price;
-    const inStock = [...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => e.textContent).join(",").includes("InStock")
-    return { price, inStock }
-}
-
-const outlandPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = [...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => e.textContent).join(",").includes("InStock")
-    return { price, inStock }
-}
-
-const labogePris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") == "instock";
-    return { price, inStock }
-}
-
-const ringoPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") == "instock";
-    return { price, inStock }
-}
-
-const gameninjaPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") != "out of stock";
-    return { price, inStock }
-}
-
-const kanonconPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") == "instock";
-    return { price, inStock }
-}
-
-const playlotPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") != "oos";
-    return { price, inStock }
-}
-
-const kortkjellerenPris = async (doc) => {
-    const inStock = ![...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => e.textContent).join(",").includes("OutOfStock")
-    const price = parsePris(doc.querySelector('[property="og:price:amount"]').getAttribute("content"));
-    return { price, inStock }
-}
-
 const midgardgamesPris = async (doc) => {
     const inStock = doc.querySelector('[itemprop="availability"]').getAttribute("href") == "http://schema.org/InStock";
     const price = parsePris(doc.querySelector('[property="og:price:amount"]').getAttribute("content")) * 1.25;
     return { price, inStock }
-}
-
-const epicardsPris = async (doc) => {
-    const inStock = [...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => e.textContent).join(",").includes("InStock")
-    const price = parsePris(doc.querySelector('[property="og:price:amount"]').getAttribute("content"));
-    return { price, inStock }
-}
-
-const gamingsjappaPris = async (doc) => {
-    const jsonld = [...doc.querySelectorAll('script[type="application/ld+json"]')].find(e => e.textContent?.includes('"availability"'))?.textContent
-    const json = JSON.parse(jsonld);
-    const price = json.offers.price;
-    const inStock = json.offers.availability.includes("schema.org/InStock")
-    return { price, inStock };
 }
 
 const arkPris = async (doc) => {
@@ -171,47 +90,96 @@ const arkPris = async (doc) => {
     return { price, inStock }
 }
 
-const pokelageretPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "instock";
-    return { price, inStock };
+const gamezonePris = async (doc) => {
+    return fromApplicationLdJson(doc)
+}
+
+const proshopPris = async (doc) => {
+    return fromApplicationLdJson(doc);
+}
+
+const pokelinkPris = async (doc) => {
+    return fromApplicationLdJson(doc)
+}
+
+const cardstorePris = async (doc) => {
+    return fromApplicationLdJson(doc)
+}
+
+const outlandPris = async (doc) => {
+    return fromApplicationLdJson(doc);
+}
+
+const kortkjellerenPris = async (doc) => {
+    return fromApplicationLdJson(doc)
+}
+
+const epicardsPris = async (doc) => {
+    return fromApplicationLdJson(doc);
+}
+
+const gamingsjappaPris = async (doc) => {
+    return fromApplicationLdJson(doc);
 }
 
 const pokeshopPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]')?.getAttribute("content") != "oos";
-    return { price, inStock }
+    return fromApplicationLdJson(doc)
 }
 
 const baldbreakersPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = [...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => e.textContent).join(",").includes("InStock")
-    return { price, inStock }
+    return fromApplicationLdJson(doc);
+}
+
+const coolshopPris = async (doc) => {
+    return fromProductPriceAmountAndProductAvailabilityProps(doc)
+}
+
+const collectiblePris = async (doc) => {
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
+}
+
+const pokiheavenPris = async (doc) => {
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
+}
+
+const labogePris = async (doc) => {
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
+}
+
+const ringoPris = async (doc) => {
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
+}
+
+const gameninjaPris = async (doc) => {
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
+}
+
+const kanonconPris = async (doc) => {
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
+}
+
+const playlotPris = async (doc) => {
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
+}
+
+const pokelageretPris = async (doc) => {
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
 }
 
 const spillgledePris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "instock";
-    return { price, inStock };
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
 }
 
 const retroworldPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "instock";
-    return { price, inStock };
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
 }
 
 const boosterpakkerPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "instock";
-    return { price, inStock };
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
 }
 
-
 const lekiaPris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "instock";
-    return { price, inStock };
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
 }
 
 export const parsers = {
