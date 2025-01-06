@@ -23,7 +23,7 @@ jobs:
         run: 'gcloud info'
       - name: 'Deploy to gen2 cloud function'
         run:  |
-          gcloud functions deploy getPrices --gen2 --region=europe-north1 --runtime=nodejs20 --source=functions --entry-point=getPrices --trigger-http
+          gcloud functions deploy getPrices --gen2 --region=europe-north1 --runtime=nodejs20 --source=functions --entry-point=getPrices --trigger-http --timeout=720
       - name: 'Upload html'
         run:  |
           gcloud storage cp public/index.html gs://pokemon-priser-data

@@ -501,6 +501,82 @@ const hiddenFatesEtb = {
     ]
 }
 
+const paldeanFatesSpecialTin = {
+    expansion: expansions.SCARLET_VIOLET_PALDEAN_FATES,
+    name: "Paldean Fates Special Tin",
+    urls: [
+        "https://pokestore.no/produkt/engelsk/tins/pokemon-paldean-fates-special-tin-shiny-charizard-ex",
+        "https://pokestore.no/produkt/engelsk/tins/pokemon-paldean-fates-special-tin-shiny-iron-treads-ex",
+        "https://pokestore.no/produkt/engelsk/tins/pokemon-paldean-fates-special-tin-shiny-great-tusk-ex",
+        "https://www.extra-leker.no/pokemon-sv4-5-paldean-fates-special-tinnboks-great-tusk",
+        "https://www.extra-leker.no/pokemon-sv4-5-paldean-fates-special-tinnboks-iron-treads",
+        "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-spec-tin-sv4-5",
+        "https://www.ringo.no/produkt/pokemon-spec-tin-sv4-5-paldean-fates/",
+        "https://gamingsjappa.no/products/pokemon-tcg-kort-paldean-fates-special-tinnboks-var-2024"
+    ]
+
+
+}
+
+
+const paldeanFatesTin = {
+    expansion: expansions.SCARLET_VIOLET_PALDEAN_FATES,
+    name: "Paldean Fates Tin",
+    urls: [
+        "https://pokestore.no/produkt/engelsk/sorter-etter-sett/paldean-fates/pokemon-paldean-fates-tin-shiny-iron-treads-ex",
+        "https://pokestore.no/produkt/engelsk/sorter-etter-sett/paldean-fates/pokemon-paldean-fates-tin-shiny-charizard-ex",
+        "https://pokestore.no/produkt/engelsk/sorter-etter-sett/paldean-fates/pokemon-paldean-fates-tin-shiny-great-tusk-ex",
+        "https://gamezone.no/spesialbokser/157935/pokemon-paldean-fates-tin-iron-tread-ex-shiny-iron-tread-ex",
+        "https://gamezone.no/spesialbokser/157928/pokemon-paldean-fates-tin-great-tusk-ex-shiny-great-tusk-ex",
+        "https://www.extra-leker.no/pokemon-sv4-5-paldean-fates-tinnboks-iron-treads",
+        "https://www.extra-leker.no/pokemon-sv4-5-paldean-fates-tinnboks-great-tusk",
+        "https://lekekassen.no/pokemon-tcg-scarlet-and-violet-4-5-paldean-fates-tin-med-byttekort-iron-treads-pok85620",
+        "https://lekekassen.no/pokemon-tcg-scarlet-and-violet-4-5-paldean-fates-tin-med-byttekort-great-tusk-pok85620",
+        "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-tin-sv4-5",
+        "https://cardcenter.no/products/pokemon-paldean-fates-shiny-iron-treads-ex-tin",
+        "https://no.coolshop.com/produkt/pokemon-sv4-5-paldean-fates-tin-shiny-iron-treads/23J6NG/",
+        "https://no.coolshop.com/produkt/pokemon-sv4-5-paldean-fates-tin-shiny-great-tusk/23J6NF/",
+        "https://www.ringo.no/produkt/pokemon-tin-sv4-5-paldean-fates/",
+        "https://www.kanoncon.no/produkt/paldean-fates-shiny-iron-treads-ex-tin/",
+        "https://kortkjelleren.no/products/pokemon-paldean-fates-tin-iron-threads",
+        "https://gamingsjappa.no/products/pokemon-tcg-kort-paldean-fates-tinnbokser-var-2024"
+    ]
+    
+}
+
+
+const paldeanFatesPremiumCollection = {
+    expansion: expansions.SCARLET_VIOLET_PALDEAN_FATES,
+    name: "Paldean Premium Collection",
+    urls: [
+        "https://pokestore.no/produkt/engelsk/sorter-etter-sett/paldean-fates/pokemon-paldean-fates-premium-collection-shiny-skeledirge-ex",
+        "https://pokestore.no/produkt/engelsk/sorter-etter-sett/paldean-fates/pokemon-paldean-fates-premium-collection-shiny-quaquaval-ex",
+        "https://pokestore.no/produkt/engelsk/sorter-etter-sett/paldean-fates/pokemon-paldean-fates-premium-collection-shiny-meowscarada-ex",
+        "https://poku.no/produkt/tcg/pokemon/samlepakker/pokemon-tcg-paldean-fates-premium-collection-skeledirge-ex/",
+        "https://poku.no/produkt/tcg/pokemon/samlepakker/pokemon-tcg-paldean-fates-premium-collection-quaquaval-ex/",
+        "https://gamezone.no/spesialbokser/157938/pokemon-paldean-fates-premium-quaquaval-premium-collection-quaquaval-ex",
+        "https://www.collectible.no/home/pokemon-paldean-fates-quaquaval-ex-premium-collection/",
+        "https://www.collectible.no/home/pokemon-paldean-fates-skeledirge-ex-premium-collection/",
+        "https://www.collectible.no/home/pokemon-paldean-fates-meowscarada-ex-premium-collection/",
+        "https://www.extra-leker.no/pokemon-sv4-5-paldean-fates-premium-collection-quaquaval",
+        "https://www.extra-leker.no/pokemon-sv4-5-paldean-fates-premium-collection-meowscarada",
+        "https://lekekassen.no/pokemon-tcg-paldean-fates-premium-collection-med-samlekort-meowscarada-ex",
+        "https://lekekassen.no/pokemon-tcg-scarlet-and-violet-paldean-fates-premium-box-byttekort-quaqaval-ex-pok85961",
+        "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-box-premium-sv4-5",
+        "https://cardcenter.no/products/pokemon-paldean-fates-premium-collection-quaquaval-ex",
+        "https://no.coolshop.com/produkt/pokemon-sv4-5-paldean-fates-premium-collection-skeledirge-ex/23JU7T/",
+        "https://no.coolshop.com/produkt/pokemon-sv4-5-paldean-fates-premium-collection-quaquaval-ex/23JU7S/",
+        "https://no.coolshop.com/produkt/pokemon-sv4-5-paldean-fates-premium-collection-meowscarada-ex/23JU7V/",
+        "https://www.ringo.no/produkt/pokemon-box-premium-sv4-5-paldean-fates/",
+        "https://www.kanoncon.no/produkt/paldean-fates-premium-collection-quaquaval-ex/",
+        "https://www.kanoncon.no/produkt/paldean-fates-premium-collection-meowscarada-ex/",
+        "https://www.pokelageret.no/produkt/engelsk/spesialbokser/paldean-fates-premium-collection-quaquaval-ex",
+        "https://www.pokelageret.no/produkt/engelsk/spesialbokser/paldean-fates-premium-collection-meowscarada-ex",
+        "https://www.pokelageret.no/produkt/engelsk/spesialbokser/paldean-fates-premium-collection-skeledirge-ex"
+    ]
+}
+
+
 export const products = [
     darknessAblazeEtb,
     hiddenFatesEtb,
@@ -524,6 +600,9 @@ export const products = [
     temporalForcesEtb,
     chillingReignEtb,
     paldeanFatesEtb,
-    fusionStrikeEtb
+    fusionStrikeEtb,
+    paldeanFatesPremiumCollection,
+    paldeanFatesSpecialTin,
+    paldeanFatesTin
 ];
 
