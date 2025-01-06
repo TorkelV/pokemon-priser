@@ -157,7 +157,9 @@
             },
             computed: {
               productsToShow() {
-                return this.showAllPrices ? this.products : this.products.map(product => {return {...product, prices: product.prices.filter(price => price.inStock).slice(0,5)}})
+                return this.showAllPrices ? this.products : 
+                  this.products.map(product => {return {...product, prices: product.prices.filter(price => price.inStock).slice(0,5)}})
+                  .filter(e=>e.prices.length)
               }
             },
             methods: {
