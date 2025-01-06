@@ -78,12 +78,6 @@ const pokemadnessPris = async (doc) => {
     return { price, inStock }
 }
 
-const midgardgamesPris = async (doc) => {
-    const inStock = doc.querySelector('[itemprop="availability"]').getAttribute("href") == "http://schema.org/InStock";
-    const price = parsePris(doc.querySelector('[property="og:price:amount"]').getAttribute("content"))
-    return { price, inStock }
-}
-
 const arkPris = async (doc) => {
     const price = JSON.parse([...doc.querySelectorAll('script[type="application/ld+json"]')].find(e => e.textContent?.includes('offers":{"price":'))?.textContent).offers.price
     const inStock = [...doc.querySelectorAll("script")].some(e => /onlineAvailability.....Available/i.test(e.textContent))
@@ -205,7 +199,6 @@ export const parsers = {
     "https://kanoncon.no": kanonconPris,
     "https://playlot.no": playlotPris,
     "https://kortkjelleren.no": kortkjellerenPris,
-    "https://midgardgames.no": midgardgamesPris,
     "https://epicards.no": epicardsPris,
     "https://gamingsjappa.no": gamingsjappaPris,
     "https://ark.no": arkPris,

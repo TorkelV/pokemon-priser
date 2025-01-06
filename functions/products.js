@@ -131,7 +131,6 @@ const shroudedFableEtb = {
         "https://www.ringo.no/produkt/pokemon-scarlet-violet-shrouded-fable-elite-trainer-box/",
         "https://www.gameninja.no/produkt/pre-order-pokemon-sv6-5-shrouded-fable-elite-trainer-box/",
         "https://www.kanoncon.no/produkt/pokemon-shrouded-fable-elite-trainer-box/",
-        "https://midgardgames.no/products/pokemon-scarlet-violet-6-5-shrouded-fable-elite-trainer-box",
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-shrouded-fable-elite-trainer-box-1",
         "https://pokelageret.no/produkt/engelsk/elite-trainer-boks/shrouded-fable-elite-trainer-box",
         "https://baldbreakers.no/products/scarlet-violet-shrouded-fable-elite-trainer-box",
@@ -326,7 +325,6 @@ const paldeaEvolvedEtb = {
         "https://lekekassen.no/pokemon-tcg-scarlet-and-violet-2-paldea-evolved-elite-trainer-box-pok85366",
         "https://www.outland.no/p-scarlet-violet-paldea-evolved-elite-trainer-box-pokemon-tcg-pokemon-820650853661",
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-scarlet-violet-2/",
-        "https://midgardgames.no/products/pokemon-tcg-scarlet-violet-2-paldea-evolved-elite-trainer-box",
         "https://gamingsjappa.no/products/pokemon-tcg-kort-scarlet-violet-2-paldea-evolved-elite-trainer-box",
         "https://retroworld.no/produkt/pokemon/pokemon-scarlet-violet-paldea-evolved-elite-trainer-box-etb"
 
@@ -345,7 +343,6 @@ const obsidianFlamesEtb = {
         "https://www.collectible.no/home/obsidian-flames-elite-trainer-box/",
         "https://cardcenter.no/products/pokemon-obsidian-flames-elite-trainer-box",
         "https://www.gameninja.no/produkt/poke-sv3-elite-trainer-box/",
-        "https://midgardgames.no/products/pokemon-tcg-obsidian-flames-elite-trainer-box",
         "https://retroworld.no/produkt/pokemon/pokemon-scarlet-violet-obsidian-flames-elite-trainer-box-etb"
 
 
@@ -379,8 +376,6 @@ const scarletAndVioletEtb = {
         "https://www.collectible.no/home/scarlet-violet-elite-trainer-box-miraidon/",
         "https://cardcenter.no/products/pokemon-scarlet-violet-elite-trainer-box",
         "https://no.coolshop.com/produkt/pokemon-sv1-elite-trainer-box-pok85341/23E5SP/",
-        "https://midgardgames.no/products/pokemon-tcg-scarlet-violet-elite-trainer-box-koraidon",
-        "https://midgardgames.no/products/pokemon-tcg-scarlet-violet-elite-trainer-box-miraidon",
         "https://retroworld.no/produkt/pokemon/samlerbokser-etb/pokemon-scarlet-violet-elite-trainer-box-etb",
         "https://retroworld.no/produkt/pokemon/samlerbokser-etb/pokemon-scarlet-violet-elite-trainer-box-etb-2"
 
