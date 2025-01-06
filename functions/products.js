@@ -109,6 +109,7 @@ const expansions = {
 const shroudedFableEtb = {
     expansion: expansions.SCARLET_VIOLET_SHROUDED_FABLE,
     name: "Shrouded Fable Elite Trainer Box",
+    image: "shroudedfable_etb.jpeg",
     urls: [
         "https://gamezone.no/samlekort/160903/pokemon-shrouded-fable-elite-trainer-box",
         "https://www.poku.no/produkt/tcg/pokemon/elite-trainer-box/pokemon-tcg-shrouded-fable-elite-trainer-box/",
@@ -141,6 +142,7 @@ const shroudedFableEtb = {
 
 const prismaticEvolutionEtb = {
     expansion: expansions.SCARLET_VIOLET_PRISMATIC_EVOLUTIONS,
+    image: "prismaticevolutions_etb.webp",
     name: "Prismatic Evolutions Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-prismatic-evolutions-elite-trainer-box-4",
@@ -157,6 +159,7 @@ const prismaticEvolutionEtb = {
 const silverTempestEtb = {
     expansion: expansions.SWORD_SHIELD_SILVER_TEMPEST,
     name: "Silver Tempest Elite Trainer Box",
+    image: "silvertempest_etb.jpeg",
     urls: [
         "https://proshop.no/Pokemon/Pokemon-TCG-Elite-Trainer-Box-Sword-Shield-Silver-Tempest/3119983",
         "https://www.computersalg.no/i/8730083/pok%c3%a9mon-poke-swsh12-elite-trainer-box",
@@ -180,6 +183,7 @@ const silverTempestEtb = {
 const twilightMasqETB = {
     expansion: expansions.SCARLET_VIOLET_TWILIGHT_MASQUERADE,
     name: "Twilight Masquerade Elite Trainer Box",
+    image: "twilightmasq_etb.jpeg",
     urls: [
         "https://www.computersalg.no/i/20959537/pok%c3%a9mon-pokemon-poke-elite-trainer-box-scarlet-violet-twilight-masquerade",
         "https://gamezone.no/samlekort/159403/pokemon-twilight-masquerade-elitetrainer-elite-trainer-box",
@@ -204,6 +208,7 @@ const twilightMasqETB = {
 const temporalForcesEtb = {
     expansion: expansions.SCARLET_VIOLET_TEMPORAL_FORCES,
     name: "Temporal Forces Elite Trainer Box",
+    image: "temporalforces_etb.jpeg",
     urls: [
         "https://gamezone.no/samlekort/158434/pokemon-temporal-forces-elite-trainer--hash-1-turkis-boks-flutter-mane",
         "https://gamezone.no/samlekort/158435/pokemon-temporal-forces-elite-trainer--hash-2-gr%c3%b8nn-boks-iron-thorns",
@@ -238,6 +243,7 @@ const temporalForcesEtb = {
 const stellarCrownEtb = {
     expansion: expansions.SCARLET_VIOLET_STELLAR_CROWN,
     name: "Stellar Crown Elite Trainer Box",
+    image: "stellarcrown_etb.jpeg",
     urls: [
         "https://www.proshop.no/Pokemon/Pokemon-TCG-Elite-Trainer-Box-Scarlet-Violet-Stellar-Crown/3298607",
         "https://www.computersalg.no/i/21434520/pok%c3%a9mon-pok%c3%a9mon-stellar-crown-elite-trainer-box",
@@ -258,16 +264,13 @@ const stellarCrownEtb = {
         "https://epicards.no/products/pokemon-tcg-stellar-crown-elite-trainer-box-med-samlekort-og-tilbehor",
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-stellar-crown-elite-trainer-box-4",
         "https://baldbreakers.no/products/scarlet-violet-stellar-crown-elite-trainer-box"
-
-
-
-
     ]
 }
 
 const surgingsparksEtb = {
     expansion: expansions.SCARLET_VIOLET_SURGING_SPARKS,
     name: "Surging sparks Elite Trainer Box",
+    image: "surgingsparks_etb.jpeg",
     urls: [
         "https://www.collectible.no/home/pokemon-surging-sparks-elite-trainer-box/",
         "https://www.computersalg.no/i/21696718/pok%c3%a9mon-pok%c3%a9mon-sv8-surging-sparks-elite-trainer-box-pok85952",
@@ -287,6 +290,7 @@ const surgingsparksEtb = {
 const paradoxriftEtb = {
     expansion: expansions.SCARLET_VIOLET_PARADOX_RIFT,
     name: "Paradox Rift Elite Trainer Box",
+    image: "paradoxrift_etb.jpeg",
     urls: [
         "https://www.computersalg.no/i/10979960/the-pok%c3%a9mon-tcg-scarlet-violet-4-paradox-rift-elite-trainer-box-iron-valiant",
         "https://pokestore.no/produkt/engelsk/etb/pokemon-paradox-rift-elite-trainer-box-iron-valiant-9",
@@ -314,6 +318,7 @@ const paradoxriftEtb = {
 const paldeaEvolvedEtb = {
     expansion: expansions.SCARLET_VIOLET_PALDEA_EVOLVED,
     name: "Paldea Evolved Elite Trainer Box",
+    image: "paldeaevolved_etb.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-paldea-evolved-elite-trainer-box-7",
         "https://www.computersalg.no/i/10268915/pok%c3%a9mon-poke-sv2-elite-trainer-box",
@@ -333,6 +338,7 @@ const paldeaEvolvedEtb = {
 const obsidianFlamesEtb = {
     expansion: expansions.SCARLET_VIOLET_OBSIDIAN_FLAMES,
     name: "Obsidian Flames Elite Trainer Box",
+    image: "obsidianflames_etb.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-obsidian-flames-elite-trainer-box-4",
         "https://www.computersalg.no/i/10401232/pok%c3%a9mon-poke-sv3-elite-trainer-box",
@@ -350,6 +356,7 @@ const obsidianFlamesEtb = {
 const pokemonGoEtb = {
     expansion: expansions.POKEMON_GO,
     name: "Pokemon Go Elite Trainer Box",
+    image: "pokemongo_etb.jpeg",
     urls: [
         "https://www.computersalg.no/i/8532722/pok%c3%a9mon-poke-elite-trainer-box-go-swsh10-5",
         "https://pokestore.no/produkt/engelsk/etb/pokemon-go-elite-trainer-box-11",
@@ -363,6 +370,7 @@ const pokemonGoEtb = {
 const scarletAndVioletEtb = {
     expansion: expansions.SCARLET_VIOLET_BASE,
     name: "Scarlet and Violet Elite Trainer Box",
+    image: "scarletviolet_etb.jpeg",
     urls: [
         "https://www.computersalg.no/i/8532722/pok%c3%a9mon-poke-elite-trainer-box-go-swsh10-5",
         "https://pokestore.no/produkt/engelsk/etb/pokemon-scarlet-violet-elite-trainer-box-koraidon-1",
@@ -382,6 +390,7 @@ const scarletAndVioletEtb = {
 const brilliantStarsEtb = {
     expansion: expansions.SWORD_SHIELD_BRILLIANT_STARS,
     name: "Brilliant Stars Elite Trainer Box",
+    image: "brilliantstars_etb.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-brilliant-stars-elite-trainer-box",
         "https://www.computersalg.no/i/8075955/pok%c3%a9mon-poke-swsh9-elite-trainer-box",
@@ -392,6 +401,7 @@ const brilliantStarsEtb = {
 const chillingReignEtb = {
     expansion: expansions.SWORD_SHIELD_CHILLING_REIGN,
     name: "Chilling Reign Elite Trainer Box",
+    image: "chillingreign_etb.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-chilling-reign-elite-trainer-box-ice-rider-calyrex",
         "https://www.extra-leker.no/pokemon-swsh-chilling-reign-elite-trainer-box-shadow-rider-calyrex",
@@ -405,6 +415,7 @@ const chillingReignEtb = {
 const paldeanFatesEtb = {
     expansion: expansions.SCARLET_VIOLET_PALDEAN_FATES,
     name: "Paldean Fates Elite Trainer Box",
+    image: "paldeanfates_etb.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-paldean-fates-elite-trainer-box-9",
         "https://www.collectible.no/home/pokemon-paldean-fates-elite-trainer-box/",
@@ -424,6 +435,7 @@ const paldeanFatesEtb = {
 const crownZenithEtb = {
     expansion: expansions.CROWN_ZENITH,
     name: "Crown Zenith Elite Trainer Box",
+    image: "crownzenith_etb.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-crown-zenith-elite-trainer-box-4",
         "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-crown-zenith-elite-trainer-box"
@@ -441,6 +453,7 @@ const fusionStrikeEtb = {
 const lostOriginEtb = {
     expansion: expansions.SWORD_SHIELD_LOST_ORIGIN,
     name: "Lost Origin Elite Trainer Box",
+    image: "lostorigin_etb.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-lost-origin-elite-trainer-box-10",
         "https://www.collectible.no/home/pokemon-lost-origin-elite-trainer-box/",
@@ -454,6 +467,7 @@ const lostOriginEtb = {
 const shiningFatesEtb = {
     expansion: expansions.SHINING_FATES,
     name: "Shining Fates Elite Trainer Box",
+    image: "shiningfates_etb.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-shining-fates-elite-trainer-box",
         "https://www.collectible.no/home/pokemon-shining-fates-elite-trainer-box/",
@@ -466,6 +480,7 @@ const shiningFatesEtb = {
 const vividVoltageEtb = {
     expansion: expansions.SWORD_SHIELD_VIVID_VOLTAGE,
     name: "Vivid Voltage Elite Trainer Box",
+    image: "vividvoltage_etb.jpeg",
     urls: [
         "https://www.collectible.no/home/pokemon-vivid-voltage-elite-trainer-box/",
         "https://pokestore.no/produkt/engelsk/etb/pokemon-vivid-voltage-elite-trainer-box"
@@ -475,6 +490,7 @@ const vividVoltageEtb = {
 const astralRadianceEtb = {
     expansion: expansions.SWORD_SHIELD_ASTRAL_RADIANCE,
     name: "Astral Radiance Elite Trainer Box",
+    image: "astralradiance_etb.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-astral-radiance-elite-trainer-box-1",
         "https://www.kanoncon.no/produkt/pokemon-sword-shield-astral-radiance-elite-trainer-box/"
@@ -484,6 +500,7 @@ const astralRadianceEtb = {
 const darknessAblazeEtb = {
     expansion: expansions.SWORD_SHIELD_DARKNESS_ABLAZE,
     name: "Darkness Ablaze Elite Trainer Box",
+    image: "darknessablaze_etb.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-darkness-ablaze-elite-trainer-box-4",
         "https://www.collectible.no/home/pokemon-darkness-ablaze-elite-trainer-box/",
@@ -495,6 +512,7 @@ const darknessAblazeEtb = {
 const hiddenFatesEtb = {
     expansion: expansions.HIDDEN_FATES,
     name: "Hidden Fates Elite Trainer Box",
+    image: "hiddenfates_etb.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-hidden-fates-elite-trainer-box",
         "https://retroworld.no/produkt/pokemon/pokemon-hidden-fates-elite-trainer-box-etb-na-pa-lager-igjen"
@@ -504,6 +522,7 @@ const hiddenFatesEtb = {
 const paldeanFatesSpecialTin = {
     expansion: expansions.SCARLET_VIOLET_PALDEAN_FATES,
     name: "Paldean Fates Special Tin",
+    image: "paldeanfates_specialtin.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/tins/pokemon-paldean-fates-special-tin-shiny-charizard-ex",
         "https://pokestore.no/produkt/engelsk/tins/pokemon-paldean-fates-special-tin-shiny-iron-treads-ex",
@@ -522,6 +541,7 @@ const paldeanFatesSpecialTin = {
 const paldeanFatesTin = {
     expansion: expansions.SCARLET_VIOLET_PALDEAN_FATES,
     name: "Paldean Fates Tin",
+    image: "paldeanfates_tin.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/sorter-etter-sett/paldean-fates/pokemon-paldean-fates-tin-shiny-iron-treads-ex",
         "https://pokestore.no/produkt/engelsk/sorter-etter-sett/paldean-fates/pokemon-paldean-fates-tin-shiny-charizard-ex",
@@ -547,7 +567,8 @@ const paldeanFatesTin = {
 
 const paldeanFatesPremiumCollection = {
     expansion: expansions.SCARLET_VIOLET_PALDEAN_FATES,
-    name: "Paldean Premium Collection",
+    name: "Paldean Fates Premium Collection",
+    image: "paldeanfates_premiumcollection.jpeg",
     urls: [
         "https://pokestore.no/produkt/engelsk/sorter-etter-sett/paldean-fates/pokemon-paldean-fates-premium-collection-shiny-skeledirge-ex",
         "https://pokestore.no/produkt/engelsk/sorter-etter-sett/paldean-fates/pokemon-paldean-fates-premium-collection-shiny-quaquaval-ex",

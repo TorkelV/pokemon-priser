@@ -1,176 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokemon Elite Trainer Boxes</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f9;
-      margin: 0;
-      padding: 20px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Card Prices</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-    #container {
-      max-width: 800px;
-      margin: auto;
-    }
+        .product {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 16px 0;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .product {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      padding: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
 
-    h2 {
-      margin-top: 0;
-    }
+        .product-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+        .product-header img {
+            width: 100px;
+            height: auto;
+        }
 
-    th,
-    td {
-      text-align: left;
-      padding: 8px;
-    }
+        .product-info {
+            flex-grow: 1;
+        }
 
-    th {
-      background-color: #f8f8f8;
-    }
+        .product-name {
+            font-size: 1.5em;
+            margin: 0;
+        }
 
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
+        .expansion-name {
+            font-size: 1em;
+            color: #666;
+        }
 
-    a {
-      color: #007BFF;
-      text-decoration: none;
-    }
+        .price-list {
+            margin-top: 20px;
+        }
 
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
+    <div id="app" class="container">
+      <h1>Pokemonkort-priser i norske nettbutikker</h1>
+      <p>Prisene oppdateres hver 8. time.</p>
+      <p>Dette er ikke en komplett liste over alle butikker og alle tilbud, men vi prøver så godt vi kan å holde den oppdatert.</p>
+      <p>Du kan gjerne være med å bidra på <a href="https://github.com/torkelv/pokemon-priser" target="_blank">Github</a>.</p>
+    <hr>
+      <p>Viser normalt bare produkter som er på lager og de laveste 5 prisene, men du kan velge å se alt 👇</p>
+      <label for="myCheckbox">
+        <input type="checkbox" id="myCheckbox" v-model="showAllPrices"> Vis alle priser.
+      </label>
+        <div v-for="product in productsToShow" :key="product.name" class="product">
+            <div class="product-header">
+                <img v-if="product.image" :src="'images/' + product.image" :alt="product.name">
+                <div class="product-info">
+                    <h2 class="product-name">{{ product.name }}</h2>
+                    <p class="expansion-name">{{ product.expansion.name }}</p>
+                </div>
+            </div>
+            <div class="price-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Butikk</th>
+                            <th>Pris</th>
+                            <th>På lager</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="price in product.prices" :key="price.url">
+                            <td><a :href="price.url" target="_blank">{{ getHostname(price.url) }}</a></td>
+                            <td>NOK {{ price.price }}</td>
+                            <td>{{ price.inStock ? 'Ja' : 'Nei' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-  <div id="container">
-    
-    <h1>Pokemonkort priser i norske nettbutikker</h1>
-    <label>Skjul utsolgte varer: <input type="checkbox" title="Skjul utsolgte" id="sold_toggle"></label>
-  <br><br>
-    <div id="product-list"></div>
-  </div>
+    <script>
+        const { createApp } = Vue;
 
-  <script>
-    document.getElementById("sold_toggle").addEventListener('change', function() {
-      if(loadedData != null) renderProducts(loadedData)
-    });
-    var loadedData = null
-    function getRoundedOsloTimestamp() {
-      // Get the current date and time in Oslo's timezone
-      const osloTime = new Date().toLocaleString("en-US", {
-        timeZone: "Europe/Oslo",
-      });
-
-      const now = new Date(osloTime);
-
-      // Define the target hours and minutes for rounding
-      const targetTimes = [
-        { hours: 0, minutes: 10 },
-        { hours: 8, minutes: 10 },
-        { hours: 16, minutes: 10 },
-      ];
-
-      // Convert the target times to Date objects for comparison
-      const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-      const targetDates = targetTimes.map(({ hours, minutes }) => {
-        return new Date(today.getTime() + hours * 3600000 + minutes * 60000);
-      });
-
-      // Determine the latest target time that is <= current time
-      let selectedTime = targetDates[0];
-      for (let i = 0; i < targetDates.length; i++) {
-        if (now >= targetDates[i]) {
-          selectedTime = targetDates[i];
-        }
-      }
-
-      // If current time is before 00:10, roll back to the previous day at 16:10
-      if (now < targetDates[0]) {
-        selectedTime = new Date(targetDates[2].getTime() - 24 * 3600000);
-      }
-
-      return selectedTime.toISOString();
-    }
-
-    // Fetch data from data.json and render the content
-    fetch('master.json?time=' + getRoundedOsloTimestamp())
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        loadedData = data
-        renderProducts(data);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-
-    function renderProducts(products) {
-      const productList = document.getElementById('product-list');
-      const hideSoldout = document.getElementById("sold_toggle").checked
-      productList.innerHTML = ''; // Clear existing content
-
-      products.forEach((product) => {
-        const productDiv = document.createElement('div');
-        productDiv.className = 'product';
-
-        // Product Name
-        const name = document.createElement('h2');
-        name.textContent = product.name;
-
-        // Prices Table
-        const table = document.createElement('table');
-        const headerRow = document.createElement('tr');
-        headerRow.innerHTML = `<th>Store</th><th>Price</th><th>In Stock</th>`;
-        table.appendChild(headerRow);
-
-        product.prices.forEach((price) => {
-          const row = document.createElement('tr');
-          row.innerHTML = `
-        <td><a href="${price.url}" target="_blank">${new URL(price.url).hostname}</a></td>
-        <td>${price.price} NOK</td>
-        <td>${price.inStock ? 'Yes' : 'No'}</td>
-      `;
-          if(price.inStock || !hideSoldout){
-            table.appendChild(row);
-          }
-        });
-
-        productDiv.appendChild(name);
-        productDiv.appendChild(table);
-        productList.appendChild(productDiv);
-      });
-    }
-  </script>
+        createApp({
+            data() {
+                return {
+                    showAllPrices: false,
+                    products: [] // Load your data from `master.json` here
+                };
+            },
+            computed: {
+              productsToShow() {
+                return this.showAllPrices ? this.products : this.products.map(product => {return {...product, prices: product.prices.filter(price => price.inStock).slice(0,5)}})
+              }
+            },
+            methods: {
+                getHostname(url) {
+                    try {
+                        return new URL(url).hostname.replace("www.","");
+                    } catch (e) {
+                        return 'Invalid URL';
+                    }
+                }
+            },
+            mounted() {
+                fetch('master.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.products = data;
+                    });
+            }
+        }).mount('#app');
+    </script>
 </body>
-
 </html>
