@@ -45,12 +45,12 @@ const scrapeProduct = async (product) => {
     const prices = await Promise.all(product.urls.map(url => getPrice(url)))
     return {
         name: product.name,
-        order: product.gen,
+        expansion: product.expansion,
         prices: prices.filter(e => e?.price).sort((a, b) => a.price - b.price)
     }
 }
 
 export const scrapeAllProducts = async (products) => {
     const productWithPrices = await Promise.all(products.map(scrapeProduct))
-    return productWithPrices.sort((a, b) => b.order - a.order)
+    return productWithPrices.sort((a, b) => b.expansion.id - a.expansion.id)
 }

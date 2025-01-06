@@ -1,5 +1,113 @@
+const expansions = {
+    EX_RUBY_SAPPHIRE: { id: 0, name: "EX Ruby & Sapphire" },
+    EX_SANDSTORM: { id: 1, name: "EX Sandstorm" },
+    EX_DRAGON: { id: 2, name: "EX Dragon" },
+    EX_TEAM_MAGMA_VS_TEAM_AQUA: { id: 3, name: "EX Team Magma vs Team Aqua" },
+    EX_HIDDEN_LEGENDS: { id: 4, name: "EX Hidden Legends" },
+    EX_FIRERED_LEAFGREEN: { id: 5, name: "EX FireRed & LeafGreen" },
+    EX_TEAM_ROCKET_RETURNS: { id: 6, name: "EX Team Rocket Returns" },
+    EX_DEOXYS: { id: 7, name: "EX Deoxys" },
+    EX_EMERALD: { id: 8, name: "EX Emerald" },
+    EX_UNSEEN_FORCES: { id: 9, name: "EX Unseen Forces" },
+    EX_DELTA_SPECIES: { id: 10, name: "EX Delta Species" },
+    EX_LEGEND_MAKER: { id: 11, name: "EX Legend Maker" },
+    EX_HOLON_PHANTOMS: { id: 12, name: "EX Holon Phantoms" },
+    EX_CRYSTAL_GUARDIANS: { id: 13, name: "EX Crystal Guardians" },
+    EX_DRAGON_FRONTIERS: { id: 14, name: "EX Dragon Frontiers" },
+    EX_POWER_KEEPERS: { id: 15, name: "EX Power Keepers" },
+    DIAMOND_PEARL: { id: 16, name: "Diamond & Pearl" },
+    DIAMOND_PEARL_MYSTERIOUS_TREASURES: { id: 17, name: "Diamond & Pearl—Mysterious Treasures" },
+    DIAMOND_PEARL_SECRET_WONDERS: { id: 18, name: "Diamond & Pearl—Secret Wonders" },
+    DIAMOND_PEARL_GREAT_ENCOUNTERS: { id: 19, name: "Diamond & Pearl—Great Encounters" },
+    DIAMOND_PEARL_MAJESTIC_DAWN: { id: 20, name: "Diamond & Pearl—Majestic Dawn" },
+    DIAMOND_PEARL_LEGENDS_AWAKENED: { id: 21, name: "Diamond & Pearl—Legends Awakened" },
+    DIAMOND_PEARL_STORMFRONT: { id: 22, name: "Diamond & Pearl—Stormfront" },
+    PLATINUM: { id: 23, name: "Platinum" },
+    PLATINUM_RISING_RIVALS: { id: 24, name: "Platinum—Rising Rivals" },
+    PLATINUM_SUPREME_VICTORS: { id: 25, name: "Platinum—Supreme Victors" },
+    PLATINUM_ARCEUS: { id: 26, name: "Platinum—Arceus" },
+    HEARTGOLD_SOULSILVER: { id: 27, name: "HeartGold & SoulSilver" },
+    POK_MON_TCG_HS_UNLEASHED: { id: 28, name: "Pokémon TCG: HS—Unleashed" },
+    HS_UNDAUNTED: { id: 29, name: "HS—Undaunted" },
+    POK_MON_TCG_HS_TRIUMPHANT: { id: 30, name: "Pokémon TCG: HS—Triumphant" },
+    POK_MON_TCG_CALL_OF_LEGENDS: { id: 31, name: "Pokémon TCG: Call of Legends" },
+    BLACK_WHITE: { id: 32, name: "Black & White" },
+    BLACK_WHITE_EMERGING_POWERS: { id: 33, name: "Black & White—Emerging Powers" },
+    BLACK_WHITE_NOBLE_VICTORIES: { id: 34, name: "Black & White—Noble Victories" },
+    BLACK_WHITE_NEXT_DESTINIES: { id: 35, name: "Black & White—Next Destinies" },
+    BLACK_WHITE_DARK_EXPLORERS: { id: 36, name: "Black & White—Dark Explorers" },
+    BLACK_WHITE_DRAGONS_EXALTED: { id: 37, name: "Black & White—Dragons Exalted" },
+    DRAGON_VAULT: { id: 38, name: "Dragon Vault" },
+    BLACK_WHITE_BOUNDARIES_CROSSED: { id: 39, name: "Black & White—Boundaries Crossed" },
+    BLACK_WHITE_PLASMA_STORM: { id: 40, name: "Black & White—Plasma Storm" },
+    BLACK_WHITE_PLASMA_FREEZE: { id: 41, name: "Black & White—Plasma Freeze" },
+    BLACK_WHITE_PLASMA_BLAST: { id: 42, name: "Black & White—Plasma Blast" },
+    BLACK_WHITE_LEGENDARY_TREASURES: { id: 43, name: "Black & White—Legendary Treasures" },
+    XY_KALOS_STARTER_SET: { id: 44, name: "XY—Kalos Starter Set" },
+    XY: { id: 45, name: "XY" },
+    XY_FLASHFIRE: { id: 46, name: "XY—Flashfire" },
+    XY_FURIOUS_FISTS: { id: 47, name: "XY—Furious Fists" },
+    XY_PHANTOM_FORCES: { id: 48, name: "XY—Phantom Forces" },
+    XY_PRIMAL_CLASH: { id: 49, name: "XY—Primal Clash" },
+    DOUBLE_CRISIS: { id: 50, name: "Double Crisis" },
+    XY_ROARING_SKIES: { id: 51, name: "XY—Roaring Skies" },
+    XY_ANCIENT_ORIGINS: { id: 52, name: "XY—Ancient Origins" },
+    XY_BREAKTHROUGH: { id: 53, name: "XY—BREAKthrough" },
+    XY_BREAKPOINT: { id: 54, name: "XY—BREAKpoint" },
+    GENERATIONS: { id: 55, name: "Generations" },
+    XY_FATES_COLLIDE: { id: 56, name: "XY—Fates Collide" },
+    XY_STEAM_SIEGE: { id: 57, name: "XY—Steam Siege" },
+    XY_EVOLUTIONS: { id: 58, name: "XY—Evolutions" },
+    SUN_MOON: { id: 59, name: "Sun & Moon" },
+    SUN_MOON_GUARDIANS_RISING: { id: 60, name: "Sun & Moon—Guardians Rising" },
+    SUN_MOON_BURNING_SHADOWS: { id: 61, name: "Sun & Moon—Burning Shadows" },
+    SHINING_LEGENDS: { id: 62, name: "Shining Legends" },
+    SUN_MOON_CRIMSON_INVASION: { id: 63, name: "Sun & Moon—Crimson Invasion" },
+    SUN_MOON_ULTRA_PRISM: { id: 64, name: "Sun & Moon—Ultra Prism" },
+    SUN_MOON_FORBIDDEN_LIGHT: { id: 65, name: "Sun & Moon—Forbidden Light" },
+    SUN_MOON_CELESTIAL_STORM: { id: 66, name: "Sun & Moon—Celestial Storm" },
+    DRAGON_MAJESTY: { id: 67, name: "Dragon Majesty" },
+    SUN_MOON_LOST_THUNDER: { id: 68, name: "Sun & Moon—Lost Thunder" },
+    SUN_MOON_TEAM_UP: { id: 69, name: "Sun & Moon—Team Up" },
+    DETECTIVE_PIKACHU: { id: 70, name: "Detective Pikachu" },
+    SUN_MOON_UNBROKEN_BONDS: { id: 71, name: "Sun & Moon—Unbroken Bonds" },
+    SUN_MOON_UNIFIED_MINDS: { id: 72, name: "Sun & Moon—Unified Minds" },
+    HIDDEN_FATES: { id: 73, name: "Hidden Fates" },
+    SUN_MOON_COSMIC_ECLIPSE: { id: 74, name: "Sun & Moon—Cosmic Eclipse" },
+    SWORD_SHIELD_BASE: { id: 75, name: "Sword & Shield" },
+    SWORD_SHIELD_REBEL_CLASH: { id: 76, name: "Sword & Shield—Rebel Clash" },
+    SWORD_SHIELD_DARKNESS_ABLAZE: { id: 77, name: "Sword & Shield—Darkness Ablaze" },
+    CHAMPION_S_PATH: { id: 78, name: "Champion’s Path" },
+    SWORD_SHIELD_VIVID_VOLTAGE: { id: 79, name: "Sword & Shield—Vivid Voltage" },
+    SHINING_FATES: { id: 80, name: "Shining Fates" },
+    SWORD_SHIELD_BATTLE_STYLES: { id: 81, name: "Sword & Shield—Battle Styles" },
+    SWORD_SHIELD_CHILLING_REIGN: { id: 82, name: "Sword & Shield—Chilling Reign" },
+    SWORD_SHIELD_EVOLVING_SKIES: { id: 83, name: "Sword & Shield—Evolving Skies" },
+    CELEBRATIONS: { id: 84, name: "Celebrations" },
+    SWORD_SHIELD_FUSION_STRIKE: { id: 85, name: "Sword & Shield—Fusion Strike" },
+    SWORD_SHIELD_BRILLIANT_STARS: { id: 86, name: "Sword & Shield—Brilliant Stars" },
+    SWORD_SHIELD_ASTRAL_RADIANCE: { id: 87, name: "Sword & Shield—Astral Radiance" },
+    POKEMON_GO: { id: 88, name: "Pokémon GO" },
+    SWORD_SHIELD_LOST_ORIGIN: { id: 89, name: "Sword & Shield—Lost Origin" },
+    SWORD_SHIELD_SILVER_TEMPEST: { id: 90, name: "Sword & Shield—Silver Tempest" },
+    CROWN_ZENITH: { id: 91, name: "Crown Zenith" },
+    SCARLET_VIOLET_BASE: { id: 92, name: "Scarlet & Violet" },
+    SCARLET_VIOLET_PALDEA_EVOLVED: { id: 93, name: "Scarlet & Violet—Paldea Evolved" },
+    SCARLET_VIOLET_OBSIDIAN_FLAMES: { id: 94, name: "Scarlet & Violet—Obsidian Flames" },
+    SCARLET_VIOLET_151: { id: 95, name: "Scarlet & Violet—151" },
+    SCARLET_VIOLET_PARADOX_RIFT: { id: 96, name: "Scarlet & Violet—Paradox Rift" },
+    SCARLET_VIOLET_PALDEAN_FATES: { id: 97, name: "Scarlet & Violet—Paldean Fates" },
+    SCARLET_VIOLET_TEMPORAL_FORCES: { id: 98, name: "Scarlet & Violet—Temporal Forces" },
+    SCARLET_VIOLET_TWILIGHT_MASQUERADE: { id: 99, name: "Scarlet & Violet—Twilight Masquerade" },
+    SCARLET_VIOLET_SHROUDED_FABLE: { id: 100, name: "Scarlet & Violet—Shrouded Fable" },
+    SCARLET_VIOLET_STELLAR_CROWN: { id: 101, name: "Scarlet & Violet—Stellar Crown" },
+    SCARLET_VIOLET_SURGING_SPARKS: { id: 102, name: "Scarlet & Violet—Surging Sparks" },
+    SCARLET_VIOLET_PRISMATIC_EVOLUTIONS: { id: 103, name: "Scarlet & Violet—Prismatic Evolutions" }
+}
+
+
 const shroudedFableEtb = {
-    gen: 98,
+    expansion: expansions.SCARLET_VIOLET_SHROUDED_FABLE,
     name: "Shrouded Fable Elite Trainer Box",
     urls: [
         "https://gamezone.no/samlekort/160903/pokemon-shrouded-fable-elite-trainer-box",
@@ -32,7 +140,7 @@ const shroudedFableEtb = {
 }
 
 const prismaticEvolutionEtb = {
-    gen: 101,
+    expansion: expansions.SCARLET_VIOLET_PRISMATIC_EVOLUTIONS,
     name: "Prismatic Evolutions Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-prismatic-evolutions-elite-trainer-box-4",
@@ -47,7 +155,7 @@ const prismaticEvolutionEtb = {
 }
 
 const silverTempestEtb = {
-    gen: 88,
+    expansion: expansions.SWORD_SHIELD_SILVER_TEMPEST,
     name: "Silver Tempest Elite Trainer Box",
     urls: [
         "https://proshop.no/Pokemon/Pokemon-TCG-Elite-Trainer-Box-Sword-Shield-Silver-Tempest/3119983",
@@ -70,7 +178,7 @@ const silverTempestEtb = {
 }
 
 const twilightMasqETB = {
-    gen: 97,
+    expansion: expansions.SCARLET_VIOLET_TWILIGHT_MASQUERADE,
     name: "Twilight Masquerade Elite Trainer Box",
     urls: [
         "https://www.computersalg.no/i/20959537/pok%c3%a9mon-pokemon-poke-elite-trainer-box-scarlet-violet-twilight-masquerade",
@@ -94,7 +202,7 @@ const twilightMasqETB = {
 }
 
 const temporalForcesEtb = {
-    gen: 96,
+    expansion: expansions.SCARLET_VIOLET_TEMPORAL_FORCES,
     name: "Temporal Forces Elite Trainer Box",
     urls: [
         "https://gamezone.no/samlekort/158434/pokemon-temporal-forces-elite-trainer--hash-1-turkis-boks-flutter-mane",
@@ -128,7 +236,7 @@ const temporalForcesEtb = {
 }
 
 const stellarCrownEtb = {
-    gen: 99,
+    expansion: expansions.SCARLET_VIOLET_STELLAR_CROWN,
     name: "Stellar Crown Elite Trainer Box",
     urls: [
         "https://www.proshop.no/Pokemon/Pokemon-TCG-Elite-Trainer-Box-Scarlet-Violet-Stellar-Crown/3298607",
@@ -158,7 +266,7 @@ const stellarCrownEtb = {
 }
 
 const surgingsparksEtb = {
-    gen: 100,
+    expansion: expansions.SCARLET_VIOLET_SURGING_SPARKS,
     name: "Surging sparks Elite Trainer Box",
     urls: [
         "https://www.collectible.no/home/pokemon-surging-sparks-elite-trainer-box/",
@@ -177,7 +285,7 @@ const surgingsparksEtb = {
 }
 
 const paradoxriftEtb = {
-    gen: 94,
+    expansion: expansions.SCARLET_VIOLET_PARADOX_RIFT,
     name: "Paradox Rift Elite Trainer Box",
     urls: [
         "https://www.computersalg.no/i/10979960/the-pok%c3%a9mon-tcg-scarlet-violet-4-paradox-rift-elite-trainer-box-iron-valiant",
@@ -204,15 +312,13 @@ const paradoxriftEtb = {
 }
 
 const paldeaEvolvedEtb = {
-    gen: 91,
-
+    expansion: expansions.SCARLET_VIOLET_PALDEA_EVOLVED,
     name: "Paldea Evolved Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-paldea-evolved-elite-trainer-box-7",
         "https://www.computersalg.no/i/10268915/pok%c3%a9mon-poke-sv2-elite-trainer-box",
         "https://www.collectible.no/home/sv-paldea-evolved-elite-trainer-box/",
         "https://lekekassen.no/pokemon-tcg-scarlet-and-violet-2-paldea-evolved-elite-trainer-box-pok85366",
-        "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-sv2-elite-trainer-box",
         "https://www.outland.no/p-scarlet-violet-paldea-evolved-elite-trainer-box-pokemon-tcg-pokemon-820650853661",
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-scarlet-violet-2/",
         "https://midgardgames.no/products/pokemon-tcg-scarlet-violet-2-paldea-evolved-elite-trainer-box",
@@ -225,7 +331,7 @@ const paldeaEvolvedEtb = {
 }
 
 const obsidianFlamesEtb = {
-    gen: 92,
+    expansion: expansions.SCARLET_VIOLET_OBSIDIAN_FLAMES,
     name: "Obsidian Flames Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-obsidian-flames-elite-trainer-box-4",
@@ -242,7 +348,7 @@ const obsidianFlamesEtb = {
 }
 
 const pokemonGoEtb = {
-    gen: 86,
+    expansion: expansions.POKEMON_GO,
     name: "Pokemon Go Elite Trainer Box",
     urls: [
         "https://www.computersalg.no/i/8532722/pok%c3%a9mon-poke-elite-trainer-box-go-swsh10-5",
@@ -255,7 +361,7 @@ const pokemonGoEtb = {
 }
 
 const scarletAndVioletEtb = {
-    gen: 90,
+    expansion: expansions.SCARLET_VIOLET_BASE,
     name: "Scarlet and Violet Elite Trainer Box",
     urls: [
         "https://www.computersalg.no/i/8532722/pok%c3%a9mon-poke-elite-trainer-box-go-swsh10-5",
@@ -274,7 +380,7 @@ const scarletAndVioletEtb = {
 }
 
 const brilliantStarsEtb = {
-    gen: 84,
+    expansion: expansions.SWORD_SHIELD_BRILLIANT_STARS,
     name: "Brilliant Stars Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-brilliant-stars-elite-trainer-box",
@@ -284,7 +390,7 @@ const brilliantStarsEtb = {
 }
 
 const chillingReignEtb = {
-    gen: 80,
+    expansion: expansions.SWORD_SHIELD_CHILLING_REIGN,
     name: "Chilling Reign Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-chilling-reign-elite-trainer-box-ice-rider-calyrex",
@@ -297,7 +403,7 @@ const chillingReignEtb = {
 }
 
 const paldeanFatesEtb = {
-    gen: 95,
+    expansion: expansions.SCARLET_VIOLET_PALDEAN_FATES,
     name: "Paldean Fates Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-paldean-fates-elite-trainer-box-9",
@@ -316,7 +422,7 @@ const paldeanFatesEtb = {
 }
 
 const crownZenithEtb = {
-    gen: 89,
+    expansion: expansions.CROWN_ZENITH,
     name: "Crown Zenith Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-crown-zenith-elite-trainer-box-4",
@@ -325,7 +431,7 @@ const crownZenithEtb = {
 }
 
 const fusionStrikeEtb = {
-    gen: 83,
+    expansion: expansions.SWORD_SHIELD_FUSION_STRIKE,
     name: "Fusion Strike Elite Trainer Box",
     urls: [
         "https://retroworld.no/produkt/pokemon/samlerbokser-etb/pokemon-fusion-strike-elite-trainer-box-etb"
@@ -333,7 +439,7 @@ const fusionStrikeEtb = {
 }
 
 const lostOriginEtb = {
-    gen: 87,
+    expansion: expansions.SWORD_SHIELD_LOST_ORIGIN,
     name: "Lost Origin Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-lost-origin-elite-trainer-box-10",
@@ -346,7 +452,7 @@ const lostOriginEtb = {
 }
 
 const shiningFatesEtb = {
-    gen: 78,
+    expansion: expansions.SHINING_FATES,
     name: "Shining Fates Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-shining-fates-elite-trainer-box",
@@ -358,7 +464,7 @@ const shiningFatesEtb = {
 }
 
 const vividVoltageEtb = {
-    gen: 77,
+    expansion: expansions.SWORD_SHIELD_VIVID_VOLTAGE,
     name: "Vivid Voltage Elite Trainer Box",
     urls: [
         "https://www.collectible.no/home/pokemon-vivid-voltage-elite-trainer-box/",
@@ -367,7 +473,7 @@ const vividVoltageEtb = {
 }
 
 const astralRadianceEtb = {
-    gen: 85,
+    expansion: expansions.SWORD_SHIELD_ASTRAL_RADIANCE,
     name: "Astral Radiance Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-astral-radiance-elite-trainer-box-1",
@@ -376,7 +482,7 @@ const astralRadianceEtb = {
 }
 
 const darknessAblazeEtb = {
-    gen: 76,
+    expansion: expansions.SWORD_SHIELD_DARKNESS_ABLAZE,
     name: "Darkness Ablaze Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-darkness-ablaze-elite-trainer-box-4",
@@ -387,7 +493,7 @@ const darknessAblazeEtb = {
 }
 
 const hiddenFatesEtb = {
-    gen: 72,
+    expansion: expansions.HIDDEN_FATES,
     name: "Hidden Fates Elite Trainer Box",
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-hidden-fates-elite-trainer-box",
