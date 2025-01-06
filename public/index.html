@@ -79,6 +79,9 @@
             background-color: #f4f4f4;
             font-weight: bold;
         }
+        tr:hover {
+          cursor: pointer;
+        }
 
         tr:nth-child(even) {
             background-color: #f9f9f9;
@@ -93,6 +96,11 @@
         a:hover {
             text-decoration: underline;
         }
+        .products {
+          display: grid;
+          grid-gap: 10px;
+          grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        }
     </style>
 </head>
 <body>
@@ -106,6 +114,7 @@
       <label for="myCheckbox">
         <input type="checkbox" id="myCheckbox" v-model="showAllPrices"> Vis alle priser.
       </label>
+      <div class="products">
         <div v-for="product in productsToShow" :key="product.name" class="product">
             <div class="product-header">
                 <img v-if="product.image" :src="'images/' + product.image" :alt="product.name">
@@ -118,21 +127,22 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Butikk</th>
-                            <th>Pris</th>
-                            <th>På lager</th>
+                          <th>Butikk</th>
+                          <th>Pris</th>  
+                          <th v-if="showAllPrices">På lager</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="price in product.prices" :key="price.url">
-                            <td><a :href="price.url" target="_blank">{{ getHostname(price.url) }}</a></td>
-                            <td>NOK {{ price.price }}</td>
-                            <td>{{ price.inStock ? 'Ja' : 'Nei' }}</td>
+                        <tr v-for="price in product.prices" :key="price.url" @click="openLink(price.url)">
+                          <td><a :href="price.url" target="_blank">{{ getHostname(price.url) }}</a></td>
+                            <td>{{ Math.floor(price.price) }},-</td>
+                            <td v-if="showAllPrices">{{ price.inStock ? 'Ja' : 'Nei' }}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+      </div>
     </div>
 
     <script>
@@ -151,6 +161,9 @@
               }
             },
             methods: {
+              openLink(url) {
+                window.open(url, '_blank').focus();
+              },
                 getHostname(url) {
                     try {
                         return new URL(url).hostname.replace("www.","");
