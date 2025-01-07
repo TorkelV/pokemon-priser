@@ -277,11 +277,18 @@ const surgingsparksEtb = {
         "https://www.pokemadness.no/elite-trainer-boks/1920-surging-sparks-elite-trainer-box-820650859526.html",
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-scarlet-violet-surging-sparks/",
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-surging-sparks-elite-trainer-box-1",
+    
+    ]
+}
+
+const surgingsparksBoosterbox = {
+    expansion: expansions.SCARLET_VIOLET_SURGING_SPARKS,
+    name: "Surging Sparks Booster Box",
+    image: "surgingsparks_boosterbox.jpeg",
+    urls: [
         "https://www.collectible.no/home/pokemon-surging-sparks-booster-box/",
-        "https://www.gameninja.no/produkt/pokemon-sv8-surging-sparks-booster-box/",
         "https://baldbreakers.no/products/pokemon-surging-sparks-booster-box",
-
-
+        "https://www.gameninja.no/produkt/pokemon-sv8-surging-sparks-booster-box/"
     ]
 }
 
