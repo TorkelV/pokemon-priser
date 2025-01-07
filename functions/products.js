@@ -841,6 +841,7 @@ export const products = [
     lostOriginBoosterBox,
     astralRadianceBoosterBox,
     silverTempestBoosterBox,
-    brilliantStarsBoosterBox
+    brilliantStarsBoosterBox,
+    surgingsparksBoosterbox
 ];
 
