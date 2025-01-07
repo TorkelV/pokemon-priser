@@ -117,7 +117,9 @@ const gamingsjappaPris = async (doc) => {
 }
 
 const pokeshopPris = async (doc) => {
-    return fromApplicationLdJson(doc)
+    const price = +doc.querySelector('[itemprop="price"]').getAttribute("content")
+    const inStock = doc?.querySelector('[itemprop="availability"]')?.getAttribute("href")?.includes("InStock")
+    return { price, inStock }
 }
 
 const baldbreakersPris = async (doc) => {
@@ -203,7 +205,7 @@ export const parsers = {
     "https://gamingsjappa.no": gamingsjappaPris,
     "https://ark.no": arkPris,
     "https://pokelageret.no": pokelageretPris,
-    "https://pokeshop.no": pokeshopPris,
+    "https://poke-shop.no": pokeshopPris,
     "https://baldbreakers.no": baldbreakersPris,
     "https://spillglede.no": spillgledePris,
     "https://retroworld.no": retroworldPris,

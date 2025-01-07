@@ -172,10 +172,6 @@ const silverTempestEtb = {
         "https://www.kanoncon.no/produkt/pokemon-sword-shield-silver-tempest-elite-trainer-box-copy/",
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-silver-tempest-elite-trainer-box",
         "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-silver-tempest-elite-trainer-box"
-
-
-
-
     ]
 }
 
@@ -280,7 +276,10 @@ const surgingsparksEtb = {
         "https://pokelink.no/products/pokemon-sv8-surging-sparks-elite-trainer-box",
         "https://www.pokemadness.no/elite-trainer-boks/1920-surging-sparks-elite-trainer-box-820650859526.html",
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-scarlet-violet-surging-sparks/",
-        "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-surging-sparks-elite-trainer-box-1"
+        "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-surging-sparks-elite-trainer-box-1",
+        "https://www.collectible.no/home/pokemon-surging-sparks-booster-box/",
+        "https://www.gameninja.no/produkt/pokemon-sv8-surging-sparks-booster-box/",
+        "https://baldbreakers.no/products/pokemon-surging-sparks-booster-box",
 
 
     ]
@@ -375,7 +374,6 @@ const scarletAndVioletEtb = {
         "https://www.collectible.no/home/scarlet-violet-elite-trainer-box-koraidon/",
         "https://www.collectible.no/home/scarlet-violet-elite-trainer-box-miraidon/",
         "https://cardcenter.no/products/pokemon-scarlet-violet-elite-trainer-box",
-        "https://no.coolshop.com/produkt/pokemon-sv1-elite-trainer-box-pok85341/23E5SP/",
         "https://retroworld.no/produkt/pokemon/samlerbokser-etb/pokemon-scarlet-violet-elite-trainer-box-etb",
         "https://retroworld.no/produkt/pokemon/samlerbokser-etb/pokemon-scarlet-violet-elite-trainer-box-etb-2"
 
@@ -559,6 +557,16 @@ const paldeanFatesTin = {
     
 }
 
+const battleStylesEtb = {
+    name: "Battle Styles Elite Trainer Box",
+    image: "battlestyles_etb.png",
+    expansion: expansions.SWORD_SHIELD_BATTLE_STYLES,
+    urls: [
+        "https://cardcenter.no/products/battle-styles-elite-trainer-box-1",
+        "https://cardcenter.no/products/battle-styles-elite-trainer-box"
+    ]
+}
+
 
 const paldeanFatesPremiumCollection = {
     expansion: expansions.SCARLET_VIOLET_PALDEAN_FATES,
@@ -592,6 +600,200 @@ const paldeanFatesPremiumCollection = {
     ]
 }
 
+/// ----
+
+const scarletVioletTemporalForcesBoosterBox = {
+    expansion: expansions.SCARLET_VIOLET_TEMPORAL_FORCES,
+    image: "temporalforces_boosterbox.jpeg",
+    name: "Temporal Forces Booster Box",
+    urls: [
+        "https://www.proshop.no/Pokemon/Pokemon-TCG-Booster-Box-36-Packs-Scarlet-Violet-Temporal-Forces/3248754",
+        "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-temporal-forces-booster-box-4",
+        "https://gamezone.no/pokemon/158440/pokemon-temporal-forces-booster-box",
+        "https://spillglede.no/produkt/pokemon/booster/pokemon-temporal-forces-booster-box",
+        "https://www.collectible.no/home/pokemon-temporal-forces-booster-box/",
+        "https://www.kanoncon.no/produkt/pokemon-temporal-forces-booster-box/",
+        "https://www.pokelageret.no/produkt/engelsk/booster-bokser/temporal-forces-booster-box",
+        "https://www.outland.no/p-scarlet-violet-temporal-forces-booster-display-boks-pokemon-tcg-pokemon-820650866395",
+        "https://www.gameninja.no/produkt/pokemon-sv5-temporal-forces-display/",
+    ]
+};
+
+const scarletVioletStellarCrownBoosterBox = {
+    expansion: expansions.SCARLET_VIOLET_STELLAR_CROWN,
+    image: "stellarcrown_boosterbox.jpeg",
+    name: "Stellar Crown Booster Box",
+    urls: [
+        "https://www.proshop.no/Pokemon/Pokemon-TCG-Booster-Display-Box-36-Packs-Scarlet-Violet-Stellar-Crown/3298598",
+        "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-stellar-crown-booster-box-4",
+        "https://www.collectible.no/home/pokemon-stellar-crown-booster-box/",
+        "https://cardcenter.no/products/stellar-crown-booster-display-box",
+        "https://epicards.no/products/scarlet-violet-stellar-crown-booster-display-boks-36pk?_pos=1&_sid=1f4f2db0d&_ss=r",
+        "https://www.kanoncon.no/produkt/pokemon-stellar-crown-booster-box/",
+        "https://www.outland.no/p-scarlet-violet-stellar-crown-booster-display-boks-scarlet-violet-stellar-crown-pokemon-820650868979",
+        "https://www.gameninja.no/produkt/pre-order-13-09-pokemon-sv7-stellar-crown-booster-box/",
+    ]
+};
+
+const scarletVioletParadoxRiftBoosterBox = {
+    expansion: expansions.SCARLET_VIOLET_PARADOX_RIFT,
+    image: "paradoxrift_boosterbox.jpeg",
+    name: "Paradox Rift Booster Box",
+    urls: [
+        "https://www.gameninja.no/produkt/pokemon-paradox-rift-sv4-display/",
+        "https://kortkjelleren.no/products/pokemon-paradox-rift-booster-box",
+        "https://www.proshop.no/Pokemon/Pokemon-TCG-Booster-Box-36-packs-Scarlet-Violet-Paradox-Rift/3289131",
+        "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-paradox-rift-booster-box-8",
+        "https://www.collectible.no/home/pokemon-paradox-rift-booster-box/",
+        "https://www.kanoncon.no/produkt/pokemon-paradox-rift-booster-box/",
+        "https://www.pokelageret.no/produkt/engelsk/booster-bokser/pokemon-paradox-rift-booster-box",
+        "https://no.coolshop.com/produkt/pokemon-sv-paradox-rift-booster-box-36-pcs-pok85399/23HE9B/",
+        "https://www.outland.no/p-scarlet-violet-paradox-rift-booster-display-box-pokemon-tcg-scarlet-violet-paradox-rift-pokemon-820650863998"
+    ]
+};
+
+const scarletVioletShroudedFableBoosterBundle = {
+    expansion: expansions.SCARLET_VIOLET_SHROUDED_FABLE,
+    image: "shroudedfable_boosterbundle.jpeg",
+    name: "Shrouded Fable Booster Bundle",
+    urls: [
+        "https://www.pokestore.no/produkt/engelsk/sorter-etter-sett/shrouded-fable/pokemon-shrouded-fable-booster-bundle",
+        "https://www.proshop.no/Pokemon/Pokemon-TCG-Booster-Bundle-6-packs-Scarlet-Violet-Shrouded-Fable/3275679",
+        "https://gamezone.no/samlekort/160902/pokemon-shrouded-fable-booster-bundle",
+        "https://cardcenter.no/products/pokemon-shrouded-fable-booster-bundle",
+        "https://www.collectible.no/home/pokemon-shrouded-fable-booster-bundle-6-pack/",
+        "https://www.pokelageret.no/produkt/engelsk/booster-bundle/shrouded-fable-booster-bundle",
+        "https://www.poki-heaven.no/produkt/pokemon-tcg/boosterpakker/pokemon-shrouded-fable-booster-bundle-4",
+        "https://www.computersalg.no/i/21456227/pok%c3%a9mon-poke-bst-bundle-sv6-5-rel-6-9",
+        "https://pokelink.no/products/pokemon-sv6-5-scarlet-violet-shrouded-fable-booster-bundle",
+        "https://www.poki-heaven.no/produkt//pokemon-shrouded-fable-booster-bundle-pa-lager",
+        "https://www.pokemadness.no/booster-pakker/1573-shrouded-fable-booster-bundle-820650858512.html",
+        "https://no.coolshop.com/produkt/pokemon-sv6-5-shrouded-fable-6-booster-packs-pok87851/23MG59/",
+        "https://www.cardstore.no/produkter/shrouded-fable-booster-bundle",
+        "https://www.outland.no/p-shrouded-fable-booster-bundle-pack-scarlet-violet-shrouded-fable-pokemon-820650858512",
+        "https://www.gameninja.no/produkt/pre-order-pokemon-sv6-5-shrouded-fable-booster-bundle/",
+        "https://www.kanoncon.no/produkt/pokemon-shrouded-fable-booster-bundle/",
+        "https://www.playlot.no/produkt/pokemon/shrouded-fable-2024/shrouded-fable-6pk-bundlepakke",
+    ]
+};
+
+const scarletVioletPaldeaEvolvedBoosterBox = {
+    expansion: expansions.SCARLET_VIOLET_PALDEA_EVOLVED,
+    image: "paldeaevolved_boosterbox.jpeg",
+    name: "Paldea Evolved Booster Box",
+    urls: [
+        "https://www.gameninja.no/produkt/pokemon-sv2-paldea-evolved-display/",
+        "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-paldea-evolved-booster-box-9",
+        "https://gamezone.no/samlekort/155602/pokemon-paldea-evolved-booster-box",
+        "https://www.collectible.no/home/pokemon-paldea-evolved-booster-box/",
+        "https://www.outland.no/p-scarlet-violet-paldea-evolved-booster-display-box-pokemon-tcg-pokemon-820650863493",
+        "https://poke-shop.no/produkt/alle-produkter/boosterbokser-1/paldea-evolved-booster-boks",
+        "https://www.pokemadness.no/booster-boks/1306-paldea-evolved-booster-boks-restock--820650863493.html"
+    ]
+};
+
+const scarletVioletObsidianFlamesBoosterBox = {
+    expansion: expansions.SCARLET_VIOLET_OBSIDIAN_FLAMES,
+    image: "obsidianflames_boosterbox.jpeg",
+    name: "Obsidian Flames Booster Box",
+    urls: [
+        "https://www.gameninja.no/produkt/pokemon-obsidian-flames-sv3-display/",
+        "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-obsidian-flames-booster-box-4",
+        "https://gamezone.no/pokemon/156448/pokemon-obsidian-flames-booster-box",
+        "https://www.collectible.no/home/pokemon-obsidian-flames-booster-box/",
+        "https://www.outland.no/p-scarlet-violet-obsidian-flames-booster-display-box-pokemon-tcg-scarlet-violet-obsidian-flames-pokemon-820650863745"
+    ]
+};
+
+const scarletVioletTwilightMasqueradeBoosterBox = {
+    expansion: expansions.SCARLET_VIOLET_TWILIGHT_MASQUERADE,
+    image: "twilightmasquerade_boosterbox.jpeg",
+    name: "Twilight Masquerade Booster Box",
+    urls: [
+        "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-twilight-masquerade-booster-box-5",
+        "https://gamezone.no/pokemon/159404/pokemon-twilight-masquerade-booster-box",
+        "https://www.gameninja.no/produkt/release-25-5-24-poke-sv6-twilight-masquerade-booster-box/",
+        "https://www.outland.no/p-scarlet-violet-twilight-masquerade-booster-display-boks-pokemon-t-scarlet-violet-twilight-masquerade-pokemon-820650867743"
+    ]
+};
+
+const scarletVioletBaseBoosterBox = {
+    expansion: expansions.SCARLET_VIOLET_BASE,
+    image: "scarletviolet_boosterbox.jpeg",
+    name: "Scarlet & Violet Base Booster Box",
+    urls: [
+        "https://www.gameninja.no/produkt/pokemon-sv1-scarlet-violet-display/",
+        "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-scarlet-violet-booster-box-6",
+        "https://cardcenter.no/products/pokemon-scarlet-violet-booster-box",
+        "https://www.collectible.no/home/scarlet-violet-booster-box/",
+        "https://www.pokelageret.no/produkt/engelsk/booster-bokser/pokemon-scarlet-violet-booster-box",
+        "https://no.coolshop.com/produkt/pokemon-tcg-scarlet-violet-36pcs-booster-box/23F6G8/",
+        "https://www.kanoncon.no/produkt/pokemon-scarlet-violet-booster-box/",
+        "https://www.outland.no/p-scarlet-violet-booster-display-box-pokemon-tcg-820650863240"
+    ]
+};
+
+const brilliantStarsBoosterBox = {
+    expansion: expansions.SWORD_SHIELD_BRILLIANT_STARS,
+    image: "brilliantstars_boosterbox.jpeg",
+    name: "Brilliant Stars Booster Box",
+    urls: [
+        "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-brilliant-stars-booster-display-1",
+        "https://boosterpakker.no/produkt/booster-bokser/brilliant-stars-booster-boks",
+    ]
+};
+
+const silverTempestBoosterBox = {
+    expansion: expansions.SWORD_SHIELD_SILVER_TEMPEST,
+    image: "silvertempest_boosterbox.jpeg",
+    name: "Silver Tempest Booster Box",
+    urls: [
+        "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-silver-tempest-booster-box-10",
+        "https://www.collectible.no/home/pokemon-silver-tempest-booster-box/",
+        "https://cardcenter.no/products/pokemon-silver-tempest-booster-box",
+    ]
+};
+
+
+const astralRadianceBoosterBox = {
+    expansion: expansions.SWORD_SHIELD_ASTRAL_RADIANCE,
+    image: "astralradiance_boosterbox.jpeg",
+    name: "Astral Radiance Booster Box",
+    urls: [
+        "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-astral-radiance-booster-display-1",
+        "https://www.collectible.no/home/pokemon-astral-radiance-booster-box/",
+    ]
+};
+
+
+const lostOriginBoosterBox = {
+    expansion: expansions.SWORD_SHIELD_LOST_ORIGIN,
+    image: "lostorigin_boosterbox.jpeg",
+    name: "Lost Origin Booster Box",
+    urls: [
+        "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-lost-origin-booster-box-1",
+    ]
+};
+
+
+const battleStylesBoosterBox = {
+    expansion: expansions.SWORD_SHIELD_BATTLE_STYLES,
+    image: "battlestyles_boosterbox.webp",
+    name: "Battle Styles Booster Box",
+    urls: [
+        "https://www.collectible.no/home/pokemon-battle-styles-booster-box/",
+    ]
+};
+
+const vividVoltageBoosterBox = {
+    expansion: expansions.SWORD_SHIELD_VIVID_VOLTAGE,
+    image: "vividvoltage_boosterbox.webp",
+    name: "Vivid Voltage Booster Box",
+    urls: [
+        "https://www.collectible.no/home/pokemon-vivid-voltage-booster-box/",
+    ]
+};
+
 
 export const products = [
     darknessAblazeEtb,
@@ -619,6 +821,20 @@ export const products = [
     fusionStrikeEtb,
     paldeanFatesPremiumCollection,
     paldeanFatesSpecialTin,
-    paldeanFatesTin
+    paldeanFatesTin,
+    scarletVioletBaseBoosterBox,
+    scarletVioletTwilightMasqueradeBoosterBox,
+    scarletVioletObsidianFlamesBoosterBox,
+    scarletVioletPaldeaEvolvedBoosterBox,
+    scarletVioletShroudedFableBoosterBundle,
+    scarletVioletParadoxRiftBoosterBox,
+    scarletVioletStellarCrownBoosterBox,
+    scarletVioletTemporalForcesBoosterBox,
+    vividVoltageBoosterBox,
+    battleStylesBoosterBox,
+    lostOriginBoosterBox,
+    astralRadianceBoosterBox,
+    silverTempestBoosterBox,
+    brilliantStarsBoosterBox
 ];
 
