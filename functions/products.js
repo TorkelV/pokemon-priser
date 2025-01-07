@@ -600,8 +600,6 @@ const paldeanFatesPremiumCollection = {
     ]
 }
 
-/// ----
-
 const scarletVioletTemporalForcesBoosterBox = {
     expansion: expansions.SCARLET_VIOLET_TEMPORAL_FORCES,
     image: "temporalforces_boosterbox.jpeg",
@@ -819,6 +817,7 @@ export const products = [
     chillingReignEtb,
     paldeanFatesEtb,
     fusionStrikeEtb,
+    battleStylesEtb,
     paldeanFatesPremiumCollection,
     paldeanFatesSpecialTin,
     paldeanFatesTin,
