@@ -24,14 +24,14 @@ jobs:
       - name: 'Use gcloud CLI'
         run: 'gcloud info'
 
+      - name: 'Deploy to gen2 cloud function'
+        run:  |
+          gcloud functions deploy getPrices --gen2 --region=europe-north1 --runtime=nodejs20 --source=functions --entry-point=getPrices --trigger-http --timeout=720 --project pokemon-priser
+     
       - name: Get Identity Token
         id: get_token
         run: echo "::add-mask::Authorization::$(gcloud auth print-identity-token)" >> token.txt
 
-      - name: 'Deploy to gen2 cloud function'
-        run:  |
-          gcloud functions deploy getPrices --gen2 --region=europe-north1 --runtime=nodejs20 --source=functions --entry-point=getPrices --trigger-http --timeout=720 --project pokemon-priser
-      
       - name: 'Run cloud function'
         run:  |
           TOKEN=$(cat token.txt)
