@@ -3,7 +3,8 @@ import {Storage} from '@google-cloud/storage';
 const storage = new Storage();
 import {products} from './products.js';
 import {scrapeAllProducts} from './scraper.js';
-import {ComputeManagementClient} from '@google-cloud/compute';
+import compute from '@google-cloud/compute';
+const {ComputeManagementClient} = compute;
 
 
 async function saveJsonToBucket(bucketName, json, filename) {
@@ -21,32 +22,20 @@ async function saveJsonToBucket(bucketName, json, filename) {
 }
 
 const invalidateCache = async () => {
-    try {
-        const computeClient = new ComputeManagementClient();
-        const project = 'pokemon-priser'; //Your Project ID
-        const urlMap = 'pokemon-priser'; //Your URL Map Name
+    const computeClient = new ComputeManagementClient();
+    const project = 'pokemon-priser'; //Your Project ID
+    const urlMap = 'pokemon-priser'; //Your URL Map Name
 
-        // Construct the request
-        const request = {
-          project: project,
-          urlMap: urlMap,
-          paths: ['/master.json'], //Paths to invalidate
-        };
-
-        //Invalidate CDN cache
-        const [operation] = await computeClient.urlMaps.invalidateCache(request);
-
-        //Wait for the operation to complete
-        console.log('Waiting for the operation to complete...');
-        await operation.promise();
-        console.log('CDN cache invalidated successfully!');
-
-
-    } catch (cdnError) {
+    // Construct the request
+    const request = {
+        project: project,
+        urlMap: urlMap,
+        paths: ['/master.json'], //Paths to invalidate
+    };
+    return await computeClient.urlMaps.invalidateCache(request).catch(e=> {
         console.error("Error invalidating CDN cache:", cdnError);
-        //Handle CDN invalidation failure appropriately (e.g., retry, alert)
-    }
-    return Promise.resolve()
+        // Ignore invalidation errors
+    });
 }
 
 functions.http('getPrices', async (req, res) => {
