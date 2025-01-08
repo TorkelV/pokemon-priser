@@ -1,9 +1,9 @@
-const functions = require('@google-cloud/functions-framework');
-const {Storage} = require('@google-cloud/storage');
+import functions  from '@google-cloud/functions-framework';
+import {Storage} from '@google-cloud/storage';
 const storage = new Storage();
-const {products} = require('./products.js');
-const {scrapeAllProducts} = require('./scraper.js');
-const {ComputeManagementClient} = require('@google-cloud/compute');
+import {products} from './products.js';
+import {scrapeAllProducts} from './scraper.js';
+import {ComputeManagementClient} from '@google-cloud/compute';
 
 
 async function saveJsonToBucket(bucketName, json, filename) {
