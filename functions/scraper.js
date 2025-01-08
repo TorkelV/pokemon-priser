@@ -47,6 +47,7 @@ const scrapeProduct = async (product) => {
         name: product.name,
         expansion: product.expansion,
         image: product.image,
+        packs: product.packs,
         prices: prices.filter(e => e?.price).sort((a, b) => a.price - b.price)
     }
 }

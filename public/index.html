@@ -31,7 +31,6 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             margin: 16px 0;
             padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
 
@@ -101,6 +100,37 @@
           grid-gap: 10px;
           grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         }
+        .product-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        align-items: center;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-filters label,
+    .product-filters select {
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .product-filters input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin: 0;
+    }
+
+    .product-filters select {
+        padding: 5px 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        background-color: #fff;
+    }
     </style>
 </head>
 <body>
@@ -111,11 +141,22 @@
       <p>Du kan gjerne være med å bidra på <a href="https://github.com/torkelv/pokemon-priser" target="_blank">Github</a>.</p>
     <hr>
       <p>Viser normalt bare produkter som er på lager og de laveste 5 prisene, men du kan velge å se alt 👇</p>
-      <label for="myCheckbox">
-        <input type="checkbox" id="myCheckbox" v-model="showAllPrices"> Vis alle priser.
+      <div class="product-filters">
+        
+        <div>
+            <select v-model="sortOption" id="sort">
+              <option value="pricePerPack">Lavest pris per boosterpakke</option>
+              <option value="expansion">Lanseringsdato</option>
+              <option value="name">Navn</option>
+            </select>
+        </div>
+        <label for="myCheckbox">
+          <input type="checkbox" id="myCheckbox" v-model="showAllPrices"> 
+          Vis alle priser.
       </label>
+    </div>
       <div class="products">
-        <div v-for="product in productsToShow" :key="product.name" class="product">
+        <div v-for="product in sortedProducts" :key="product.name" class="product">
             <div class="product-header">
                 <img v-if="product.image" :src="'images/' + product.image" :alt="product.name">
                 <div class="product-info">
@@ -152,15 +193,40 @@
             data() {
                 return {
                     showAllPrices: false,
-                    products: [] // Load your data from `master.json` here
+                    products: [],
+                    sortOption: 'pricePerPack',
                 };
             },
             computed: {
               productsToShow() {
                 return this.showAllPrices ? this.products : 
-                  this.products.map(product => {return {...product, prices: product.prices.filter(price => price.inStock).slice(0,5)}})
+                  this.products.map(product => {
+                    return {
+                      ...product, 
+                      prices: product.prices.filter(price => price.inStock).slice(0,5)
+                    }
+                })
                   .filter(e=>e.prices.length)
-              }
+              },
+              sortedProducts() {
+                const products = [...this.productsToShow];
+                if (this.sortOption === 'pricePerPack') {
+                    return products.sort((a, b) => {
+                        const priceA = a.prices.length > 0 ? Math.min(...a.prices.map(p => p.price/a.packs)) : Infinity;
+                        const priceB = b.prices.length > 0 ? Math.min(...b.prices.map(p => p.price/b.packs)) : Infinity;
+                        return priceA - priceB;
+                    });
+                }
+                if (this.sortOption === 'name') {
+                    return products.sort((a, b) => a.name.localeCompare(b.name));
+                } 
+                if (this.sortOption === 'expansion') {
+                    return products.sort((a, b) => {
+                        return b.expansion.id - a.expansion.id;
+                    });
+                }
+                return products; // Default fallback
+            },
             },
             methods: {
               openLink(url) {
