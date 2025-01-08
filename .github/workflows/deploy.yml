@@ -43,5 +43,5 @@ jobs:
       
       - name: 'Invalidate index.html'
         run:  |
-          gcloud compute url-maps invalidate-cdn-cache pokemon-priser --path /index.html --project pokemon-priser
+          gcloud compute url-maps invalidate-cdn-cache pokemon-priser --path /index.html --project pokemon-priser --async
         
