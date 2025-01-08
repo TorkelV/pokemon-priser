@@ -28,15 +28,13 @@ jobs:
         run:  |
           gcloud functions deploy getPrices --gen2 --region=europe-north1 --runtime=nodejs20 --source=functions --entry-point=getPrices --trigger-http --timeout=720 --project pokemon-priser
      
-      - name: Get Identity Token
-        id: get_token
-        run: echo "::add-mask::Authorization::$(gcloud auth print-identity-token)" >> token.txt
-
       - name: 'Run cloud function'
         run:  |
-          TOKEN=$(cat token.txt)
-          curl -m 730 -X POST https://europe-north1-pokemon-priser.cloudfunctions.net/getPrices -H "Authorization: bearer $TOKEN" -H "Content-Type: application/json" -d '{"name": "Hello World"}'
-      
+          curl -m 730 -X POST "https://europe-north1-pokemon-priser.cloudfunctions.net/getPrices" \
+            -H "Authorization: Bearer ${{ steps.auth.outputs.access_token }}" \
+            -H "Content-Type: application/json" \
+            -d '{"name": "Hello World"}'
+
       - name: 'Upload index.html'
         run:  |
           gcloud storage cp public/index.html gs://pokemon-priser-data --project pokemon-priser
