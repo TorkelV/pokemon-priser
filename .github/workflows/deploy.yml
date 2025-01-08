@@ -15,16 +15,33 @@ jobs:
         uses: 'google-github-actions/auth@v1'
         with:
           credentials_json: '${{ secrets.GCLOUD_SERVICE_ACCOUNT_JSON }}'
+      
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v1'
         with:
           version: '>= 363.0.0'
+      
       - name: 'Use gcloud CLI'
         run: 'gcloud info'
+
+      - name: Get Identity Token
+        id: get_token
+        run: echo "::add-mask::Authorization::$(gcloud auth print-identity-token)" >> token.txt
+
       - name: 'Deploy to gen2 cloud function'
         run:  |
-          gcloud functions deploy getPrices --gen2 --region=europe-north1 --runtime=nodejs20 --source=functions --entry-point=getPrices --trigger-http --timeout=720
-      - name: 'Upload html'
+          gcloud functions deploy getPrices --gen2 --region=europe-north1 --runtime=nodejs20 --source=functions --entry-point=getPrices --trigger-http --timeout=720 --project pokemon-priser
+      
+      - name: 'Run cloud function'
         run:  |
-          gcloud storage cp public/index.html gs://pokemon-priser-data
+          TOKEN=$(cat token.txt)
+          curl -m 730 -X POST https://europe-north1-pokemon-priser.cloudfunctions.net/getPrices -H "Authorization: bearer $TOKEN" -H "Content-Type: application/json" -d '{"name": "Hello World"}'
+      
+      - name: 'Upload index.html'
+        run:  |
+          gcloud storage cp public/index.html gs://pokemon-priser-data --project pokemon-priser
+      
+      - name: 'Invalidate index.html'
+        run:  |
+          gcloud compute url-maps invalidate-cdn-cache pokemon-priser --path /index.html --project pokemon-priser
         

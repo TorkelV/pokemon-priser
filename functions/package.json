@@ -2,6 +2,7 @@
   "main": "index.js",
   "type": "module",
   "dependencies": {
+    "@google-cloud/compute": "^4.9.0",
     "@google-cloud/functions-framework": "^3.0.0",
     "@google-cloud/storage": "^7.14.0",
     "jsdom": "^25.0.1"
