@@ -4,7 +4,8 @@ const storage = new Storage();
 import {products} from './products.js';
 import {scrapeAllProducts} from './scraper.js';
 import compute from '@google-cloud/compute';
-const {ComputeManagementClient} = compute;
+const {UrlMapsClient} = compute
+const urlMapsClient = new UrlMapsClient();
 
 
 async function saveJsonToBucket(bucketName, json, filename) {
@@ -22,7 +23,7 @@ async function saveJsonToBucket(bucketName, json, filename) {
 }
 
 const invalidateCache = async () => {
-    const computeClient = new ComputeManagementClient();
+    
     const project = 'pokemon-priser'; //Your Project ID
     const urlMap = 'pokemon-priser'; //Your URL Map Name
 
@@ -30,12 +31,14 @@ const invalidateCache = async () => {
     const request = {
         project: project,
         urlMap: urlMap,
-        paths: ['/master.json'], //Paths to invalidate
+        cacheInvalidationRuleResource: { path: "/master.json"},
     };
-    return await computeClient.urlMaps.invalidateCache(request).catch(e=> {
-        console.error("Error invalidating CDN cache:", cdnError);
-        // Ignore invalidation errors
-    });
+    console.log(request);
+    console.log("running cache invalidation");
+    return await urlMapsClient.invalidateCache(request).catch(e=>{
+        console.error("Failed to invalidate")
+        return Promise.resolve()
+    })
 }
 
 functions.http('getPrices', async (req, res) => {
