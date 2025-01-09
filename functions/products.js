@@ -295,6 +295,7 @@ const surgingsparksBoosterbox = {
     expansion: expansions.SCARLET_VIOLET_SURGING_SPARKS,
     name: "Surging Sparks Booster Box",
     image: "surgingsparks_boosterbox.jpeg",
+    packs: 36,
     urls: [
         "https://www.collectible.no/home/pokemon-surging-sparks-booster-box/",
         "https://baldbreakers.no/products/pokemon-surging-sparks-booster-box",
