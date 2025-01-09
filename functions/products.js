@@ -640,7 +640,11 @@ const paldeanFatesPremiumCollection = {
         "https://www.kanoncon.no/produkt/paldean-fates-premium-collection-meowscarada-ex/",
         "https://www.pokelageret.no/produkt/engelsk/spesialbokser/paldean-fates-premium-collection-quaquaval-ex",
         "https://www.pokelageret.no/produkt/engelsk/spesialbokser/paldean-fates-premium-collection-meowscarada-ex",
-        "https://www.pokelageret.no/produkt/engelsk/spesialbokser/paldean-fates-premium-collection-skeledirge-ex"
+        "https://www.pokelageret.no/produkt/engelsk/spesialbokser/paldean-fates-premium-collection-skeledirge-ex",
+"https://retroworld.no/products/pokemon-paldean-fates-meowscarada-ex-premium-collection",
+"https://retroworld.no/products/paldean-fates-quaquaval-ex-premium-collection",
+"https://retroworld.no/products/pokemon-paldean-fates-skeledirge-ex-premium-collection",
+
     ]
 }
 
