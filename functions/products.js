@@ -135,7 +135,8 @@ const shroudedFableEtb = {
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-shrouded-fable-elite-trainer-box-1",
         "https://pokelageret.no/produkt/engelsk/elite-trainer-boks/shrouded-fable-elite-trainer-box",
         "https://baldbreakers.no/products/scarlet-violet-shrouded-fable-elite-trainer-box",
-        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-shrouded-fable-elite-trainer-box-2"
+        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-shrouded-fable-elite-trainer-box-2",
+"https://retroworld.no/products/pokemon-shrouded-fable-elite-trainer-box-etb"
 
     ]
 }
@@ -174,7 +175,8 @@ const silverTempestEtb = {
         "https://www.gameninja.no/produkt/pokemon-silver-tempest-swsh12-elite-trainer-box/",
         "https://www.kanoncon.no/produkt/pokemon-sword-shield-silver-tempest-elite-trainer-box-copy/",
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-silver-tempest-elite-trainer-box",
-        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-silver-tempest-elite-trainer-box"
+        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-silver-tempest-elite-trainer-box",
+"https://retroworld.no/products/silver-tempest-elite-trainer-box"
     ]
 }
 
@@ -284,6 +286,7 @@ const surgingsparksEtb = {
         "https://www.pokemadness.no/elite-trainer-boks/1920-surging-sparks-elite-trainer-box-820650859526.html",
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-scarlet-violet-surging-sparks/",
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-surging-sparks-elite-trainer-box-1",
+"https://retroworld.no/products/pokemon-surging-sparks-elite-trainer-box-etb",
     
     ]
 }
@@ -295,7 +298,7 @@ const surgingsparksBoosterbox = {
     urls: [
         "https://www.collectible.no/home/pokemon-surging-sparks-booster-box/",
         "https://baldbreakers.no/products/pokemon-surging-sparks-booster-box",
-        "https://www.gameninja.no/produkt/pokemon-sv8-surging-sparks-booster-box/"
+        "https://www.gameninja.no/produkt/pokemon-sv8-surging-sparks-booster-box/",
     ]
 }
 
@@ -422,7 +425,9 @@ const chillingReignEtb = {
         "https://www.extra-leker.no/pokemon-swsh-chilling-reign-elite-trainer-box-ice-rider-calyrex",
         "https://www.outland.no/sword-shield-shadow-rider-calyrex-chilling-reign-elite-trainer-box",
         "https://www.outland.no/sword-shield-ice-rider-calyrex-chilling-reign-elite-trainer-box",
-        "https://retroworld.no/produkt/pokemon/samlerbokser-etb/pokemon-chilling-reign-elite-trainer-box-etb-3"
+        "https://retroworld.no/produkt/pokemon/samlerbokser-etb/pokemon-chilling-reign-elite-trainer-box-etb-3",
+"https://retroworld.no/products/pokemon-chilling-reign-center-elite-trainer-box-etb",
+"https://retroworld.no/products/chilling-reign-elite-trainer-box"
     ]
 }
 
@@ -491,6 +496,7 @@ const shiningFatesEtb = {
         "https://pokestore.no/produkt/engelsk/etb/pokemon-shining-fates-elite-trainer-box",
         "https://www.collectible.no/home/pokemon-shining-fates-elite-trainer-box/",
         "https://www.outland.no/shining-fates-elite-trainer-box",
+"https://retroworld.no/products/pokemon-shining-fates-elite-trainer-box-etb",
 
 
     ]
@@ -503,7 +509,8 @@ const vividVoltageEtb = {
     packs: 8,
     urls: [
         "https://www.collectible.no/home/pokemon-vivid-voltage-elite-trainer-box/",
-        "https://pokestore.no/produkt/engelsk/etb/pokemon-vivid-voltage-elite-trainer-box"
+        "https://pokestore.no/produkt/engelsk/etb/pokemon-vivid-voltage-elite-trainer-box",
+"https://retroworld.no/products/pokemon-vivid-voltage-elite-trainer-box-etb"
     ]
 }
 
@@ -527,7 +534,8 @@ const darknessAblazeEtb = {
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-darkness-ablaze-elite-trainer-box-4",
         "https://www.collectible.no/home/pokemon-darkness-ablaze-elite-trainer-box/",
-        "https://gamingsjappa.no/products/pokemon-tcg-kort-sword-shield-3-darkness-ablaze-elite-trainer-box"
+        "https://gamingsjappa.no/products/pokemon-tcg-kort-sword-shield-3-darkness-ablaze-elite-trainer-box",
+"https://retroworld.no/products/pokemon-darkness-ablaze-elite-trainer-box-etb"
 
     ]
 }
@@ -539,7 +547,8 @@ const hiddenFatesEtb = {
     packs: 10,
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-hidden-fates-elite-trainer-box",
-        "https://retroworld.no/produkt/pokemon/pokemon-hidden-fates-elite-trainer-box-etb-na-pa-lager-igjen"
+        "https://retroworld.no/produkt/pokemon/pokemon-hidden-fates-elite-trainer-box-etb-na-pa-lager-igjen",
+"https://retroworld.no/products/hidden-fates-elite-trainer-box"
     ]
 }
 
