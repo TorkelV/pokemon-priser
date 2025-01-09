@@ -514,7 +514,8 @@ const astralRadianceEtb = {
     packs: 8,
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-astral-radiance-elite-trainer-box-1",
-        "https://www.kanoncon.no/produkt/pokemon-sword-shield-astral-radiance-elite-trainer-box/"
+        "https://www.kanoncon.no/produkt/pokemon-sword-shield-astral-radiance-elite-trainer-box/",
+"https://retroworld.no/products/pokemon-astral-radiance-elite-trainer-box-etb"
     ]
 }
 
@@ -596,7 +597,10 @@ const battleStylesEtb = {
     packs: 8,
     urls: [
         "https://cardcenter.no/products/battle-styles-elite-trainer-box-1",
-        "https://cardcenter.no/products/battle-styles-elite-trainer-box"
+        "https://cardcenter.no/products/battle-styles-elite-trainer-box",
+"https://retroworld.no/products/pokemon-battle-styles-elite-trainer-box-rod-etb",
+"https://retroworld.no/products/pokemon-battle-styles-elite-trainer-box-bla-etb",
+
     ]
 }
 
