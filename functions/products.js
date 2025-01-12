@@ -102,7 +102,9 @@ const expansions = {
     SCARLET_VIOLET_SHROUDED_FABLE: { id: 100, name: "Scarlet & Violet—Shrouded Fable" },
     SCARLET_VIOLET_STELLAR_CROWN: { id: 101, name: "Scarlet & Violet—Stellar Crown" },
     SCARLET_VIOLET_SURGING_SPARKS: { id: 102, name: "Scarlet & Violet—Surging Sparks" },
-    SCARLET_VIOLET_PRISMATIC_EVOLUTIONS: { id: 103, name: "Scarlet & Violet—Prismatic Evolutions" }
+    SCARLET_VIOLET_PRISMATIC_EVOLUTIONS: { id: 103, name: "Scarlet & Violet—Prismatic Evolutions" },
+    SCARLET_VIOLET_JOURNEY_TOGETHER: { id: 104, name: "Scarlet & Violet—Journey Together" }
+
 }
 
 
@@ -136,8 +138,9 @@ const shroudedFableEtb = {
         "https://pokelageret.no/produkt/engelsk/elite-trainer-boks/shrouded-fable-elite-trainer-box",
         "https://baldbreakers.no/products/scarlet-violet-shrouded-fable-elite-trainer-box",
         "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-shrouded-fable-elite-trainer-box-2",
-        "https://retroworld.no/products/pokemon-shrouded-fable-elite-trainer-box-etb"
-
+        "https://retroworld.no/products/pokemon-shrouded-fable-elite-trainer-box-etb",
+        "https://www.tinycardcollection.no/produkt/pokemon/elite-trainer-box/scarlet-violet-shrouded-fable-pokemon-center-elite-trainer-box",
+        
     ]
 }
 
@@ -153,7 +156,8 @@ const prismaticEvolutionEtb = {
         "https://cardcenter.no/products/pokemon-prismatic-evolutions-elite-trainer-box",
         "https://www.gameninja.no/produkt/prismatic-evolutions-elite-trainer-box/",
         "https://www.playlot.no/produkt/pokemon/prismatic-evolution-2025/prismatic-evolution-elite-trainer-boks",
-"https://baldbreakers.no/products/pokemon-prismatic-evolutions-elite-trainer-box-forhandsbestill"
+        "https://baldbreakers.no/products/pokemon-prismatic-evolutions-elite-trainer-box-forhandsbestill",
+
 
 
     ]
@@ -201,7 +205,10 @@ const twilightMasqETB = {
         "https://kortkjelleren.no/products/pokemon-twilight-masquerade-elite-trainer",
         "https://gamingsjappa.no/products/pokemon-tcg-kort-scarlet-violet-6-twilight-masquerade-elite-trainer-box",
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-twilight-masquerade-elite-trainer-box-1",
-        "https://baldbreakers.no/products/scarlet-violet-twilight-masquerade-elite-trainer-box"
+        "https://baldbreakers.no/products/scarlet-violet-twilight-masquerade-elite-trainer-box",
+        "https://www.tinycardcollection.no/produkt/pokemon/elite-trainer-box/scarlet-violet-twilight-masquerade-elite-trainer-box",
+        "https://spillwill.no/products/pokemon-tcg-scarlet-violet-twilight-masquerade-pokemon-elite-trainer-box",
+
 
 
     ]
@@ -267,8 +274,11 @@ const stellarCrownEtb = {
         "https://www.kanoncon.no/produkt/pokemon-stellar-crown-elite-trainer-box/",
         "https://epicards.no/products/pokemon-tcg-stellar-crown-elite-trainer-box-med-samlekort-og-tilbehor",
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-stellar-crown-elite-trainer-box-4",
-        "https://baldbreakers.no/products/scarlet-violet-stellar-crown-elite-trainer-box"
-    ]
+        "https://baldbreakers.no/products/scarlet-violet-stellar-crown-elite-trainer-box",
+        "https://www.tinycardcollection.no/produkt/pokemon/elite-trainer-box/pokemon-scarlet-violet-stellar-crown-elite-trainer-box",
+        "https://spillwill.no/products/pokemon-stellar-crown-elite-trainer-box",
+
+         ]
 }
 
 const surgingsparksEtb = {
@@ -441,7 +451,9 @@ const paldeanFatesEtb = {
         "https://www.gameninja.no/produkt/poke-elite-trainer-box-sv4-5/",
         "https://kortkjelleren.no/products/paldean-fates-elite-trainer-box",
         "https://gamingsjappa.no/products/pokemon-tcg-kort-scarlet-violet-4-5-paldean-fates-elite-trainer-box",
-        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-paldean-fates-elite-trainer-box-2"
+        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-paldean-fates-elite-trainer-box-2",
+        "https://spillwill.no/products/pokemon-paldean-fates-elite-trainer-box",
+        
 
 
 
@@ -575,7 +587,6 @@ const paldeanFatesTin = {
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-tin-sv4-5",
         "https://cardcenter.no/products/pokemon-paldean-fates-shiny-iron-treads-ex-tin",
         "https://no.coolshop.com/produkt/pokemon-sv4-5-paldean-fates-tin-shiny-iron-treads/23J6NG/",
-        "https://no.coolshop.com/produkt/pokemon-sv4-5-paldean-fates-tin-shiny-great-tusk/23J6NF/",
         "https://www.ringo.no/produkt/pokemon-tin-sv4-5-paldean-fates/",
         "https://www.kanoncon.no/produkt/paldean-fates-shiny-iron-treads-ex-tin/",
         "https://kortkjelleren.no/products/pokemon-paldean-fates-tin-iron-threads",
@@ -648,6 +659,8 @@ const scarletVioletTemporalForcesBoosterBox = {
         "https://www.pokelageret.no/produkt/engelsk/booster-bokser/temporal-forces-booster-box",
         "https://www.outland.no/p-scarlet-violet-temporal-forces-booster-display-boks-pokemon-tcg-pokemon-820650866395",
         "https://www.gameninja.no/produkt/pokemon-sv5-temporal-forces-display/",
+        "https://spillwill.no/products/temporal-forces-booster-display",
+
     ]
 };
 
@@ -665,6 +678,8 @@ const scarletVioletStellarCrownBoosterBox = {
         "https://www.kanoncon.no/produkt/pokemon-stellar-crown-booster-box/",
         "https://www.outland.no/p-scarlet-violet-stellar-crown-booster-display-boks-scarlet-violet-stellar-crown-pokemon-820650868979",
         "https://www.gameninja.no/produkt/pre-order-13-09-pokemon-sv7-stellar-crown-booster-box/",
+        "https://spillwill.no/products/pokemon-tcg-scarlet-violet-stellar-crown-booster-display-box-36-packs",
+
     ]
 };
 
@@ -681,8 +696,9 @@ const scarletVioletParadoxRiftBoosterBox = {
         "https://www.collectible.no/home/pokemon-paradox-rift-booster-box/",
         "https://www.kanoncon.no/produkt/pokemon-paradox-rift-booster-box/",
         "https://www.pokelageret.no/produkt/engelsk/booster-bokser/pokemon-paradox-rift-booster-box",
-        "https://no.coolshop.com/produkt/pokemon-sv-paradox-rift-booster-box-36-pcs-pok85399/23HE9B/",
-        "https://www.outland.no/p-scarlet-violet-paradox-rift-booster-display-box-pokemon-tcg-scarlet-violet-paradox-rift-pokemon-820650863998"
+        "https://www.outland.no/p-scarlet-violet-paradox-rift-booster-display-box-pokemon-tcg-scarlet-violet-paradox-rift-pokemon-820650863998",
+        "https://spillwill.no/products/pokemon-tcg-scarlet-violet-paradox-rift-booster-display-box-36-packs",
+
     ]
 };
 
@@ -723,7 +739,9 @@ const scarletVioletPaldeaEvolvedBoosterBox = {
         "https://www.collectible.no/home/pokemon-paldea-evolved-booster-box/",
         "https://www.outland.no/p-scarlet-violet-paldea-evolved-booster-display-box-pokemon-tcg-pokemon-820650863493",
         "https://poke-shop.no/produkt/alle-produkter/boosterbokser-1/paldea-evolved-booster-boks",
-        "https://www.pokemadness.no/booster-boks/1306-paldea-evolved-booster-boks-restock--820650863493.html"
+        "https://www.pokemadness.no/booster-boks/1306-paldea-evolved-booster-boks-restock--820650863493.html",
+        "https://spillwill.no/products/pokemon-tcg-scarlet-violet-paldea-evolved-booster-display-box-36-packs",
+
     ]
 };
 
@@ -750,7 +768,9 @@ const scarletVioletTwilightMasqueradeBoosterBox = {
         "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-twilight-masquerade-booster-box-5",
         "https://gamezone.no/pokemon/159404/pokemon-twilight-masquerade-booster-box",
         "https://www.gameninja.no/produkt/release-25-5-24-poke-sv6-twilight-masquerade-booster-box/",
-        "https://www.outland.no/p-scarlet-violet-twilight-masquerade-booster-display-boks-pokemon-t-scarlet-violet-twilight-masquerade-pokemon-820650867743"
+        "https://www.outland.no/p-scarlet-violet-twilight-masquerade-booster-display-boks-pokemon-t-scarlet-violet-twilight-masquerade-pokemon-820650867743",
+        "https://spillwill.no/products/pokemon-tcg-scarlet-violet-twilight-masquerade-booster-display-box-36-packs",
+        
     ]
 };
 
@@ -790,7 +810,6 @@ const silverTempestBoosterBox = {
     urls: [
         "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-silver-tempest-booster-box-10",
         "https://www.collectible.no/home/pokemon-silver-tempest-booster-box/",
-        "https://cardcenter.no/products/pokemon-silver-tempest-booster-box",
     ]
 };
 
@@ -874,6 +893,41 @@ const terapagosUltraPremium = {
     ]
 }
 
+const journeyTogetherEtb = {
+    expansion: expansions.SCARLET_VIOLET_JOURNEY_TOGETHER,
+    image: "journeytogether_etb.jpg",
+    name: "Journey Together Elite Trainer Box",
+    packs: 9,
+    urls: [
+        "https://pokestore.no/produkt/engelsk/sorter-etter-sett/journey-together/pokemon-journey-together-elite-trainer-box",
+        "https://cardcenter.no/products/pokemon-journey-together-elite-trainer-box",
+        "https://www.kanoncon.no/produkt/pokemon-journey-together-elite-trainer-box/",
+        "https://poke-shop.no/produkt/forhandsbestilling/pokemon-journey-together-elite-trainer-box",
+        //"https://www.pokemadness.no/forhandsbestill/2128-journey-together-elite-trainer-box.html",
+        "https://baldbreakers.no/products/pokemon-tcg-scarlet-amp-violet-journey-together-elite-trainer-box-forhandssalg",
+
+
+
+    ]
+};
+
+const journeyTogetherBoosterBox = {
+    expansion: expansions.SCARLET_VIOLET_JOURNEY_TOGETHER,
+    image: "journeytogether_boosterbox.jpg",
+    name: "Journey Together Booster Box",
+    packs: 36,
+    urls: [
+        "https://pokestore.no/produkt/engelsk/sorter-etter-sett/journey-together/pokemon-journey-together-booster-box",
+        "https://cardcenter.no/products/pokemon-journey-together-booster-display-box",
+        "https://www.kanoncon.no/produkt/pokemon-journey-together-booster-box/",
+        "https://poke-shop.no/produkt/forhandsbestilling/pokemon-journey-together-booster-box",
+        //"https://www.pokemadness.no/forhandsbestill/2129-journey-together-booster-box.html",
+
+
+
+    ]
+}
+
 
 export const products = [
     darknessAblazeEtb,
@@ -918,6 +972,8 @@ export const products = [
     brilliantStarsBoosterBox,
     surgingsparksBoosterbox,
     greninjaUltraPremium,
-    terapagosUltraPremium
+    terapagosUltraPremium,
+    journeyTogetherBoosterBox,
+    journeyTogetherEtb
 ];
 

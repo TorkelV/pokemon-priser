@@ -1,6 +1,8 @@
 
 const getApplicationLdJson = (doc) => {
-    return [...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => JSON.parse(e.textContent)).find(e => e["@type"] == "Product")
+    const ldJson = [...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => JSON.parse(e.textContent)).find(e => e["@type"] == "Product" || e["@graph"]?.some(g=>g["@type"] == "Product"))
+    const product = ldJson["@type"] == "Product" ? ldJson : ldJson["@graph"].find(e=>e["@type"] == "Product");
+    return product;
 }
 
 const fromApplicationLdJson = (doc) => {
@@ -14,7 +16,7 @@ const fromApplicationLdJson = (doc) => {
 const fromProductPriceAmountAndProductAvailabilityProps = doc => {
     const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
     const stockProp = doc.querySelector('[property="product:availability"]')?.getAttribute("content")?.toLowerCase()
-    const inStock = ["instock", "in stock"].includes(stockProp);
+    const inStock = ["instock", "in stock"].some(e=>stockProp?.includes(e) == true)
     return { price, inStock }
 }
 
@@ -24,9 +26,7 @@ const parsePris = (pris) => {
 }
 
 const pokestorePris = async (doc) => {
-    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
-    const inStock = doc.querySelector('[property="product:availability"]').getAttribute("content") == "instock";
-    return { price, inStock };
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
 }
 
 const computersalgPris = async (doc) => {
@@ -36,9 +36,7 @@ const computersalgPris = async (doc) => {
 }
 
 const pokuPris = async (doc) => {
-    const price = parsePris(doc.querySelector(".summary-inner .woocommerce-Price-amount.amount bdi").textContent)
-    const inStock = true;
-    return { price, inStock }
+    return fromApplicationLdJson(doc);
 }
 
 const extralekerPris = async (doc) => {
@@ -178,6 +176,10 @@ const lekiaPris = async (doc) => {
     return fromProductPriceAmountAndProductAvailabilityProps(doc);
 }
 
+const tinycardcollectionPris = async (doc) => {
+    return fromProductPriceAmountAndProductAvailabilityProps(doc);
+}
+
 export const parsers = {
     "https://pokestore.no": pokestorePris,
     "https://proshop.no": proshopPris,
@@ -210,7 +212,8 @@ export const parsers = {
     "https://spillglede.no": spillgledePris,
     "https://retroworld.no": retroworldPris,
     "https://boosterpakker.no": boosterpakkerPris,
-    "https://lekia.no": lekiaPris
+    "https://lekia.no": lekiaPris,
+    "https://tinycardcollection.no": tinycardcollectionPris
 }
 
 export const headers = {
