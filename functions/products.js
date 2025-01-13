@@ -903,7 +903,7 @@ const journeyTogetherEtb = {
         "https://cardcenter.no/products/pokemon-journey-together-elite-trainer-box",
         "https://www.kanoncon.no/produkt/pokemon-journey-together-elite-trainer-box/",
         "https://poke-shop.no/produkt/forhandsbestilling/pokemon-journey-together-elite-trainer-box",
-        //"https://www.pokemadness.no/forhandsbestill/2128-journey-together-elite-trainer-box.html",
+        "https://www.pokemadness.no/forhandsbestill/2128-journey-together-elite-trainer-box.html",
         "https://baldbreakers.no/products/pokemon-tcg-scarlet-amp-violet-journey-together-elite-trainer-box-forhandssalg",
 
 
@@ -921,7 +921,7 @@ const journeyTogetherBoosterBox = {
         "https://cardcenter.no/products/pokemon-journey-together-booster-display-box",
         "https://www.kanoncon.no/produkt/pokemon-journey-together-booster-box/",
         "https://poke-shop.no/produkt/forhandsbestilling/pokemon-journey-together-booster-box",
-        //"https://www.pokemadness.no/forhandsbestill/2129-journey-together-booster-box.html",
+        "https://www.pokemadness.no/forhandsbestill/2129-journey-together-booster-box.html",
 
 
 
