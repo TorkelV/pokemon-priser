@@ -102,10 +102,6 @@ const outlandPris = async (doc) => {
     return fromApplicationLdJson(doc);
 }
 
-const kortkjellerenPris = async (doc) => {
-    return fromApplicationLdJson(doc)
-}
-
 const epicardsPris = async (doc) => {
     return fromApplicationLdJson(doc);
 }
@@ -202,7 +198,6 @@ export const parsers = {
     "https://gameninja.no": gameninjaPris,
     "https://kanoncon.no": kanonconPris,
     "https://playlot.no": playlotPris,
-    "https://kortkjelleren.no": kortkjellerenPris,
     "https://epicards.no": epicardsPris,
     "https://gamingsjappa.no": gamingsjappaPris,
     "https://ark.no": arkPris,
