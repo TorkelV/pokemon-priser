@@ -72,7 +72,7 @@ const cardcenterPris = async (doc) => {
 
 const pokemadnessPris = async (doc) => {
     const price = +doc.querySelector('[itemprop="price"]').getAttribute("content")
-    const inStock = doc.querySelectorAll(".product-unavailable") == null
+    const inStock = doc?.querySelector('[itemprop="availability"]')?.getAttribute("href")?.includes("InStock")
     return { price, inStock }
 }
 
