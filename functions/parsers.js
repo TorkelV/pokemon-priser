@@ -208,7 +208,8 @@ export const parsers = {
     "https://retroworld.no": retroworldPris,
     "https://boosterpakker.no": boosterpakkerPris,
     "https://lekia.no": lekiaPris,
-    "https://tinycardcollection.no": tinycardcollectionPris
+    "https://tinycardcollection.no": tinycardcollectionPris,
+    "https://spillwill.no": fromApplicationLdJson,
 }
 
 export const headers = {
