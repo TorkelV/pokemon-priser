@@ -131,6 +131,53 @@
         font-size: 1rem;
         background-color: #fff;
     }
+
+    .banner {
+        cursor: pointer;
+    background-color: #FFFFFF;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.banner-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.banner-logo {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.banner-text-content {
+    text-align: left;
+}
+
+.banner-title {
+    color: #333;
+    font-size: 20px;
+    margin: 0;
+}
+
+.banner-text {
+    color: #444;
+    font-size: 16px;
+    margin: 10px 0 0;
+}
+
+.banner-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
     </style>
 </head>
 <body>
@@ -154,9 +201,32 @@
           <input type="checkbox" id="myCheckbox" v-model="showAllPrices"> 
           Vis alle priser.
       </label>
+      
     </div>
+    
       <div class="products">
-        <div v-for="product in sortedProducts" :key="product.name" class="product">
+        <div v-for="product in items" :key="product.name" class="product">
+            <div v-if="product.isAdvert">
+                <div class="product-header">
+                    <img  :src="'images/fjelltoppjakten.png'" alt="fjelltoppjakten logo">
+                    <div class="product-info">
+                        <h2 class="product-name">Fjelltoppjakten - Fjelltopper i Norge</h2>
+                        <p class="expansion-name">Klarer du å samle alle?</p>
+                    </div>
+                </div>
+                    <div class="banner-content" @click="openLink('https://fjelltoppjakten.no')">
+                        <div class="banner-text-content">
+                            <p class="banner-text">Vi vil påstå at samling av fjelltopper er mer avhengighetsskapende enn pokemonkort.</p>
+                            <p class="banner-text">Med over 100&nbsp;000 brukere og 3 millioner innsjekker er Fjelltoppjakten blant norges mest populære turapper.</p>
+                            <p class="banner-text">
+                                Både Pokepriser og Fjelltoppjakten er laget av to nerder fra Bergen ✅
+                            </p>
+                            <a style="font-size: 16px;" href="https://fjelltoppjakten.no" class="banner-link">Finn din neste tur med oss ↪</a>
+                        </div>
+                    </div>
+    
+            </div>
+            <div v-else>
             <div class="product-header">
                 <img loading="lazy" v-if="product.image" :src="'images/' + product.image" :alt="product.name">
                 <div class="product-info">
@@ -183,6 +253,7 @@
                 </table>
             </div>
         </div>
+    </div>
       </div>
     </div>
 
@@ -227,6 +298,10 @@
                 }
                 return products; // Default fallback
             },
+            items() {
+                const products = this.sortedProducts
+                return products.slice(0,3).concat([{isAdvert: true, name: ""}]).concat(products.slice(3))
+              },
             },
             methods: {
               openLink(url) {
