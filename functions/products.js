@@ -157,12 +157,12 @@ const prismaticEvolutionEtb = {
         "https://www.gameninja.no/produkt/prismatic-evolutions-elite-trainer-box/",
         "https://www.playlot.no/produkt/pokemon/prismatic-evolution-2025/prismatic-evolution-elite-trainer-boks",
         "https://baldbreakers.no/products/pokemon-prismatic-evolutions-elite-trainer-box-forhandsbestill",
-"https://www.ringo.no/produkt/pokemon-scarlet-violet-prismatic-evolutions-elite-trainer-box/",
-"https://www.norli.no/pokemon-sv8-5-elite-trainer-box-0196214105133",
-"https://lekekassen.no/pokemon-tcg-prismatic-evolutions-elite-trainer-box",
-"https://www.computersalg.no/i/21870137/pok%c3%a9mon-pok%c3%a9mon-sv8-5-prismatic-evolutions-elite-trainer-box-pok10013-release-17-1",
-
-"https://no.coolshop.com/produkt/pokemon-sv8-5-prismatic-evolutions-elite-trainer-box-pok10013/23PQ85/",
+        "https://www.ringo.no/produkt/pokemon-scarlet-violet-prismatic-evolutions-elite-trainer-box/",
+        "https://www.norli.no/pokemon-sv8-5-elite-trainer-box-0196214105133",
+        "https://lekekassen.no/pokemon-tcg-prismatic-evolutions-elite-trainer-box",
+        "https://www.computersalg.no/i/21870137/pok%c3%a9mon-pok%c3%a9mon-sv8-5-prismatic-evolutions-elite-trainer-box-pok10013-release-17-1",
+        "https://no.coolshop.com/produkt/pokemon-sv8-5-prismatic-evolutions-elite-trainer-box-pok10013/23PQ85/",
+        "https://spillwill.no/products/pokemon-prismatic-evolution-elite-trainer-box"
 
 
     ]
@@ -905,6 +905,7 @@ const journeyTogetherEtb = {
         "https://poke-shop.no/produkt/forhandsbestilling/pokemon-journey-together-elite-trainer-box",
         "https://www.pokemadness.no/forhandsbestill/2128-journey-together-elite-trainer-box.html",
         "https://baldbreakers.no/products/pokemon-tcg-scarlet-amp-violet-journey-together-elite-trainer-box-forhandssalg",
+        "https://poku.no/produkt/tcg/pokemon/elite-trainer-box/pokemon-tcg-journey-together-elite-trainer-box/"
 
 
 
