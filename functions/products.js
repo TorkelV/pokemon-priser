@@ -162,7 +162,8 @@ const prismaticEvolutionEtb = {
         "https://lekekassen.no/pokemon-tcg-prismatic-evolutions-elite-trainer-box",
         "https://www.computersalg.no/i/21870137/pok%c3%a9mon-pok%c3%a9mon-sv8-5-prismatic-evolutions-elite-trainer-box-pok10013-release-17-1",
         "https://no.coolshop.com/produkt/pokemon-sv8-5-prismatic-evolutions-elite-trainer-box-pok10013/23PQ85/",
-        "https://spillwill.no/products/pokemon-prismatic-evolution-elite-trainer-box"
+        "https://spillwill.no/products/pokemon-prismatic-evolution-elite-trainer-box",
+        "https://www.laboge.no/produkt/sealed/prismatic-evolutions-elite-trainer-box-pre-order-sealed",
 
 
     ]
@@ -741,6 +742,8 @@ const scarletVioletPaldeaEvolvedBoosterBox = {
         "https://poke-shop.no/produkt/alle-produkter/boosterbokser-1/paldea-evolved-booster-boks",
         "https://www.pokemadness.no/booster-boks/1306-paldea-evolved-booster-boks-restock--820650863493.html",
         "https://spillwill.no/products/pokemon-tcg-scarlet-violet-paldea-evolved-booster-display-box-36-packs",
+        "https://pokelageret.no/produkt/engelsk/paldea-evolved-booster-box",
+        "https://www.laboge.no/produkt/sealed/pokemon-paldea-evolved-booster-boks-sealed",
 
     ]
 };
@@ -905,10 +908,10 @@ const journeyTogetherEtb = {
         "https://poke-shop.no/produkt/forhandsbestilling/pokemon-journey-together-elite-trainer-box",
         "https://www.pokemadness.no/forhandsbestill/2128-journey-together-elite-trainer-box.html",
         "https://baldbreakers.no/products/pokemon-tcg-scarlet-amp-violet-journey-together-elite-trainer-box-forhandssalg",
-        "https://poku.no/produkt/tcg/pokemon/elite-trainer-box/pokemon-tcg-journey-together-elite-trainer-box/"
-
-
-
+        "https://poku.no/produkt/tcg/pokemon/elite-trainer-box/pokemon-tcg-journey-together-elite-trainer-box/",
+        "https://www.outland.no/p-scarlet-violet-journey-together-elite-trainer-boks-scarlet-violet-journey-together-pokemon-196214108554",
+        "https://gamezone.no/samlekort/163449/pokemon-journey-together-etb-elite-trainer-box",
+        "https://www.laboge.no/produkt/sealed/pokemon-journey-together-elite-trainer-box",
     ]
 };
 
@@ -923,8 +926,11 @@ const journeyTogetherBoosterBox = {
         "https://www.kanoncon.no/produkt/pokemon-journey-together-booster-box/",
         "https://poke-shop.no/produkt/forhandsbestilling/pokemon-journey-together-booster-box",
         "https://www.pokemadness.no/forhandsbestill/2129-journey-together-booster-box.html",
-
-
+        "https://www.outland.no/p-scarlet-violet-journey-together-booster-display-boks-scarlet-violet-journey-together-pokemon-196214108202",
+        "https://gamezone.no/samlekort/163451/pokemon-journey-together-booster-box",
+        "https://baldbreakers.no/products/pokemon-tcg-scarlet-violet-journey-together-pokemon-booster-box-forhandssalg",
+        "https://poku.no/produkt/tcg/pokemon/pokemon-boosterpakker/pokemon-tcg-journey-together-booster-display/",
+        "https://www.laboge.no/produkt/sealed/pokemon-journey-together-booster-box-display-pre-order-sealed",
 
     ]
 }

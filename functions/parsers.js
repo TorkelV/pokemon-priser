@@ -72,7 +72,7 @@ const cardcenterPris = async (doc) => {
 
 const pokemadnessPris = async (doc) => {
     const price = +doc.querySelector('[itemprop="price"]').getAttribute("content")
-    const inStock = doc?.querySelector('[itemprop="availability"]')?.getAttribute("href")?.includes("InStock")
+    const inStock = doc?.querySelector('[itemprop="availability"]')?.getAttribute("href")?.includes("InStock") && !doc.querySelectorAll(".add-to-cart")[0].disabled
     return { price, inStock }
 }
 
@@ -137,7 +137,12 @@ const labogePris = async (doc) => {
 }
 
 const ringoPris = async (doc) => {
-    return fromProductPriceAmountAndProductAvailabilityProps(doc);
+    // modifisert fromProductPriceAmountAndProductAvailabilityProps, fordi Ringo lar "availability" være 'in stock' selv om den ikke er tilgjenglig i noen butikker.
+    const price = parsePris(doc.querySelector('[property="product:price:amount"]').getAttribute("content"));
+    const stockProp = doc.querySelector('[property="product:availability"]')?.getAttribute("content")?.toLowerCase()
+    const inStock = ["instock", "in stock"].some(e=>stockProp?.includes(e) == true) 
+                    && /Denne varen finnes i [^0]/.test(doc.querySelector(".product-availabe-box").textContent)
+    return { price, inStock }
 }
 
 const gameninjaPris = async (doc) => {
