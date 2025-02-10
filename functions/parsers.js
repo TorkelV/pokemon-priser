@@ -9,7 +9,7 @@ const fromApplicationLdJson = (doc) => {
     const json = getApplicationLdJson(doc)
     const offer = Array.isArray(json.offers) ? json.offers[0] : json.offers
     const price = +offer.price;
-    const inStock = offer.availability?.includes("InStock") === true
+    const inStock = ["instock", "preorder"].some(e=>offer.availability.toLowerCase()?.includes(e) == true)
     return { price, inStock }
 }
 
