@@ -137,7 +137,7 @@ const shroudedFableEtb = {
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-shrouded-fable-elite-trainer-box-1",
         "https://pokelageret.no/produkt/engelsk/elite-trainer-boks/shrouded-fable-elite-trainer-box",
         "https://baldbreakers.no/products/scarlet-violet-shrouded-fable-elite-trainer-box",
-        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-shrouded-fable-elite-trainer-box-2",
+        "https://cardworld.no/products/pokemon-shrouded-fable-elite-trainer-box",
         "https://retroworld.no/products/pokemon-shrouded-fable-elite-trainer-box-etb",
         "https://www.tinycardcollection.no/produkt/pokemon/elite-trainer-box/scarlet-violet-shrouded-fable-pokemon-center-elite-trainer-box",
         
@@ -164,8 +164,8 @@ const prismaticEvolutionEtb = {
         "https://no.coolshop.com/produkt/pokemon-sv8-5-prismatic-evolutions-elite-trainer-box-pok10013/23PQ85/",
         "https://spillwill.no/products/pokemon-prismatic-evolution-elite-trainer-box",
         "https://www.laboge.no/produkt/sealed/prismatic-evolutions-elite-trainer-box-pre-order-sealed",
-
-
+        "https://www.maxgaming.no/no/pokemon/scarlet-violet-85-prismatic-evolutions-elite-trainer-box",
+        "https://www.proshop.no/Pokemon/Pokemon-TCG-Terapagos-ex-Ultra-Premium-Collection/3305129",
     ]
 }
 
@@ -186,7 +186,7 @@ const silverTempestEtb = {
         "https://www.gameninja.no/produkt/pokemon-silver-tempest-swsh12-elite-trainer-box/",
         "https://www.kanoncon.no/produkt/pokemon-sword-shield-silver-tempest-elite-trainer-box-copy/",
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-silver-tempest-elite-trainer-box",
-        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-silver-tempest-elite-trainer-box",
+        "https://cardworld.no/products/pokemon-silver-tempest-elite-trainer-box",
         "https://retroworld.no/products/silver-tempest-elite-trainer-box"
     ]
 }
@@ -236,7 +236,6 @@ const temporalForcesEtb = {
         "https://www.extra-leker.no/pokemon-sv5-temporal-forces-elite-trainer-box-walking-wake",
         "https://www.extra-leker.no/pokemon-sv5-temporal-forces-elite-trainer-box-iron-leaves",
         "https://lekekassen.no/pokemon-tcg-temporal-forces-elite-trainer-boks-med-byttekort-og-tilbehor-iron-leaves-pok85657",
-        "https://cardcenter.no/products/pokemon-temporal-forces-elite-trainer-box-walking-wake",
         "https://cardcenter.no/products/pokemon-temporal-forces-elite-trainer-box-iron-leaves",
         "https://pokelink.no/products/pokemon-sv5-temporal-force-elite-trainer-box-iron-leaves",
         "https://no.coolshop.com/produkt/pokemon-sv5-temporal-forces-elite-trainer-box-iron-leaves-pok85657/23JF7C/",
@@ -248,8 +247,8 @@ const temporalForcesEtb = {
         "https://www.kanoncon.no/produkt/temporal-forces-elite-trainer-box-walking-wake/",
         "https://gamingsjappa.no/products/pokemon-tcg-kort-scarlet-violet-5-temporal-forces-elite-trainer-box",
         "https://www.ark.no/produkt/pokemon-elite-trainer-boks-sv5-820650856570",
-        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-temporal-forces-elite-trainer-box-walking-wake",
-        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-temporal-forces-elite-trainer-box-iron-leaves"
+        "https://cardworld.no/products/pokemon-temporal-forces-elite-trainer-box-walking-wake",
+        "https://cardworld.no/products/pokemon-temporal-forces-elite-trainer-box-iron-leaves"
 
 
     ]
@@ -272,7 +271,6 @@ const stellarCrownEtb = {
         "https://cardcenter.no/products/stellar-crown-elite-trainer-box",
         "https://pokelink.no/products/pokemon-sv7-stellar-crown-elite-trainer-box",
         "https://www.pokemadness.no/elite-trainer-boks/1614-stellar-crown-elite-trainer-boks-820650859229.html",
-        "https://no.coolshop.com/produkt/pokemon-sv7-elite-trainer-box-pok85922/23MG5E/",
         "https://www.cardstore.no/produkter/stellar-crown-elite-trainer-box",
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-scarlet-violet-stellar-crown/",
         "https://www.gameninja.no/produkt/pre-order-13-09-pokemon-sv7-stellar-crown-elite-trainer-box/",
@@ -282,6 +280,7 @@ const stellarCrownEtb = {
         "https://baldbreakers.no/products/scarlet-violet-stellar-crown-elite-trainer-box",
         "https://www.tinycardcollection.no/produkt/pokemon/elite-trainer-box/pokemon-scarlet-violet-stellar-crown-elite-trainer-box",
         "https://spillwill.no/products/pokemon-stellar-crown-elite-trainer-box",
+        "https://cardworld.no/products/pokemon-stellar-crown-elite-trainer-box"
 
          ]
 }
@@ -303,6 +302,7 @@ const surgingsparksEtb = {
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-scarlet-violet-surging-sparks/",
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-surging-sparks-elite-trainer-box-1",
         "https://retroworld.no/products/pokemon-surging-sparks-elite-trainer-box-etb",
+        "https://gamezone.no/samlekort/161948/pokemon-surging-spark-elite-trainer-box"
     
     ]
 }
@@ -342,7 +342,8 @@ const paradoxriftEtb = {
         "https://gamingsjappa.no/products/pokemon-tcg-kort-scarlet-violet-4-paradox-rift-elite-trainer-box",
         "https://baldbreakers.no/products/scarlet-violet-paradox-rift-elite-trainer-box-roaring-moon",
         "https://baldbreakers.no/products/scarlet-violet-paradox-rift-elite-trainer-box-iron-valiant",
-        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-paradox-rift-2-pack-elite-trainer-box-roaring-moon-iron-valiant",
+        "https://cardworld.no/products/pokemon-paradox-rift-elite-trainer-box",
+
     ]
 }
 
@@ -454,12 +455,8 @@ const paldeanFatesEtb = {
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-sv4-5-paldean-fates/",
         "https://www.gameninja.no/produkt/poke-elite-trainer-box-sv4-5/",
         "https://gamingsjappa.no/products/pokemon-tcg-kort-scarlet-violet-4-5-paldean-fates-elite-trainer-box",
-        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-paldean-fates-elite-trainer-box-2",
+        "https://cardworld.no/products/pokemon-paldean-fates-elite-trainer-box",
         "https://spillwill.no/products/pokemon-paldean-fates-elite-trainer-box",
-        
-
-
-
     ]
 }
 
@@ -470,7 +467,7 @@ const crownZenithEtb = {
     packs: 10,
     urls: [
         "https://pokestore.no/produkt/engelsk/etb/pokemon-crown-zenith-elite-trainer-box-4",
-        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-crown-zenith-elite-trainer-box"
+        "https://cardworld.no/products/pokemon-crown-zenith-elite-trainer-box"
     ]
 }
 
@@ -484,7 +481,8 @@ const lostOriginEtb = {
         "https://www.collectible.no/home/pokemon-lost-origin-elite-trainer-box/",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-swsh11-elite-trainer-box",
         "https://cardcenter.no/products/lost-origin-elite-trainer-box",
-        "https://spillglede.no/produkt/pokemon/elite-trainer-box/pokemon-lost-origin-elite-trainer-box"
+        "https://cardworld.no/products/pokemon-lost-origin-elite-trainer-box",
+
 
     ]
 }
@@ -512,7 +510,8 @@ const vividVoltageEtb = {
     urls: [
         "https://www.collectible.no/home/pokemon-vivid-voltage-elite-trainer-box/",
         "https://pokestore.no/produkt/engelsk/etb/pokemon-vivid-voltage-elite-trainer-box",
-"https://retroworld.no/products/pokemon-vivid-voltage-elite-trainer-box-etb"
+        "https://retroworld.no/products/pokemon-vivid-voltage-elite-trainer-box-etb",
+        "https://cardworld.no/products/pokemon-vivid-voltage-elite-trainer-box"
     ]
 }
 
@@ -603,8 +602,6 @@ const battleStylesEtb = {
     expansion: expansions.SWORD_SHIELD_BATTLE_STYLES,
     packs: 8,
     urls: [
-        "https://cardcenter.no/products/battle-styles-elite-trainer-box-1",
-        "https://cardcenter.no/products/battle-styles-elite-trainer-box",
 "https://retroworld.no/products/pokemon-battle-styles-elite-trainer-box-rod-etb",
 "https://retroworld.no/products/pokemon-battle-styles-elite-trainer-box-bla-etb",
 
@@ -655,7 +652,7 @@ const scarletVioletTemporalForcesBoosterBox = {
         "https://www.proshop.no/Pokemon/Pokemon-TCG-Booster-Box-36-Packs-Scarlet-Violet-Temporal-Forces/3248754",
         "https://pokestore.no/produkt/engelsk/booster-bokser/pokemon-temporal-forces-booster-box-4",
         "https://gamezone.no/pokemon/158440/pokemon-temporal-forces-booster-box",
-        "https://spillglede.no/produkt/pokemon/booster/pokemon-temporal-forces-booster-box",
+        "https://cardworld.no/produkt/pokemon/booster/pokemon-temporal-forces-booster-box",
         "https://www.collectible.no/home/pokemon-temporal-forces-booster-box/",
         "https://www.kanoncon.no/produkt/pokemon-temporal-forces-booster-box/",
         "https://www.pokelageret.no/produkt/engelsk/booster-bokser/temporal-forces-booster-box",
@@ -719,7 +716,6 @@ const scarletVioletShroudedFableBoosterBundle = {
         "https://www.computersalg.no/i/21456227/pok%c3%a9mon-poke-bst-bundle-sv6-5-rel-6-9",
         "https://pokelink.no/products/pokemon-sv6-5-scarlet-violet-shrouded-fable-booster-bundle",
         "https://www.pokemadness.no/booster-pakker/1573-shrouded-fable-booster-bundle-820650858512.html",
-        "https://no.coolshop.com/produkt/pokemon-sv6-5-shrouded-fable-6-booster-packs-pok87851/23MG59/",
         "https://www.cardstore.no/produkter/shrouded-fable-booster-bundle",
         "https://www.outland.no/p-shrouded-fable-booster-bundle-pack-scarlet-violet-shrouded-fable-pokemon-820650858512",
         "https://www.gameninja.no/produkt/pre-order-pokemon-sv6-5-shrouded-fable-booster-bundle/",
@@ -892,6 +888,8 @@ const terapagosUltraPremium = {
         "https://www.collectible.no/home/pokemon-terapagos-ultra-premium-collection/",
         "https://www.proshop.no/Pokemon/Pokemon-TCG-Terapagos-ex-Ultra-Premium-Collection/3305129",
         "https://pokestore.no/produkt/engelsk/spesialsett-collection/pokemon-terapagos-ex-ultra-premium-collection",
+        "https://www.maxgaming.no/no/pokemon/pokemon-terapagos-ex-ultra-premium-collection",
+
         
     ]
 }
@@ -912,6 +910,7 @@ const journeyTogetherEtb = {
         "https://www.outland.no/p-scarlet-violet-journey-together-elite-trainer-boks-scarlet-violet-journey-together-pokemon-196214108554",
         "https://gamezone.no/samlekort/163449/pokemon-journey-together-etb-elite-trainer-box",
         "https://www.laboge.no/produkt/sealed/pokemon-journey-together-elite-trainer-box",
+        "https://cardworld.no/pokemon/forhandsbestilling/pokemon-journey-together-elite-trainer-box-preorder"
     ]
 };
 

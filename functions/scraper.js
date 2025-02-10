@@ -14,8 +14,10 @@ const getDom = async (url, headers) => {
     return fetch(url, {
         method: 'GET',
         headers: headers,
-    })
-        .then(response => response.text())
+    }).then(response => {
+            if(response.status == 404) throw Error("404")
+            return response.text()
+        })
         .then(data => getDoc(data))
 }
 
@@ -35,7 +37,11 @@ const getPrice = async (url) => {
     const parser = getParser(url);
     const headers = getHeaders(url)
     const price = await getDom(url, headers).then(doc => parser(doc)).catch(e => {
-        console.error(`Failed to get price for: ${url}`, e)
+        if(e.message == "404"){
+            console.error(`Not found: ${url}`)
+        } else {
+            console.error(`Failed to get price for: ${url}`, e)
+        }
         return {}
     });
     return { url, ...price };

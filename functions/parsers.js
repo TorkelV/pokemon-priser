@@ -181,6 +181,12 @@ const tinycardcollectionPris = async (doc) => {
     return fromProductPriceAmountAndProductAvailabilityProps(doc);
 }
 
+const maxgamingPris = async (doc) => {
+    const price = +doc.querySelector('[itemprop="price"]').getAttribute("content")
+    const inStock = doc?.querySelector('[itemprop="availability"]')?.getAttribute("content")?.includes("InStock")
+    return {price, inStock}
+}
+
 export const parsers = {
     "https://pokestore.no": pokestorePris,
     "https://proshop.no": proshopPris,
@@ -209,12 +215,13 @@ export const parsers = {
     "https://pokelageret.no": pokelageretPris,
     "https://poke-shop.no": pokeshopPris,
     "https://baldbreakers.no": baldbreakersPris,
-    "https://spillglede.no": spillgledePris,
+    "https://cardworld.no": spillgledePris,
     "https://retroworld.no": retroworldPris,
     "https://boosterpakker.no": boosterpakkerPris,
     "https://lekia.no": lekiaPris,
     "https://tinycardcollection.no": tinycardcollectionPris,
     "https://spillwill.no": fromApplicationLdJson,
+    "https://maxgaming.no": maxgamingPris
 }
 
 export const headers = {
