@@ -186,6 +186,7 @@
       <p>Prisene oppdateres hver 8. time.</p>
       <p>Dette er ikke en komplett liste over alle butikker og alle tilbud, men vi prøver så godt vi kan å holde den oppdatert.</p>
       <p>Du kan gjerne være med å bidra på <a href="https://github.com/torkelv/pokemon-priser" target="_blank">Github</a>.</p>
+      <p>Lurer du på hva et produkt inneholder utenom boosters anbefaler vi å sjekke produktet på <a href="https://collectible.no">collectible.no</a>, som alltid har gode produktbeskrivelser ❤️</p>
     <hr>
       <p>Viser normalt bare produkter som er på lager og de laveste 5 prisene, men du kan velge å se alt 👇</p>
       <div class="product-filters">
@@ -232,6 +233,7 @@
                 <div class="product-info">
                     <h2 class="product-name">{{ product.name }}</h2>
                     <p class="expansion-name">{{ product.expansion.name }}</p>
+                    <p class="expansion-name">Boosters: {{ product.packs }}</p>
                 </div>
             </div>
             <div class="price-list">
@@ -240,6 +242,7 @@
                         <tr>
                           <th>Butikk</th>
                           <th>Pris</th>  
+                          <th>~Per booster</th>
                           <th v-if="showAllPrices">På lager</th>
                         </tr>
                     </thead>
@@ -247,6 +250,7 @@
                         <tr v-for="price in product.prices" :key="price.url" @click="openLink(price.url)">
                           <td><a :href="price.url" target="_blank">{{ getHostname(price.url) }}</a></td>
                             <td>{{ Math.floor(price.price) }},-</td>
+                            <td>{{ price.pricePerBooster }},-</td>
                             <td v-if="showAllPrices">{{ price.inStock ? 'Ja' : 'Nei' }}</td>
                         </tr>
                     </tbody>
@@ -258,6 +262,10 @@
     </div>
 
     <script>
+        function round(num, decimals) {
+            var n = Math.pow(10, decimals);
+            return Math.round( (n * num).toFixed(decimals) ) / n;
+        };
         const { createApp } = Vue;
 
         createApp({
@@ -270,21 +278,25 @@
             },
             computed: {
               productsToShow() {
-                return this.showAllPrices ? this.products : 
+                const prods = this.showAllPrices ? this.products : 
                   this.products.map(product => {
                     return {
                       ...product, 
                       prices: product.prices.filter(price => price.inStock).slice(0,5)
                     }
+                }).filter(e=>e.prices.length);
+                return prods.map(p=> {
+                    return {...p, prices: p.prices.map(price => {
+                        return { ...price, pricePerBooster: Math.round(price.price/p.packs,2)}
+                    }) }
                 })
-                  .filter(e=>e.prices.length)
               },
               sortedProducts() {
-                const products = [...this.productsToShow];
+                const products = [...this.productsToShow]
                 if (this.sortOption === 'pricePerPack') {
-                    return products.sort((a, b) => {
-                        const priceA = a.prices.length > 0 ? Math.min(...a.prices.map(p => p.price/a.packs)) : Infinity;
-                        const priceB = b.prices.length > 0 ? Math.min(...b.prices.map(p => p.price/b.packs)) : Infinity;
+                    return products.sort((product1, prod2) => {
+                        const priceA = product1.prices.length > 0 ? Math.min(...product1.prices.map(p => p.pricePerBooster)) : Infinity;
+                        const priceB = prod2.prices.length > 0 ? Math.min(...prod2.prices.map(p => p.pricePerBooster)) : Infinity;
                         return priceA - priceB;
                     });
                 }
