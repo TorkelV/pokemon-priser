@@ -112,6 +112,15 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
+    .product-filters select,
+        .product-filters input[type="text"] {
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            background-color: #fff;
+        }
+
     .product-filters label,
     .product-filters select {
         font-size: 1rem;
@@ -182,90 +191,82 @@
 </head>
 <body>
     <div id="app" class="container">
-      <h1>Pokemonkort-priser i norske nettbutikker</h1>
-      <p>Prisene oppdateres hver 8. time.</p>
-      <p>Dette er ikke en komplett liste over alle butikker og alle tilbud, men vi prøver så godt vi kan å holde den oppdatert.</p>
-      <p>Du kan gjerne være med å bidra på <a href="https://github.com/torkelv/pokemon-priser" target="_blank">Github</a>.</p>
-      <p>Lurer du på hva et produkt inneholder utenom boosters anbefaler vi å sjekke produktet på <a href="https://collectible.no">collectible.no</a>, som alltid har gode produktbeskrivelser ❤️</p>
-    <hr>
-      <p>Viser normalt bare produkter som er på lager og de laveste 5 prisene, men du kan velge å se alt 👇</p>
-      <div class="product-filters">
-        
-        <div>
-            <select v-model="sortOption" id="sort">
-              <option value="pricePerPack">Lavest pris per boosterpakke</option>
-              <option value="expansion">Lanseringsdato</option>
-              <option value="name">Navn</option>
-            </select>
+        <h1>Pokemonkort-priser i norske nettbutikker</h1>
+        <p>Prisene oppdateres hver 8. time.</p>
+        <p>Dette er ikke en komplett liste over alle butikker og alle tilbud, men vi prøver så godt vi kan å holde den oppdatert.</p>
+        <p>Du kan gjerne være med å bidra på <a href="https://github.com/torkelv/pokemon-priser" target="_blank">Github</a>.</p>
+        <p>Lurer du på hva et produkt inneholder utenom boosters anbefaler vi å sjekke produktet på <a href="https://collectible.no">collectible.no</a>, som alltid har gode produktbeskrivelser ❤️</p>
+        <hr>
+        <p>Viser normalt bare produkter som er på lager og de laveste 5 prisene, men du kan velge å se alt 👇</p>
+        <div class="product-filters">
+            <div>
+                <select v-model="sortOption" id="sort">
+                    <option value="pricePerPack">Lavest pris per boosterpakke</option>
+                    <option value="expansion">Lanseringsdato</option>
+                    <option value="name">Navn</option>
+                </select>
+            </div>
+            <input type="text" v-model="searchQuery" placeholder="Søk etter produktnavn">
+            <label for="myCheckbox">
+                <input type="checkbox" id="myCheckbox" v-model="showAllPrices"> 
+                Vis alle priser.
+            </label>
         </div>
-        <label for="myCheckbox">
-          <input type="checkbox" id="myCheckbox" v-model="showAllPrices"> 
-          Vis alle priser.
-      </label>
-      
-    </div>
-    
-      <div class="products">
-        <div v-for="product in items" :key="product.name" class="product">
-            <div v-if="product.isAdvert">
-                <div class="product-header">
-                    <img  :src="'images/fjelltoppjakten.png'" alt="fjelltoppjakten logo">
-                    <div class="product-info">
-                        <h2 class="product-name">Fjelltoppjakten - Fjelltopper i Norge</h2>
-                        <p class="expansion-name">Klarer du å samle alle?</p>
-                    </div>
-                </div>
-                    <div class="banner-content" @click="openLink('https://fjelltoppjakten.no')">
-                        <div class="banner-text-content">
-                            <p class="banner-text">Vi vil påstå at samling av fjelltopper er mer avhengighetsskapende enn pokemonkort.</p>
-                            <p class="banner-text">Med over 100&nbsp;000 brukere og 3 millioner innsjekker er Fjelltoppjakten blant norges mest populære turapper.</p>
-                            <p class="banner-text">
-                                Både Pokepriser og Fjelltoppjakten er laget av to nerder fra Bergen ✅
-                            </p>
-                            <a style="font-size: 16px;" href="https://fjelltoppjakten.no" class="banner-link">Finn din neste tur med oss ↪</a>
+        <div class="products">
+            <div v-for="product in filteredProducts" :key="product.name" class="product">
+                <div v-if="product.isAdvert">
+                    <div class="product-header">
+                        <img  :src="'images/fjelltoppjakten.png'" alt="fjelltoppjakten logo">
+                        <div class="product-info">
+                            <h2 class="product-name">Fjelltoppjakten - Fjelltopper i Norge</h2>
+                            <p class="expansion-name">Klarer du å samle alle?</p>
                         </div>
                     </div>
-    
-            </div>
-            <div v-else>
-            <div class="product-header">
-                <img loading="lazy" v-if="product.image" :src="'images/' + product.image" :alt="product.name">
-                <div class="product-info">
-                    <h2 class="product-name">{{ product.name }}</h2>
-                    <p class="expansion-name">{{ product.expansion.name }}</p>
-                    <p class="expansion-name">Boosters: {{ product.packs }}</p>
+                        <div class="banner-content" @click="openLink('https://fjelltoppjakten.no')">
+                            <div class="banner-text-content">
+                                <p class="banner-text">Vi vil påstå at samling av fjelltopper er mer avhengighetsskapende enn pokemonkort.</p>
+                                <p class="banner-text">Med over 100&nbsp;000 brukere og 3 millioner innsjekker er Fjelltoppjakten blant norges mest populære turapper.</p>
+                                <p class="banner-text">
+                                    Både Pokepriser og Fjelltoppjakten er laget av to nerder fra Bergen ✅
+                                </p>
+                                <a style="font-size: 16px;" href="https://fjelltoppjakten.no" class="banner-link">Finn din neste tur med oss ↪</a>
+                            </div>
+                        </div>
+        
                 </div>
-            </div>
-            <div class="price-list">
-                <table>
-                    <thead>
-                        <tr>
-                          <th>Butikk</th>
-                          <th>Pris</th>  
-                          <th>~Per booster</th>
-                          <th v-if="showAllPrices">På lager</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="price in product.prices" :key="price.url" @click="openLink(price.url)">
-                          <td><a :href="price.url" target="_blank">{{ getHostname(price.url) }}</a></td>
-                            <td>{{ Math.floor(price.price) }},-</td>
-                            <td>{{ price.pricePerBooster }},-</td>
-                            <td v-if="showAllPrices">{{ price.inStock ? 'Ja' : 'Nei' }}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div v-else>
+                <div class="product-header">
+                    <img loading="lazy" v-if="product.image" :src="'images/' + product.image" :alt="product.name">
+                    <div class="product-info">
+                        <h2 class="product-name">{{ product.name }}</h2>
+                        <p class="expansion-name">{{ product.expansion.name }}</p>
+                        <p class="expansion-name">Boosters: {{ product.packs }}</p>
+                    </div>
+                </div>
+                <div class="price-list">
+                    <table>
+                        <thead>
+                            <tr>
+                              <th>Butikk</th>
+                              <th>Pris</th>  
+                              <th>~Per booster</th>
+                              <th v-if="showAllPrices">På lager</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="price in product.prices" :key="price.url" @click="openLink(price.url)">
+                              <td><a :href="price.url" target="_blank">{{ getHostname(price.url) }}</a></td>
+                                <td>{{ Math.floor(price.price) }},-</td>
+                                <td>{{ price.pricePerBooster }},-</td>
+                                <td v-if="showAllPrices">{{ price.inStock ? 'Ja' : 'Nei' }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-      </div>
-    </div>
-
     <script>
-        function round(num, decimals) {
-            var n = Math.pow(10, decimals);
-            return Math.round( (n * num).toFixed(decimals) ) / n;
-        };
         const { createApp } = Vue;
 
         createApp({
@@ -274,54 +275,62 @@
                     showAllPrices: false,
                     products: [],
                     sortOption: 'pricePerPack',
+                    searchQuery: '', // Add search query to data
                 };
             },
             computed: {
-              productsToShow() {
-                const prods = this.showAllPrices ? this.products : 
-                  this.products.map(product => {
-                    return {
-                      ...product, 
-                      prices: product.prices.filter(price => price.inStock).slice(0,5)
+                productsToShow() {
+                    const prods = this.showAllPrices ? this.products : 
+                        this.products.map(product => {
+                            return {
+                                ...product, 
+                                prices: product.prices.filter(price => price.inStock).slice(0,5)
+                            }
+                        }).filter(e => e.prices.length);
+                    return prods.map(p => {
+                        return {...p, prices: p.prices.map(price => {
+                            return { ...price, pricePerBooster: Math.round(price.price / p.packs, 2) }
+                        }) }
+                    })
+                },
+                sortedProducts() {
+                    const products = [...this.productsToShow]
+                    if (this.sortOption === 'pricePerPack') {
+                        return products.sort((product1, prod2) => {
+                            const priceA = product1.prices.length > 0 ? Math.min(...product1.prices.map(p => p.pricePerBooster)) : Infinity;
+                            const priceB = prod2.prices.length > 0 ? Math.min(...prod2.prices.map(p => p.pricePerBooster)) : Infinity;
+                            return priceA - priceB;
+                        });
                     }
-                }).filter(e=>e.prices.length);
-                return prods.map(p=> {
-                    return {...p, prices: p.prices.map(price => {
-                        return { ...price, pricePerBooster: Math.round(price.price/p.packs,2)}
-                    }) }
-                })
-              },
-              sortedProducts() {
-                const products = [...this.productsToShow]
-                if (this.sortOption === 'pricePerPack') {
-                    return products.sort((product1, prod2) => {
-                        const priceA = product1.prices.length > 0 ? Math.min(...product1.prices.map(p => p.pricePerBooster)) : Infinity;
-                        const priceB = prod2.prices.length > 0 ? Math.min(...prod2.prices.map(p => p.pricePerBooster)) : Infinity;
-                        return priceA - priceB;
-                    });
-                }
-                if (this.sortOption === 'name') {
-                    return products.sort((a, b) => a.name.localeCompare(b.name));
-                } 
-                if (this.sortOption === 'expansion') {
-                    return products.sort((a, b) => {
-                        return b.expansion.id - a.expansion.id;
-                    });
-                }
-                return products; // Default fallback
-            },
-            items() {
-                const products = this.sortedProducts
-                return products.slice(0,3).concat([{isAdvert: true, name: ""}]).concat(products.slice(3))
-              },
+                    if (this.sortOption === 'name') {
+                        return products.sort((a, b) => a.name.localeCompare(b.name));
+                    } 
+                    if (this.sortOption === 'expansion') {
+                        return products.sort((a, b) => {
+                            return b.expansion.id - a.expansion.id;
+                        });
+                    }
+                    return products; // Default fallback
+                },
+                filteredProducts() {
+                    const products = this.sortedProducts;
+                    if (this.searchQuery) {
+                        return products.filter(product => product.name.toLowerCase().includes(this.searchQuery.toLowerCase()));
+                    }
+                    return products;
+                },
+                items() {
+                    const products = this.filteredProducts;
+                    return products.slice(0, 3).concat([{ isAdvert: true, name: "" }]).concat(products.slice(3));
+                },
             },
             methods: {
-              openLink(url) {
-                window.open(url, '_blank').focus();
-              },
+                openLink(url) {
+                    window.open(url, '_blank').focus();
+                },
                 getHostname(url) {
                     try {
-                        return new URL(url).hostname.replace("www.","");
+                        return new URL(url).hostname.replace("www.", "");
                     } catch (e) {
                         return 'Invalid URL';
                     }
