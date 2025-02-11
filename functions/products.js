@@ -302,7 +302,9 @@ const surgingsparksEtb = {
         "https://www.ringo.no/produkt/pokemon-elite-trainer-box-scarlet-violet-surging-sparks/",
         "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-surging-sparks-elite-trainer-box-1",
         "https://retroworld.no/products/pokemon-surging-sparks-elite-trainer-box-etb",
-        "https://gamezone.no/samlekort/161948/pokemon-surging-spark-elite-trainer-box"
+        "https://gamezone.no/samlekort/161948/pokemon-surging-spark-elite-trainer-box",
+"https://cardcenter.no/products/pokemon-surging-sparks-elite-trainer-box",
+"https://www.gameninja.no/produkt/surging-sparks-elite-trainer-box/"
     
     ]
 }
