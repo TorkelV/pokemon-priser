@@ -254,7 +254,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="price in product.prices" :key="price.url" @click="openLink(price.url)">
+                            <tr v-for="price in product.prices" :key="price.url" @click="openLink(price.url,product.name)">
                               <td><a :href="price.url" target="_blank">{{ getHostname(price.url) }}</a></td>
                                 <td>{{ Math.floor(price.price) }},-</td>
                                 <td>{{ price.pricePerBooster }},-</td>
@@ -267,8 +267,10 @@
         </div>
     </div>
     <script type="module">
-        function _0xbc53(){const _0x76d3dd=['5SRXqHX','19707gEeJTI','36205pfueYZ','43334863379','256cTZKGe','pokemon-priser','AIzaSyCzuvAi3nTLMKZZeQuLuQnH5k9TsFKHIfU','28522UWHrXp','765exRgIJ','pokemon-priser.firebasestorage.app','G-NK27C8D1H8','45830HhtAqI','12QdsYGh','pokemon-priser.firebaseapp.com','7DiFDDB','5869304zMeiCC','5827588CMrxdm','1:43334863379:web:8f06652d19bfc7b2ef4de6','4413794Cbufgb','324eMUCMA'];_0xbc53=function(){return _0x76d3dd;};return _0xbc53();}function _0x59c6(_0x22bd1a,_0x493b44){const _0xbc53e=_0xbc53();return _0x59c6=function(_0x59c6a4,_0x30c37a){_0x59c6a4=_0x59c6a4-0xdd;let _0x432f89=_0xbc53e[_0x59c6a4];return _0x432f89;},_0x59c6(_0x22bd1a,_0x493b44);}const _0x44ed97=_0x59c6;(function(_0x5ebed5,_0x589dae){const _0x33851b=_0x59c6,_0x30ac6e=_0x5ebed5();while(!![]){try{const _0x156109=-parseInt(_0x33851b(0xe3))/0x1*(-parseInt(_0x33851b(0xea))/0x2)+parseInt(_0x33851b(0xe4))/0x3*(parseInt(_0x33851b(0xe7))/0x4)+-parseInt(_0x33851b(0xe5))/0x5*(-parseInt(_0x33851b(0xe2))/0x6)+-parseInt(_0x33851b(0xdd))/0x7*(-parseInt(_0x33851b(0xde))/0x8)+-parseInt(_0x33851b(0xeb))/0x9*(parseInt(_0x33851b(0xee))/0xa)+parseInt(_0x33851b(0xe1))/0xb*(-parseInt(_0x33851b(0xef))/0xc)+-parseInt(_0x33851b(0xdf))/0xd;if(_0x156109===_0x589dae)break;else _0x30ac6e['push'](_0x30ac6e['shift']());}catch(_0x7fbc1){_0x30ac6e['push'](_0x30ac6e['shift']());}}}(_0xbc53,0x5c1e1));import{initializeApp as _0x184152}from'https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js';import{getAnalytics as _0x242711}from'https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js';const analytics=_0x242711(_0x184152({'apiKey':_0x44ed97(0xe9),'authDomain':_0x44ed97(0xf0),'projectId':_0x44ed97(0xe8),'storageBucket':_0x44ed97(0xec),'messagingSenderId':_0x44ed97(0xe6),'appId':_0x44ed97(0xe0),'measurementId':_0x44ed97(0xed)}));
+        function _0xbc53(){const _0x76d3dd=['5SRXqHX','19707gEeJTI','36205pfueYZ','43334863379','256cTZKGe','pokemon-priser','AIzaSyCzuvAi3nTLMKZZeQuLuQnH5k9TsFKHIfU','28522UWHrXp','765exRgIJ','pokemon-priser.firebasestorage.app','G-NK27C8D1H8','45830HhtAqI','12QdsYGh','pokemon-priser.firebaseapp.com','7DiFDDB','5869304zMeiCC','5827588CMrxdm','1:43334863379:web:8f06652d19bfc7b2ef4de6','4413794Cbufgb','324eMUCMA'];_0xbc53=function(){return _0x76d3dd;};return _0xbc53();}function _0x59c6(_0x22bd1a,_0x493b44){const _0xbc53e=_0xbc53();return _0x59c6=function(_0x59c6a4,_0x30c37a){_0x59c6a4=_0x59c6a4-0xdd;let _0x432f89=_0xbc53e[_0x59c6a4];return _0x432f89;},_0x59c6(_0x22bd1a,_0x493b44);}const _0x44ed97=_0x59c6;(function(_0x5ebed5,_0x589dae){const _0x33851b=_0x59c6,_0x30ac6e=_0x5ebed5();while(!![]){try{const _0x156109=-parseInt(_0x33851b(0xe3))/0x1*(-parseInt(_0x33851b(0xea))/0x2)+parseInt(_0x33851b(0xe4))/0x3*(parseInt(_0x33851b(0xe7))/0x4)+-parseInt(_0x33851b(0xe5))/0x5*(-parseInt(_0x33851b(0xe2))/0x6)+-parseInt(_0x33851b(0xdd))/0x7*(-parseInt(_0x33851b(0xde))/0x8)+-parseInt(_0x33851b(0xeb))/0x9*(parseInt(_0x33851b(0xee))/0xa)+parseInt(_0x33851b(0xe1))/0xb*(-parseInt(_0x33851b(0xef))/0xc)+-parseInt(_0x33851b(0xdf))/0xd;if(_0x156109===_0x589dae)break;else _0x30ac6e['push'](_0x30ac6e['shift']());}catch(_0x7fbc1){_0x30ac6e['push'](_0x30ac6e['shift']());}}}(_0xbc53,0x5c1e1));import{initializeApp as _0x184152}from'https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js';import{getAnalytics as _0x242711}from'https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js';const an=_0x242711(_0x184152({'apiKey':_0x44ed97(0xe9),'authDomain':_0x44ed97(0xf0),'projectId':_0x44ed97(0xe8),'storageBucket':_0x44ed97(0xec),'messagingSenderId':_0x44ed97(0xe6),'appId':_0x44ed97(0xe0),'measurementId':_0x44ed97(0xed)}));
         const { createApp } = Vue;
+        import { logEvent, getAnalytics } from 'https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js'
+        const analytics = getAnalytics();
         createApp({
             data() {
                 return {
@@ -325,7 +327,12 @@
                 },
             },
             methods: {
-                openLink(url) {
+                openLink(url, productName) {
+                    console.log("clicked")
+                    logEvent(analytics, "openLink", {
+                        url: url,
+                        productName
+                    })
                     window.open(url, '_blank').focus();
                 },
                 getHostname(url) {
