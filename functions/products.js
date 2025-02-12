@@ -936,6 +936,51 @@ const journeyTogetherBoosterBox = {
     ]
 }
 
+const ionoTournamentCollection = {
+    expansion: expansions.SCARLET_VIOLET_PALDEA_EVOLVED,
+    image: "iono_tournament.jpeg",
+    name: "Iono Premium Tournament Collection",
+    packs: 6,
+    urls: [
+        "https://pokestore.no/produkt/engelsk/spesialsett-collection/pokemon-iono-premium-tournament-collection",
+        "https://www.extra-leker.no/pokemon-premium-tournament-collection-iono",
+        "https://cardcenter.no/products/pokemon-iono-premium-tournament-collection",
+        "https://pokelink.no/products/pokemon-iono-premium-tournament-collection",
+        "https://www.outland.no/p-iono-premium-tournament-collection-pokemon-tcg-pokemon-820650857485",
+        "https://www.gameninja.no/produkt/iono-tournament-collection/",
+        "https://gamingsjappa.no/products/pokemon-tcg-kort-iono-premium-tournament-collection",
+        "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-iono-premium-tournament-collection",
+        "https://baldbreakers.no/products/pokemon-premium-tournament-collection-iono"
+    ]
+}
+
+const cyrusTournamentCollection = {
+    expansion: expansions.SWORD_SHIELD_SILVER_TEMPEST,
+    image: "cyrus_tournament.jpeg",
+    name: "Cyrus Premium Tournament Collection",
+    packs: 7,
+    urls: [
+        "https://www.collectible.no/home/pokemon-cyrus-premium-tournament-collection/",
+        "https://pokestore.no/produkt/engelsk/spesialsett-collection/pokemon-cyrus-premium-tournament-collection",
+        "https://www.extra-leker.no/pokemon-premium-tournament-collection-cyrus",
+        "https://lekekassen.no/pokemon-tcg-tournament-collection-cyrus-pok85076",
+        "https://cardcenter.no/products/pokemon-cyrus-premium-tournament-collection"
+    ]
+}
+
+const klaraTournamentColleciton = {
+    expansion: expansions.SWORD_SHIELD_SILVER_TEMPEST,
+    image: "klara_tournament.jpeg",
+    name: "Klara Premium Tournament Collection",
+    packs: 7,
+    urls: [
+        "https://www.collectible.no/home/pokemon-klara-premium-tournament-collection/",
+        "https://gamezone.no/pokemon/154015/pokemon-premium-tournament-coll-klara",
+        "https://pokestore.no/produkt/engelsk/spesialsett-collection/pokemon-klara-premium-tournament-collection",
+        "https://www.extra-leker.no/pokemon-premium-tournament-collection-klara",
+        "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-klara-premium-tournament-collection"
+    ]
+}
 
 export const products = [
     darknessAblazeEtb,
@@ -982,6 +1027,9 @@ export const products = [
     greninjaUltraPremium,
     terapagosUltraPremium,
     journeyTogetherBoosterBox,
-    journeyTogetherEtb
+    journeyTogetherEtb,
+    ionoTournamentCollection,
+    cyrusTournamentCollection,
+    klaraTournamentColleciton,
 ];
 
