@@ -221,7 +221,8 @@ export const parsers = {
     "https://lekia.no": lekiaPris,
     "https://tinycardcollection.no": tinycardcollectionPris,
     "https://spillwill.no": fromApplicationLdJson,
-    "https://maxgaming.no": maxgamingPris
+    "https://maxgaming.no": maxgamingPris,
+    "https://jollyroom.no": fromApplicationLdJson
 }
 
 export const headers = {

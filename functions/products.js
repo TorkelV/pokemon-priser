@@ -140,7 +140,7 @@ const shroudedFableEtb = {
         "https://cardworld.no/products/pokemon-shrouded-fable-elite-trainer-box",
         "https://retroworld.no/products/pokemon-shrouded-fable-elite-trainer-box-etb",
         "https://www.tinycardcollection.no/produkt/pokemon/elite-trainer-box/scarlet-violet-shrouded-fable-pokemon-center-elite-trainer-box",
-        
+        "https://www.jollyroom.no/leker/spill-puslespill/kortspill-memory/pokemon-scarlet-violet-shrouded-fable-elite-trainer-box-samlekort",
     ]
 }
 
@@ -638,9 +638,10 @@ const paldeanFatesPremiumCollection = {
         "https://www.pokelageret.no/produkt/engelsk/spesialbokser/paldean-fates-premium-collection-quaquaval-ex",
         "https://www.pokelageret.no/produkt/engelsk/spesialbokser/paldean-fates-premium-collection-meowscarada-ex",
         "https://www.pokelageret.no/produkt/engelsk/spesialbokser/paldean-fates-premium-collection-skeledirge-ex",
-"https://retroworld.no/products/pokemon-paldean-fates-meowscarada-ex-premium-collection",
-"https://retroworld.no/products/paldean-fates-quaquaval-ex-premium-collection",
-"https://retroworld.no/products/pokemon-paldean-fates-skeledirge-ex-premium-collection",
+        "https://retroworld.no/products/pokemon-paldean-fates-meowscarada-ex-premium-collection",
+        "https://retroworld.no/products/paldean-fates-quaquaval-ex-premium-collection",
+        "https://retroworld.no/products/pokemon-paldean-fates-skeledirge-ex-premium-collection",
+        "https://www.jollyroom.no/leker/spill-puslespill/kortspill-memory/pokemon-scarlet-violet-paldean-fates-premium-samlekort-sett-blandet"
 
     ]
 }
@@ -723,6 +724,8 @@ const scarletVioletShroudedFableBoosterBundle = {
         "https://www.gameninja.no/produkt/pre-order-pokemon-sv6-5-shrouded-fable-booster-bundle/",
         "https://www.kanoncon.no/produkt/pokemon-shrouded-fable-booster-bundle/",
         "https://www.playlot.no/produkt/pokemon/shrouded-fable-2024/shrouded-fable-6pk-bundlepakke",
+        "https://www.jollyroom.no/leker/spill-puslespill/kortspill-memory/pokemon-scarlet-violet-shrouded-fable-booster-bundle-samlekort",
+
     ]
 };
 
