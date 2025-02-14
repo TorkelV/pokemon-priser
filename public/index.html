@@ -290,7 +290,9 @@
                             }
                         }).filter(e => e.prices.length);
                     return prods.map(p => {
-                        return {...p, prices: p.prices.map(price => {
+                        return {...p, 
+                            cheapestBooster: p.prices.length > 0 ? Math.min(...p.prices.map(price => price.price / p.packs)) : Infinity,
+                            prices: p.prices.map(price => {
                             return { ...price, pricePerBooster: Math.round(price.price / p.packs, 2) }
                         }) }
                     })
@@ -298,11 +300,8 @@
                 sortedProducts() {
                     const products = [...this.productsToShow]
                     if (this.sortOption === 'pricePerPack') {
-                        return products.sort((product1, prod2) => {
-                            const priceA = product1.prices.length > 0 ? Math.min(...product1.prices.map(p => p.pricePerBooster)) : Infinity;
-                            const priceB = prod2.prices.length > 0 ? Math.min(...prod2.prices.map(p => p.pricePerBooster)) : Infinity;
-                            return priceA - priceB;
-                        });
+                        console.log(products)
+                        return products.sort((p1, p2) => p1.cheapestBooster - p2.cheapestBooster);
                     }
                     if (this.sortOption === 'name') {
                         return products.sort((a, b) => a.name.localeCompare(b.name));
