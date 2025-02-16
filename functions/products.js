@@ -945,7 +945,8 @@ const journeyTogetherEtb = {
         "https://www.outland.no/p-scarlet-violet-journey-together-elite-trainer-boks-scarlet-violet-journey-together-pokemon-196214108554",
         "https://gamezone.no/samlekort/163449/pokemon-journey-together-etb-elite-trainer-box",
         "https://www.laboge.no/produkt/sealed/pokemon-journey-together-elite-trainer-box",
-        "https://cardworld.no/pokemon/forhandsbestilling/pokemon-journey-together-elite-trainer-box-preorder"
+        "https://cardworld.no/pokemon/forhandsbestilling/pokemon-journey-together-elite-trainer-box-preorder",
+        "https://www.collectible.no/home/pokemon-journey-together-elite-trainer-box/",
     ]
 };
 
@@ -965,8 +966,8 @@ const journeyTogetherBoosterBox = {
         "https://baldbreakers.no/products/pokemon-tcg-scarlet-violet-journey-together-pokemon-booster-box-forhandssalg",
         "https://poku.no/produkt/tcg/pokemon/pokemon-boosterpakker/pokemon-tcg-journey-together-booster-display/",
         "https://www.laboge.no/produkt/sealed/pokemon-journey-together-booster-box-display-pre-order-sealed",
-        "https://www.collectible.no/home/pokemon-journey-together-elite-trainer-box/",
-        "https://cardworld.no/pokemon/forhandsbestilling/pokemon-journey-together-booster-box"
+        "https://cardworld.no/pokemon/forhandsbestilling/pokemon-journey-together-booster-box",
+        "https://www.collectible.no/home/pokemon-journey-together-booster-box/"
 
     ]
 }
