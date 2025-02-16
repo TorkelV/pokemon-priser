@@ -163,7 +163,9 @@ const pokelageretPris = async (doc) => {
 }
 
 const spillgledePris = async (doc) => {
-    return fromProductPriceAmountAndProductAvailabilityProps(doc);
+    const price = +doc.querySelector('[itemprop="price"]').getAttribute("content")
+    const inStock = doc?.querySelector('[itemprop="availability"]')?.getAttribute("href")?.includes("InStock")
+    return { price, inStock }
 }
 
 const retroworldPris = async (doc) => {
