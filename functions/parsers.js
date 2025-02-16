@@ -229,6 +229,6 @@ export const parsers = {
 }
 
 export const headers = {
-    "https://proshop.no": {"User-Agent": "PostmanRuntime/7.43.0"},
+    "https://proshop.no": {"User-Agent": "Googlebot-Image"},
     "https://norli.no": { "User-Agent": "googlebot" }
 }
