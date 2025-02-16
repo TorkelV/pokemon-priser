@@ -87,6 +87,7 @@ const gamezonePris = async (doc) => {
 }
 
 const proshopPris = async (doc) => {
+    if(doc.querySelector(".page__title").textContent.includes("Søk")) return {}
     return fromApplicationLdJson(doc);
 }
 
@@ -226,5 +227,6 @@ export const parsers = {
 }
 
 export const headers = {
+    "https://proshop.no": {"User-Agent": "PostmanRuntime/7.43.0"},
     "https://norli.no": { "User-Agent": "googlebot" }
 }
