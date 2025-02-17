@@ -49,16 +49,26 @@ const getPrice = async (url) => {
 
 const scrapeProduct = async (product) => {
     const prices = await Promise.all(product.urls.map(url => getPrice(url)))
+    .then(prices => prices.filter(price => price?.price))
+    .then(prices => 
+        prices.sort((a, b) => a.price - b.price)
+            .map(price => {
+                return {
+                    ...price, 
+                    pricePerBooster: Math.round(price.price / product.packs, 2),
+                }
+            }).filter(price => price.pricePerBooster > 20) // If price is that low it's probably wrong data
+        ) 
     return {
         name: product.name,
         expansion: product.expansion,
         image: product.image,
         packs: product.packs,
-        prices: prices.filter(e => e?.price).sort((a, b) => a.price - b.price)
+        prices: prices
     }
 }
 
 export const scrapeAllProducts = async (products) => {
     const productWithPrices = await Promise.all(products.map(scrapeProduct))
-    return productWithPrices.sort((a, b) => b.expansion.id - a.expansion.id)
+    return productWithPrices.filter(p=>p).sort((a, b) => b.expansion.id - a.expansion.id)
 }

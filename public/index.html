@@ -291,10 +291,8 @@
                         }).filter(e => e.prices.length);
                     return prods.map(p => {
                         return {...p, 
-                            cheapestBooster: p.prices.length > 0 ? Math.min(...p.prices.map(price => price.price / p.packs)) : Infinity,
-                            prices: p.prices.map(price => {
-                            return { ...price, pricePerBooster: Math.round(price.price / p.packs, 2) }
-                        }) }
+                            cheapestBooster: p.prices.length > 0 ? Math.min(...p.prices.map(price => price.price / p.packs)) : Infinity
+                         }
                     })
                 },
                 sortedProducts() {
