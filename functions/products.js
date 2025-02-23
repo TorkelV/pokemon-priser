@@ -586,7 +586,6 @@ const paldeanFatesSpecialTin = {
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-spec-tin-sv4-5",
         "https://www.ringo.no/produkt/pokemon-spec-tin-sv4-5-paldean-fates/",
         "https://gamingsjappa.no/products/pokemon-tcg-kort-paldean-fates-special-tinnboks-var-2024",
-        "https://www.playlot.no/produkt/pokemon/collection-bokser/metallbokser-tins/paldean-fates-metallboks-tin"
     ]
 
 
@@ -612,7 +611,8 @@ const paldeanFatesTin = {
         "https://no.coolshop.com/produkt/pokemon-sv4-5-paldean-fates-tin-shiny-iron-treads/23J6NG/",
         "https://www.ringo.no/produkt/pokemon-tin-sv4-5-paldean-fates/",
         "https://www.kanoncon.no/produkt/paldean-fates-shiny-iron-treads-ex-tin/",
-        "https://gamingsjappa.no/products/pokemon-tcg-kort-paldean-fates-tinnbokser-var-2024"
+        "https://gamingsjappa.no/products/pokemon-tcg-kort-paldean-fates-tinnbokser-var-2024",
+         "https://www.playlot.no/produkt/pokemon/collection-bokser/metallbokser-tins/paldean-fates-metallboks-tin",
     ]
     
 }
