@@ -239,7 +239,7 @@
                     <img loading="lazy" v-if="product.image" :src="'images/' + product.image" :alt="product.name">
                     <div class="product-info">
                         <h2 class="product-name">{{ product.name }}</h2>
-                        <p class="expansion-name">{{ product.expansion.name }}</p>
+                        <p class="expansion-name">{{ product?.expansion?.name }}</p>
                         <p class="expansion-name">Boosters: {{ product.packs }}</p>
                     </div>
                 </div>

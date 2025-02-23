@@ -216,7 +216,7 @@ const twilightMasqETB = {
         "https://spillwill.no/products/pokemon-tcg-scarlet-violet-twilight-masquerade-pokemon-elite-trainer-box",
         "https://boosterpakker.no/produkt/booster-bokser/twilight-masqurade-booster-boks",
         "https://www.jollyroom.no/leker/spill-puslespill/kortspill-memory/pokemon-scarlet-violet-twilight-masquerade-sv6-elite-trainer-box-samling",
-
+        "https://www.playlot.no/produkt/pokemon/scarlet-violet/twilight-masquerade-sv6/twilight-masquerade-elite-trainer-boks"
 
 
     ]
@@ -585,7 +585,8 @@ const paldeanFatesSpecialTin = {
         "https://www.extra-leker.no/pokemon-sv4-5-paldean-fates-special-tinnboks-iron-treads",
         "https://www.norli.no/leker/kreative-leker/samlekort/pokemonkort/pokemon-spec-tin-sv4-5",
         "https://www.ringo.no/produkt/pokemon-spec-tin-sv4-5-paldean-fates/",
-        "https://gamingsjappa.no/products/pokemon-tcg-kort-paldean-fates-special-tinnboks-var-2024"
+        "https://gamingsjappa.no/products/pokemon-tcg-kort-paldean-fates-special-tinnboks-var-2024",
+        "https://www.playlot.no/produkt/pokemon/collection-bokser/metallbokser-tins/paldean-fates-metallboks-tin"
     ]
 
 

@@ -1,7 +1,7 @@
 
 const getApplicationLdJson = (doc) => {
-    const ldJson = [...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => JSON.parse(e.textContent)).find(e => e["@type"] == "Product" || e["@graph"]?.some(g=>g["@type"] == "Product"))
-    const product = ldJson["@type"] == "Product" ? ldJson : ldJson["@graph"].find(e=>e["@type"] == "Product");
+    const ldJson = [...doc.querySelectorAll('script[type="application/ld+json"]')].map(e => JSON.parse(e.textContent)).find(e => e["@type"] == "ProductGroup" || e["@type"] == "Product" || e["@graph"]?.some(g=>g["@type"] == "Product"))
+    const product = ldJson["@type"] == "Product" ? ldJson : ldJson["@type"] == "ProductGroup" ? ldJson["hasVariant"][0] : ldJson["@graph"].find(e=>e["@type"] == "Product");
     return product;
 }
 
@@ -26,7 +26,7 @@ const parsePris = (pris) => {
 }
 
 const pokestorePris = async (doc) => {
-    return fromProductPriceAmountAndProductAvailabilityProps(doc);
+    return fromApplicationLdJson(doc);
 }
 
 const computersalgPris = async (doc) => {
