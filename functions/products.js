@@ -543,7 +543,9 @@ const astralRadianceEtb = {
         "https://pokestore.no/produkt/engelsk/etb/pokemon-astral-radiance-elite-trainer-box-1",
         "https://www.kanoncon.no/produkt/pokemon-sword-shield-astral-radiance-elite-trainer-box/",
 "https://retroworld.no/products/pokemon-astral-radiance-elite-trainer-box-etb",
-"https://cardcenter.no/products/pokemon-astral-radiance-elite-trainer-box"
+"https://cardcenter.no/products/pokemon-astral-radiance-elite-trainer-box",
+"https://www.laboge.no/produkt/sealed/pokemon-astral-radiance-elite-trainer-box-sealed",
+
     ]
 }
 
