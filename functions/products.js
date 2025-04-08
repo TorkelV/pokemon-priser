@@ -913,7 +913,6 @@ const terapagosUltraPremium = {
     expansion: expansions.SCARLET_VIOLET_STELLAR_CROWN,
     packs: 18,
     urls: [
-        "https://poke-shop.no/produkt/alle-produkter/spesialbokser/terapagos-ex-ultra-premium-collection",
         "https://www.gameninja.no/produkt/pokemon-terapagos-ex-ultra-premium-collection/",
         "https://www.ringo.no/produkt/pokemon-ultra-prem-coll-box-terapagos/",
         "https://www.outland.no/p-terapagos-ex-ultra-premium-collection-pokemon-tcg-pokemon-820650858666",
@@ -988,7 +987,6 @@ const ionoTournamentCollection = {
         "https://www.outland.no/p-iono-premium-tournament-collection-pokemon-tcg-pokemon-820650857485",
         "https://www.gameninja.no/produkt/iono-tournament-collection/",
         "https://gamingsjappa.no/products/pokemon-tcg-kort-iono-premium-tournament-collection",
-        "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-iono-premium-tournament-collection",
         "https://baldbreakers.no/products/pokemon-premium-tournament-collection-iono",
         "https://www.collectible.no/home/pokemon-journey-together-booster-box/"
     ]
@@ -1018,7 +1016,6 @@ const klaraTournamentColleciton = {
         "https://gamezone.no/pokemon/154015/pokemon-premium-tournament-coll-klara",
         "https://pokestore.no/produkt/engelsk/spesialsett-collection/pokemon-klara-premium-tournament-collection",
         "https://www.extra-leker.no/pokemon-premium-tournament-collection-klara",
-        "https://poke-shop.no/produkt/alle-produkter/spesialbokser/pokemon-klara-premium-tournament-collection"
     ]
 }
 
