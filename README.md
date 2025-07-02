@@ -1,3 +1,5 @@
+Pokepriser.net er lagt ned på grunn av høye nettverkskostnader.
+
 En scraper for å finne pokemonkort-priser fra norske nettbutikker.
 Pluss en liten web-app for å vise prisene (HTML/CSS er generert av ChatGPT).
 
