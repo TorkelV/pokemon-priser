@@ -103,8 +103,10 @@ const expansions = {
     SCARLET_VIOLET_STELLAR_CROWN: { id: 101, name: "Scarlet & Violet—Stellar Crown" },
     SCARLET_VIOLET_SURGING_SPARKS: { id: 102, name: "Scarlet & Violet—Surging Sparks" },
     SCARLET_VIOLET_PRISMATIC_EVOLUTIONS: { id: 103, name: "Scarlet & Violet—Prismatic Evolutions" },
-    SCARLET_VIOLET_JOURNEY_TOGETHER: { id: 104, name: "Scarlet & Violet—Journey Together" }
-
+    SCARLET_VIOLET_JOURNEY_TOGETHER: { id: 104, name: "Scarlet & Violet—Journey Together" },
+    SCARLET_VIOLET_DESTINED_RIVALS: { id: 105, name: "Scarlet & Violet—Destined Rivals" },
+    SCARLET_VIOLET_BLACK_BOLT: { id: 106, name: "Scarlet & Violet—Black Bolt" },
+    SCARLET_VIOLET_WHITE_FLARE: { id: 107, name: "Scarlet & Violet—White Flare" },
 }
 
 
@@ -316,7 +318,7 @@ const surgingsparksEtb = {
         "https://www.maxgaming.no/no/pokemon/scarlet-violet-8-surging-sparks-elite-trainer-box",
         "https://www.jollyroom.no/leker/spill-puslespill/kortspill-memory/pokemon-scarlet-violet-surging-sparks-elite-trainer-box-samlekort",
 
-    
+
     ]
 }
 
@@ -616,7 +618,7 @@ const paldeanFatesTin = {
         "https://gamingsjappa.no/products/pokemon-tcg-kort-paldean-fates-tinnbokser-var-2024",
          "https://www.playlot.no/produkt/pokemon/collection-bokser/metallbokser-tins/paldean-fates-metallboks-tin",
     ]
-    
+
 }
 
 const battleStylesEtb = {
@@ -806,7 +808,7 @@ const scarletVioletTwilightMasqueradeBoosterBox = {
         "https://www.gameninja.no/produkt/release-25-5-24-poke-sv6-twilight-masquerade-booster-box/",
         "https://www.outland.no/p-scarlet-violet-twilight-masquerade-booster-display-boks-pokemon-t-scarlet-violet-twilight-masquerade-pokemon-820650867743",
         "https://spillwill.no/products/pokemon-tcg-scarlet-violet-twilight-masquerade-booster-display-box-36-packs",
-        
+
     ]
 };
 
@@ -927,7 +929,7 @@ const terapagosUltraPremium = {
         "https://pokestore.no/produkt/engelsk/spesialsett-collection/pokemon-terapagos-ex-ultra-premium-collection",
         "https://www.maxgaming.no/no/pokemon/pokemon-terapagos-ex-ultra-premium-collection",
 
-        
+
     ]
 }
 
@@ -1019,6 +1021,49 @@ const klaraTournamentColleciton = {
     ]
 }
 
+const destinedRivalsEtb = {
+    expansion: expansions.SCARLET_VIOLET_DESTINED_RIVALS,
+    image: "destinedrivals_etb.jpg",
+    name: "Destined Rivals Elite Trainer Box",
+    packs: 9,
+    urls: [
+        "https://pokestore.no/products/pokemon-destined-rivals-elite-trainer-box",
+        "https://cardcenter.no/products/pokemon-destined-rivals-elite-trainer-box",
+        "https://www.kanoncon.no/produkt/pokemon-journey-together-elite-trainer-box/",
+        "https://poke-shop.no/produkt/alle-produkter/elite-trainer-box/pokemon-destined-rivals-elite-trainer-box",
+        "https://www.pokemadness.no/elite-trainer-boks/2251-scarlet-violet-destined-rivals-elite-trainer-box-196214111523.html",
+        "https://baldbreakers.no/products/destined-etb?_pos=2&_sid=6da0f2052&_ss=r",
+        "https://poku.no/produkt/tcg/pokemon/elite-trainer-box/pokemon-tcg-destined-rivals-elite-trainer-box/", //Mangler link, bare tippet her
+        "https://www.outland.no/p-scarlet-violet-destined-rivals-elite-trainer-boks-scarlet-violet-destined-rivals-pokemon-196214111523",
+        "https://gamezone.no/samlekort/164365/pokemon-destined-rivals-etb-elite-trainer-box",
+        "https://laboge.no/products/pokemon-destined-rivals-elite-trainer-box",
+        "https://cardworld.no/products/pokemon-destined-rivals-elite-trainer-box",
+        "https://www.collectible.no/home/pokemon-destined-rivals-elite-trainer-box/",
+    ]
+};
+
+const destinedRivalsBoosterBox = {
+    expansion: expansions.SCARLET_VIOLET_JOURNEY_TOGETHER,
+    image: "destinedrivals_boosterbox.png",
+    name: "Journey Together Booster Box",
+    packs: 36,
+    urls: [
+        "https://pokestore.no/products/pokemon-destined-rivals-booster-box",
+        //"https://cardcenter.no", Siden er fjernet
+        "https://www.kanoncon.no/produkt/pokemon-destined-rivals-booster-box/",
+        //"https://poke-shop.no", siden er fjernet
+        "https://www.pokemadness.no/forhandsbestill/2246-scarlet-violet-destined-rivals-booster-display-196214111189.html",
+        "https://www.outland.no/p-scarlet-violet-destined-rivals-booster-display-boks-scarlet-violet-destined-rivals-pokemon-196214111189",
+        "https://gamezone.no/samlekort/164366/pokemon-destined-rivals-booster-box",
+        "https://baldbreakers.no/products/scarlet-violet-destined-rivals-booster-display-box-36-packs",
+        "https://poku.no/produkt/tcg/pokemon/pokemon-boosterpakker/pokemon-tcg-destined-rivals-booster-display/",
+        //"https://www.laboge.no", siden er fjernet
+        "https://cardworld.no/products/pokemon-destined-rivals-booster-box",
+        //"https://www.collectible.no/home/pokemon-destined-rivals-booster-box/" siden er fjernet
+
+    ]
+}
+
 export const products = [
     darknessAblazeEtb,
     hiddenFatesEtb,
@@ -1068,5 +1113,7 @@ export const products = [
     ionoTournamentCollection,
     cyrusTournamentCollection,
     klaraTournamentColleciton,
+    destinedRivalsEtb,
+    destinedRivalsBoosterBox
 ];
 
