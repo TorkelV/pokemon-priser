@@ -107,6 +107,7 @@ const expansions = {
     SCARLET_VIOLET_DESTINED_RIVALS: { id: 105, name: "Scarlet & Violet—Destined Rivals" },
     SCARLET_VIOLET_BLACK_BOLT: { id: 106, name: "Scarlet & Violet—Black Bolt" },
     SCARLET_VIOLET_WHITE_FLARE: { id: 107, name: "Scarlet & Violet—White Flare" },
+    ASCENDED_HEROES: { id: 108, name: "Ascended Heroes" },
 }
 
 
@@ -1064,6 +1065,72 @@ const destinedRivalsBoosterBox = {
     ]
 }
 
+const ascendedHeroesEtb = {
+    expansion: expansions.ASCENDED_HEROES,
+    image: "ascendedheroes_etb.jpg",
+    name: "Ascended Heroes Elite Trainer Box",
+    packs: 9,
+    urls: [
+        "https://www.cardstore.no/products/ascended-heroes-elite-trainer-box-etb",
+        "https://gamezone.no/samlekort/167771/pokemon-ascended-heroes-etb-elite-trainer-box",
+        "https://www.outland.no/p-mega-evolution-ascended-heroes-elite-trainer-boks-mega-evolution-ascended-heroes-pokemon-196214132474",
+        "https://en.poke4dayz.no/product-page/pokemon-ascended-heroes-elite-trainer-box-pre-order",
+        "https://poku.no/produkt/tcg/pokemon/elite-trainer-box/pokemon-tcg-ascended-heroes-elite-trainer-box-2/",
+        "https://poke-shop.no/produkt/forhandsbestilling/pokemon-ascended-heroes-elite-trainer-box",
+        "https://pokestore.no/products/pokemon-ascended-heroes-elite-trainer-box",
+        "https://playlot.no/produkt/ascended-heroes-elite-trainer-box/",
+        "https://www.pokemadness.no/forhandsbestill/2668-ascended-heroes-elite-trainer-box.html",
+        "https://www.poki-heaven.no/produkt/pokemon-tcg/forhandssalg/maks-5-per-pers-pokemon-ascended-heroes-elite-trainer-box",
+    ]
+};
+
+const ascendedHeroesBoosterBundle = {
+    expansion: expansions.ASCENDED_HEROES,
+    image: "ascendedheroes_boosterbundle.jpeg",
+    name: "Ascended Heroes Booster Bundle",
+    packs: 6,
+    urls: [
+        "https://cardcenter.no/products/pokemon-ascended-heroes-booster-bundle",
+        "https://en.poke4dayz.no/product-page/fam-pokemon-ascended-heroes-booster-bundle-late-release",
+        "https://poku.no/produkt/tcg/pokemon/pokemon-boosterpakker/pokemon-tcg-ascended-heroes-bundle-2/",
+    ]
+};
+
+const ascendedHeroesPinCollection = {
+    expansion: expansions.ASCENDED_HEROES,
+    image: "ascendedheroes_pincollection.jpeg",
+    name: "Ascended Heroes First Partners Deluxe Pin Collection",
+    packs: 5,
+    urls: [
+        "https://cardcenter.no/products/pokemon-ascended-heroes-first-partners-deluxe-pin-collection",
+        "https://www.cardstore.no/products/ascended-heroes-first-partners-deluxe-pin-collection",
+    ]
+};
+
+const ascendedHeroesMiniTinDisplay = {
+    expansion: expansions.ASCENDED_HEROES,
+    image: "ascendedheroes_minitindisplay.jpeg",
+    name: "Ascended Heroes Mini Tin Display",
+    packs: 20,
+    urls: [
+        "https://www.cardstore.no/products/ascended-heroes-mini-tin-display",
+        "https://gamezone.no/samlekort/167772/pokemon-ascended-heroes-tin-box-10-stk",
+        "https://en.poke4dayz.no/product-page/pokemon-ascended-heroes-mini-tin-display-maks-1-per-person",
+        "https://pokestore.no/products/pokemon-ascended-heroes-mini-tin-display",
+    ]
+};
+
+const ascendedHeroesMiniTin = {
+    expansion: expansions.ASCENDED_HEROES,
+    image: "ascendedheroes_minitin.jpeg",
+    name: "Ascended Heroes Mini Tin",
+    packs: 2,
+    urls: [
+        "https://playlot.no/produkt/ascended-heroes-mini-tin/",
+        "https://www.pokemadness.no/forhandsbestill/2669-ascended-heroes-mini-tin.html",
+    ]
+};
+
 export const products = [
     darknessAblazeEtb,
     hiddenFatesEtb,
@@ -1114,6 +1181,13 @@ export const products = [
     cyrusTournamentCollection,
     klaraTournamentColleciton,
     destinedRivalsEtb,
-    destinedRivalsBoosterBox
+    destinedRivalsBoosterBox,
+    ascendedHeroesEtb,
+    ascendedHeroesBoosterBundle,
+    ascendedHeroesPinCollection,
+    ascendedHeroesMiniTinDisplay,
+    ascendedHeroesMiniTin
 ];
+
+
 
